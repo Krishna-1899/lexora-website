@@ -2,15 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiChevronRight, FiCheck } from 'react-icons/fi';
 import Container from '../ui/Container';
-import SectionHeader from '../ui/SectionHeader';
-import aboutBg from '../../assets/images/backgrounds/about-bg-2-1.png';
 import about1 from '../../assets/images/about/about-2-1.webp';
 import about2 from '../../assets/images/about/about-2-2.webp';
+import aboutBg from '../../assets/images/backgrounds/about-bg-2-1.png';
 
 const AboutSection = () => {
   return (
     <section className="section-space relative bg-[#d5e9e8]">
-      <div className='bg-[url("../../assets/images/backgrounds/about-bg-2-1.png")]'>
+      <div 
+        style={{
+          backgroundImage: `url(${aboutBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         <Container className="relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {/* Left Side - Images */}

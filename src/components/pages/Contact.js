@@ -81,10 +81,7 @@ const Contact = () => {
 
       {/* Contact Section */}
       <section className="py-20 relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5"
-          style={{ backgroundImage: "url('/assets/images/backgrounds/contact-bg-1.png')" }}
-        />
+        {/* Background removed - image file does not exist */}
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -168,10 +165,7 @@ const Contact = () => {
             {/* Contact Form */}
             <div>
               <div className="bg-white rounded-lg shadow-xl p-8 relative overflow-hidden">
-                <div 
-                  className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5"
-                  style={{ backgroundImage: "url('/assets/images/shapes/contact-info-form-bg.png')" }}
-                />
+                {/* Background removed - image file does not exist */}
                 
                 <div className="relative z-10">
                   <div className="mb-8">

@@ -9,9 +9,17 @@ import {
   FaPinterest,
 } from "react-icons/fa";
 import logoLight from "../../assets/images/logo/logo-light.webp";
+import footerBg from "../../assets/images/shapes/footer-bg-1-1.png";
 const Footer = () => {
   return (
-    <footer className="bg-kajaria-blue-900 text-white bg-[url('../../assets/images/shapes/footer-bg-1-1.png')] bg-cover bg-center">
+    <footer 
+      className="bg-kajaria-blue-900 text-white" 
+      style={{
+        backgroundImage: `url(${footerBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
       {/* Footer Top */}
       <div className="container mx-auto px-4 pt-16 pb-10 relative z-10 ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
