@@ -15,6 +15,7 @@ import seclLogo from '../../assets/images/resources/brand-1-3.png';
 import cgLogo from '../../assets/images/resources/brand-1-4.png';
 import dlfLogo from '../../assets/images/resources/brand-1-5.png';
 import emaarLogo from '../../assets/images/resources/brand-1-6.png';
+import offerBg from '../../assets/images/backgrounds/offer-bg.jpg';
 
 const WhoWeAre = () => {
   const [activeTab, setActiveTab] = useState('adhesives');
