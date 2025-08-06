@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './components/home/HomePage';
 import WhoWeAre from './components/pages/WhoWeAre';
 import Contact from './components/pages/Contact';
+import FloatingWhatsApp from './components/ui/FloatingWhatsApp';
 import './App.css';
 
 function App() {
@@ -14,6 +15,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         {/* Add more routes here as needed */}
       </Routes>
+      
+      {/* Floating WhatsApp Button - appears on all pages */}
+      <FloatingWhatsApp />
     </Router>
   );
 }
