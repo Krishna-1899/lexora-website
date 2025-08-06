@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Container from '../ui/Container';
-import SectionHeader from '../ui/SectionHeader';
+// import SectionHeader from '../ui/SectionHeader';
 import Slider from 'react-slick';
 import { FiArrowRight } from 'react-icons/fi';
 import 'slick-carousel/slick/slick.css';
@@ -28,17 +28,17 @@ const FeaturesSection = () => {
     'ModernTiels': {
       image: service3Image,
       title: 'Fast and Economical',
-      text: 'Gresbond Premium Tile adhesive can be easily applied over large areas with a notched trowel. Then the tiles can be adjusted gently after laying to produce a uniform adhesive bed.'
+      text: 'Lexora Premium Tile adhesive can be easily applied over large areas with a notched trowel. Then the tiles can be adjusted gently after laying to produce a uniform adhesive bed.'
     },
     'FloorRemoval': {
       image: service1Image,
       title: 'Easy to work with',
-      text: 'Gresbond High-quality tile adhesives for wall application have good non-slump properties. The freshly laid tiles therefore do not slip on the wall. It is thus possible to lay the tiles from top to bottom without using spacers. This makes it easier to produce a uniform pattern.'
+      text: 'Lexora High-quality tile adhesives for wall application have good non-slump properties. The freshly laid tiles therefore do not slip on the wall. It is thus possible to lay the tiles from top to bottom without using spacers. This makes it easier to produce a uniform pattern.'
     },
     'KitchenStripOuts': {
       image: service2Image,
       title: 'Excellent Results',
-      text: 'Gresbond advanced premium adhesives are so easy to mix and install that good results are consistently achieved. Irrespective of the tile material or the substrate, the tile adhesive can be custom-mixed for the particular tile type and substrate.'
+      text: 'Lexora advanced premium adhesives are so easy to mix and install that good results are consistently achieved. Irrespective of the tile material or the substrate, the tile adhesive can be custom-mixed for the particular tile type and substrate.'
     }
   };
   
@@ -125,7 +125,7 @@ const FeaturesSection = () => {
   };
   
   return (
-    <section className="section-space-two relative" style={{ backgroundColor: '#d5e9e8' }}>
+    <section className="section-space-two relative bg-kajaria-blue-200">
       <div 
         className="absolute inset-0 opacity-10 bg-cover bg-center"
         style={{ backgroundImage: `url(${offerBg})` }}
@@ -134,7 +134,7 @@ const FeaturesSection = () => {
         <div className="relative z-10">
           {/* Section Title */}
           <div className="sec-title mb-12" data-aos="fade-up">
-            <h6 className="sec-title__tagline">Gresbond</h6>
+            <h6 className="sec-title__tagline">Lexora</h6>
             <h3 className="sec-title__title">Tile Adhesives, Grouts And Tile Cleaners</h3>
           </div>
           
@@ -155,10 +155,10 @@ const FeaturesSection = () => {
               <div className="w-full lg:w-1/3 flex justify-center px-4 lg:px-0">
                 <ul className="flex flex-col w-full lg:w-11/12 justify-center">
                   <li 
-                    className={`tab-btn cursor-pointer transition-all duration-300 ${activeTab === 'ModernTiels' ? 'bg-primary text-white' : '`text-kajaria-blue-700` hover:bg-blue-600 bg-white hover:text-white'}`}
+                    className={`tab-btn cursor-pointer transition-all duration-300 ${activeTab === 'ModernTiels' ? 'bg-kajaria-blue-600 text-white' : 'text-kajaria-blue-700 hover:bg-kajaria-blue-900 bg-white hover:text-white'}`}
                     onClick={() => handleTabClick('ModernTiels')}
                   >
-                    <button type="button" className="tab-btn__inner w-full text-left p-3 sm:p-4 md:p-6 flex items-center justify-between hover:bg-blue-600 transition-all duration-300">
+                    <button type="button" className="tab-btn__inner w-full text-left p-3 sm:p-4 md:p-6 flex items-center justify-between hover:bg-kajaria-blue-600 transition-all duration-300">
                       <span className="font-medium">Fast and Economical</span>
                       <span className="tab-btn__icon">
                         <FiArrowRight className="text-x" />
@@ -166,7 +166,7 @@ const FeaturesSection = () => {
                     </button>
                   </li>
                   <li 
-                    className={`tab-btn cursor-pointer transition-all duration-300 ${activeTab === 'FloorRemoval' ? 'bg-primary text-white' : 'text-kajaria-blue-700 hover:bg-blue-600 bg-white hover:text-white'}`}
+                    className={`tab-btn cursor-pointer transition-all duration-300 ${activeTab === 'FloorRemoval' ? 'bg-kajaria-blue-600 text-white' : 'text-kajaria-blue-700 hover:bg-kajaria-blue-900 bg-white hover:text-white'}`}
                     onClick={() => handleTabClick('FloorRemoval')}
                   >
                     <button type="button" className="tab-btn__inner w-full text-left p-3 sm:p-4 md:p-6 flex items-center justify-between transition-all duration-300">
@@ -177,7 +177,7 @@ const FeaturesSection = () => {
                     </button>
                   </li>
                   <li 
-                    className={`tab-btn cursor-pointer transition-all duration-300 ${activeTab === 'KitchenStripOuts' ? 'bg-primary text-white' : 'text-kajaria-blue-700 hover:bg-blue-600 bg-white hover:text-white'}`}
+                    className={`tab-btn cursor-pointer transition-all duration-300 ${activeTab === 'KitchenStripOuts' ? 'bg-kajaria-blue-600 text-white' : 'text-kajaria-blue-700 hover:bg-kajaria-blue-900 bg-white hover:text-white'}`}
                     onClick={() => handleTabClick('KitchenStripOuts')}
                   >
                     <button type="button" className="tab-btn__inner w-full text-left p-3 sm:p-4 md:p-6 flex items-center justify-between transition-all duration-300">
@@ -227,7 +227,7 @@ const FeaturesSection = () => {
                         alt={feature.title} 
                         className="h-28 w-28 mb-4"
                       />
-                      <div className="benifits_title text-sm font-medium text-gray-800 leading-tight">
+                      <div className="benifits_title text-sm font-medium text-kajaria-blue-600 leading-tight">
                         {feature.title}
                       </div>
                     </div>

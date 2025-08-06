@@ -3,25 +3,22 @@ import { Link } from "react-router-dom";
 import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import { FiChevronDown, FiChevronRight } from "react-icons/fi";
 import headerBg from "../../assets/images/backgrounds/about-bg-2-1.png";
-import logoDark from "../../assets/images/logo/logo-dark.webp";
-import logoLight from "../../assets/images/logo/logo-light.webp";
+import logoDark from "../../assets/images/logo/logo-light.png";
+import logoLight from "../../assets/images/logo/logo-light.png";
 // Import menu images
-import cx1Image from "../../assets/images/menu/cx-1.webp";
-import cx2Image from "../../assets/images/menu/cx-2.webp";
-import vx1Image from "../../assets/images/menu/vx-1.webp";
-import vx2Image from "../../assets/images/menu/vx-2.webp";
-import ex5Image from "../../assets/images/menu/ex-5.webp";
-import lx7Image from "../../assets/images/menu/lx-7.webp";
-import lx7SuperFlexImage from "../../assets/images/menu/lx-7-super-flex.webp";
+import cx1Image from "../../assets/images/menu/lx-1.png";
+import cx2Image from "../../assets/images/menu/lx-2.png";
+import vx1Image from "../../assets/images/menu/lx-3.png";
+import vx2Image from "../../assets/images/menu/lx-4.png";
+import ex5Image from "../../assets/images/menu/pu-l29.png";
 import pua100Image from "../../assets/images/menu/ea-100.webp";
 // Import grout images
-import duetImage from "../../assets/images/menu/duet.webp";
-import ke100Image from "../../assets/images/menu/KE100.webp";
-import glitterImage from "../../assets/images/menu/glitter.webp";
-import unsandedImage from "../../assets/images/menu/unsanded.webp";
-import admisImage from "../../assets/images/menu/admis.webp";
+import unsandedImage from "../../assets/images/menu/epoxy-grout.png";
+import admisImage from "../../assets/images/menu/grount-admix.png";
+import admisImage2 from "../../assets/images/menu/tile-grout.png";
 // Import cleaner image
-import tc1Image from "../../assets/images/menu/tc-1.webp";
+import tc1Image from "../../assets/images/menu/tile-cleaner.png";
+import tc2Image from "../../assets/images/menu/tile-clener2.png";
 // Import tool images
 import levelingPlierImage from "../../assets/images/menu/leveling-plier-head.webp";
 import rubberMalletImage from "../../assets/images/menu/rubber-mallet-head.webp";
@@ -83,30 +80,21 @@ const Header = () => {
   };
 
   const adhesiveProducts = [
-    { name: "CX-1", img: cx1Image, link: "/cx-1" },
-    { name: "CX-2", img: cx2Image, link: "/cx-2" },
-    { name: "VX-1", img: vx1Image, link: "/vx-1" },
-    { name: "VX-2", img: vx2Image, link: "/vx-2" },
-    { name: "EX-5", img: ex5Image, link: "/ex-5" },
-    { name: "LX-7", img: lx7Image, link: "/lx-7" },
-    {
-      name: "LX-7 Super Flex",
-      img: lx7SuperFlexImage,
-      link: "/lx-7-super-flex",
-    },
-    { name: "PUA-100", img: pua100Image, link: "/pua-100" },
+    { name: "LX-1", img: cx1Image, link: "/cx-1" },
+    { name: "LX-2", img: cx2Image, link: "/cx-2" },
+    { name: "LX-3", img: vx1Image, link: "/vx-1" },
+    { name: "VX-4", img: vx2Image, link: "/vx-2" },
+    { name: "PU-L29", img: ex5Image, link: "/ex-5" },
   ];
 
   const groutProducts = [
-    { name: "KE-100 Duet", img: duetImage, link: "/ke-100-duet" },
-    { name: "KE-100", img: ke100Image, link: "/ke-100" },
-    { name: "KE-100 Glitter", img: glitterImage, link: "/ke-100-glitter" },
     {
-      name: "Premium Unsanded Grout",
+      name: "Epoxy Grout",
       img: unsandedImage,
       link: "/premium-unsanded-grout",
     },
-    { name: "KGA-01", img: admisImage, link: "/kga-01" },
+    { name: "Grout Admix", img: admisImage, link: "/kga-01" },
+    { name: "Tile Grout", img: admisImage2, link: "/kga-02"}
   ];
 
   const toolProducts = [
@@ -153,8 +141,8 @@ const Header = () => {
             <Link to="/" className="block">
               <img
                 src={logoDark}
-                alt="Gresbond by kajaria logo"
-                className="w-auto h-10 md:h-12"
+                alt="Lexora logo"
+                className="w-auto h-10 md:h-14"
               />
             </Link>
 
@@ -317,7 +305,7 @@ const Header = () => {
                         className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded"
                         onClick={() => setProductsMenuOpen(false)}
                       >
-                        <div className="bg-blue-50 p-4 transition-all duration-300 group-hover:bg-blue-100">
+                        <div className="bg-kajaria-blue-50 p-4 transition-all duration-300 group-hover:bg-kajaria-blue-100">
                           <img
                             src={item.img}
                             alt={item.name}
@@ -341,7 +329,7 @@ const Header = () => {
                         className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded"
                         onClick={() => setProductsMenuOpen(false)}
                       >
-                        <div className="bg-blue-50 p-4 transition-all duration-300 group-hover:bg-blue-100">
+                        <div className="bg-kajaria-blue-50 p-4 transition-all duration-300 group-hover:bg-kajaria-blue-100">
                           <img
                             src={item.img}
                             alt={item.name}
@@ -363,18 +351,36 @@ const Header = () => {
                       className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded"
                       onClick={() => setProductsMenuOpen(false)}
                     >
-                      <div className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded cursor-pointer">
-                        <div className="bg-blue-50 p-4 transition-all duration-300 group-hover:bg-blue-100">
+                      {/* <div className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded cursor-pointer"> */}
+                        <div className="bg-kajaria-blue-50 p-4 transition-all duration-300 group-hover:bg-kajaria-blue-100">
                           <img
-                            src={tc1Image}
+                            src={tc2Image}
                             alt="TC-1"
-                            className="w-20 h-20 mx-auto object-contain mb-3"
+                            className="w-20 mx-auto object-contain mb-3"
                           />
                           <h3 className="text-xl font-bold text-kajaria-blue-900 group-hover:text-kajaria-blue-700 transition-colors duration-300">
                             TC-1
                           </h3>
                         </div>
-                      </div>
+                      {/* </div> */}
+                    </Link>
+                    <Link
+                      to=""
+                      className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded"
+                      onClick={() => setProductsMenuOpen(false)}
+                    >
+                      {/* <div className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded cursor-pointer"> */}
+                        <div className="bg-kajaria-blue-50 p-4 transition-all duration-300 group-hover:bg-kajaria-blue-100">
+                          <img
+                            src={tc1Image}
+                            alt="TC-1"
+                            className="w-20 mx-auto object-contain mb-3"
+                          />
+                          <h3 className="text-xl font-bold text-kajaria-blue-900 group-hover:text-kajaria-blue-700 transition-colors duration-300">
+                            TC-1
+                          </h3>
+                        </div>
+                      {/* </div> */}
                     </Link>
                   </div>
                 )}
@@ -388,7 +394,7 @@ const Header = () => {
                         className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded"
                         onClick={() => setProductsMenuOpen(false)}
                       >
-                        <div className="bg-blue-50 p-4 transition-all duration-300 group-hover:bg-blue-100">
+                        <div className="bg-kajaria-blue-50 p-4 transition-all duration-300 group-hover:bg-kajaria-blue-100">
                           <img
                             src={item.img}
                             alt={item.name}
@@ -419,11 +425,11 @@ const Header = () => {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden">
-          <div className="fixed right-0 top-0 w-4/5 h-full mobile-menu-bg overflow-y-auto">
+          <div className="fixed right-0 top-0 w-4/5 h-full bg-kajaria-blue-900 overflow-y-auto">
             <div className="flex justify-between items-center p-4 border-b border-gray-700 relative z-10">
               <img
                 src={logoLight}
-                alt="Gresbond by kajaria logo"
+                alt="Lexora logo"
                 className="w-auto h-10"
               />
               <button
@@ -472,7 +478,7 @@ const Header = () => {
                               <li key={index}>
                                 <Link
                                   to=""
-                                  className="text-gray-300 hover:text-kajaria-blue-700 block py-1"
+                                  className="text-white hover:text-kajaria-blue-700 block py-1"
                                   onClick={toggleMobileMenu}
                                 >
                                   {item.name}
@@ -493,7 +499,7 @@ const Header = () => {
                               <li key={index}>
                                 <Link
                                   to=""
-                                  className="text-gray-300 hover:text-kajaria-blue-700 block py-1"
+                                  className="text-white hover:text-kajaria-blue-700 block py-1"
                                   onClick={toggleMobileMenu}
                                 >
                                   {item.name}
@@ -513,7 +519,7 @@ const Header = () => {
                             <li>
                               <Link
                                 to=""
-                                className="text-gray-300 hover:text-kajaria-blue-700 block py-1"
+                                className="text-white hover:text-kajaria-blue-700 block py-1"
                                 onClick={toggleMobileMenu}
                               >
                                 TC-1
@@ -533,7 +539,7 @@ const Header = () => {
                               <li key={index}>
                                 <Link
                                   to=""
-                                  className="text-gray-300 hover:text-kajaria-blue-700 block py-1"
+                                  className="text-white hover:text-kajaria-blue-700 block py-1"
                                   onClick={toggleMobileMenu}
                                 >
                                   {item.name}
@@ -565,7 +571,7 @@ const Header = () => {
                       <li>
                         <Link
                           to="/tile-adhesive-calculator"
-                          className="text-gray-300 hover:text-kajaria-blue-700 block py-1"
+                          className="text-white hover:text-kajaria-blue-700 block py-1"
                           onClick={toggleMobileMenu}
                         >
                           Tile Adhesive Calculator
@@ -574,7 +580,7 @@ const Header = () => {
                       <li>
                         <Link
                           to="/tile-adhesive-selector"
-                          className="text-gray-300 hover:text-kajaria-blue-700 block py-1"
+                          className="text-white hover:text-kajaria-blue-700 block py-1"
                           onClick={toggleMobileMenu}
                         >
                           Tile Adhesive Selector
@@ -583,7 +589,7 @@ const Header = () => {
                       <li>
                         <Link
                           to="/tile-joint-filler-grout-calculator"
-                          className="text-gray-300 hover:text-kajaria-blue-700 block py-1"
+                          className="text-white hover:text-kajaria-blue-700 block py-1"
                           onClick={toggleMobileMenu}
                         >
                           Tile Joint Filler Calculator
@@ -592,7 +598,7 @@ const Header = () => {
                       <li>
                         <Link
                           to="/tile-joint-filler-visualizer"
-                          className="text-gray-300 hover:text-kajaria-blue-700 block py-1"
+                          className="text-white hover:text-kajaria-blue-700 block py-1"
                           onClick={toggleMobileMenu}
                         >
                           Tile Joint Filler Visualizer
@@ -626,19 +632,19 @@ const Header = () => {
               <div className="flex items-center mb-4">
                 <i className="text-kajaria-blue-700 mr-2">✉</i>
                 <a
-                  href="mailto:info@kajariagresbond.com"
+                  href="mailto:lexorachembond@gmail.com"
                   className="text-white hover:text-kajaria-blue-700"
                 >
-                  info@kajariagresbond.com
+                  lexorachembond@gmail.com
                 </a>
               </div>
               <div className="flex items-center">
                 <i className="text-kajaria-blue-700 mr-2">☎</i>
                 <a
-                  href="tel:+1800309309"
+                  href="tel:+8758435000"
                   className="text-white hover:text-kajaria-blue-700"
                 >
-                  1800 309 309
+                  8758435000
                 </a>
               </div>
             </div>
@@ -662,8 +668,8 @@ const Header = () => {
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search For Gresbond By Kajaria"
-                className="w-full border border-gray-300 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-kajaria-blue-700"
+                placeholder="Search For Lexora"
+                className="w-full border border-white rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-kajaria-blue-700"
               />
               <FaSearch className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
             </div>

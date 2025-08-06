@@ -8,7 +8,7 @@ import {
   FaLinkedinIn,
   FaPinterest,
 } from "react-icons/fa";
-import logoLight from "../../assets/images/logo/logo-light.webp";
+import logoLight from "../../assets/images/logo/logo-light.png";
 import footerBg from "../../assets/images/shapes/footer-bg-1-1.png";
 const Footer = () => {
   return (
@@ -26,34 +26,33 @@ const Footer = () => {
           {/* Column 1 - About */}
           <div>
             <Link to="/" className="block mb-6">
-              <img src={logoLight} alt="Gresbond logo" className="w-40" />
+              <img src={logoLight} alt="Lexora logo" className="w-40" />
             </Link>
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://maps.app.goo.gl/Eh2kE9VpznEKsW7P9"
+                  href="https://maps.app.goo.gl/5GRkaCv5VMG7VDsf7"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start hover:text-kajaria-blue-300 transition-colors"
                 >
-                  J1/B1 (Extn.), Mohan Co - op Industrial Estate, Mathura Road,
-                  New Delhi - 110044
+                  Industrial Estate 9, nr. solo sanitaryware, Lalpar, Morbi, Gujarat 363642
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@kajariagresbond.com"
+                  href="mailto:lexorachembond@gmail.com"
                   className="flex items-center hover:text-kajaria-blue-300 transition-colors"
                 >
-                  <span className="mr-2">✉</span> info@kajariagresbond.com
+                  <span className="mr-2">✉</span> lexorachembond@gmail.com
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+1800309309"
+                  href="tel:+8758435000"
                   className="flex items-center hover:text-kajaria-blue-300 transition-colors"
                 >
-                  <span className="mr-2">☎</span> 1800 120 100
+                  <span className="mr-2">☎</span> 8758435000
                 </a>
               </li>
             </ul>
@@ -100,7 +99,7 @@ const Footer = () => {
                   to=""
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  Advantage of Gresbond
+                  Advantage of Lexora
                 </Link>
               </li>
             </ul>
@@ -115,7 +114,7 @@ const Footer = () => {
                   to=""
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  CX-1
+                  LX-1
                 </Link>
               </li>
               <li>
@@ -123,7 +122,7 @@ const Footer = () => {
                   to=""
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  CX-2 White
+                  LX-2
                 </Link>
               </li>
               <li>
@@ -131,7 +130,7 @@ const Footer = () => {
                   to=""
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  VX-1
+                  LX-1
                 </Link>
               </li>
               <li>
@@ -139,7 +138,7 @@ const Footer = () => {
                   to=""
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  VX-2 White
+                  LX-3
                 </Link>
               </li>
               <li>
@@ -147,7 +146,7 @@ const Footer = () => {
                   to=""
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  EX-5
+                  LX-4
                 </Link>
               </li>
               <li>
@@ -155,23 +154,7 @@ const Footer = () => {
                   to=""
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  PUA-100
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="hover:text-kajaria-blue-300 transition-colors"
-                >
-                  LX-7
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="hover:text-kajaria-blue-300 transition-colors"
-                >
-                  LX-7 Super Flex
+                  PU-L29
                 </Link>
               </li>
             </ul>
@@ -186,7 +169,7 @@ const Footer = () => {
                   to=""
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  KE-100 Duet
+                  Epoxy Grout
                 </Link>
               </li>
               <li>
@@ -194,7 +177,7 @@ const Footer = () => {
                   to=""
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  KE-100
+                  Grout Admix
                 </Link>
               </li>
               <li>
@@ -202,23 +185,7 @@ const Footer = () => {
                   to=""
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  KE-100 Glitter
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="hover:text-kajaria-blue-300 transition-colors"
-                >
-                  Unsanded Grout
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="hover:text-kajaria-blue-300 transition-colors"
-                >
-                  KGA-01 Grout Admix
+                  Tile Grout
                 </Link>
               </li>
             </ul>
@@ -233,19 +200,29 @@ const Footer = () => {
                   TC-1
                 </Link>
               </li>
+              <li>
+                <Link
+                  to=""
+                  className="hover:text-kajaria-blue-300 transition-colors"
+                >
+                  TC-2
+                </Link>
+              </li>
             </ul>
 
             {/* Map */}
             <div className="mt-6">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d112195.21693887505!2d77.298307!3d28.506623!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce775cee6ba19%3A0x5b6b82731b77bbdb!2sGres%20Bond%20By%20Kajaria%20-%20Head%20Office!5e0!3m2!1sen!2sin!4v1731503841064!5m2!1sen!2sin"
+                src="
+                https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.047431951008!2d70.88883877513365!3d22.800706279329923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39598d000877c079%3A0x9da77e2b5a55dd01!2sLEXORA%20CHEMBOND%20LLP!5e0!3m2!1sen!2sin!4v1754502849076!5m2!1sen!2sin
+                "
                 width="100%"
                 height="200"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Gresbond Corporate Office"
+                title="Lexora Corporate Office"
               ></iframe>
             </div>
           </div>
@@ -257,57 +234,49 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-4 mb-4 md:mb-0">
             <a
-              href="https://www.facebook.com/GresbondByKajaria"
-              target="_blank"
+              href=""
+              // target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-kajaria-blue-800 hover:bg-kajaria-blue-600 transition-colors"
             >
               <FaFacebookF />
             </a>
             <a
-              href="https://x.com/gresbond"
-              target="_blank"
+              href=""
+              // target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-kajaria-blue-800 hover:bg-kajaria-blue-600 transition-colors"
             >
               <FaTwitter />
             </a>
             <a
-              href="https://www.instagram.com/gresbondbykajaria"
-              target="_blank"
+              href=""
+              // target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-kajaria-blue-800 hover:bg-kajaria-blue-600 transition-colors"
             >
               <FaInstagram />
             </a>
             <a
-              href="https://www.youtube.com/@GresBondbyKajaria"
-              target="_blank"
+              href=""
+              // target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-kajaria-blue-800 hover:bg-kajaria-blue-600 transition-colors"
             >
               <FaYoutube />
             </a>
             <a
-              href="https://www.linkedin.com/company/gres-bond-by-kajaria/"
-              target="_blank"
+              href=""
+              // target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-kajaria-blue-800 hover:bg-kajaria-blue-600 transition-colors"
             >
               <FaLinkedinIn />
             </a>
-            <a
-              href="https://in.pinterest.com/gresbondbykajaria/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-kajaria-blue-800 hover:bg-kajaria-blue-600 transition-colors"
-            >
-              <FaPinterest />
-            </a>
           </div>
 
           <p>
-            &copy; Copyright {new Date().getFullYear()} by Gresbond by Kajaria
+            &copy; Copyright {new Date().getFullYear()} by Lexora
           </p>
         </div>
       </div>

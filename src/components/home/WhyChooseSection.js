@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../ui/Container';
-import SectionHeader from '../ui/SectionHeader';
+// import SectionHeader from '../ui/SectionHeader';
 import { FiCheck } from 'react-icons/fi';
 
 const WhyChooseSection = () => {
@@ -8,7 +8,7 @@ const WhyChooseSection = () => {
     {
       id: 1,
       title: "Premium Quality:",
-      description: "Gresbond products are developed by Kajaria, India's No.1 tile company, ensuring top-notch quality and reliability."
+      description: "Lexora products are developed by Kajaria, India's No.1 tile company, ensuring top-notch quality and reliability."
     },
     {
       id: 2,
@@ -50,14 +50,14 @@ const WhyChooseSection = () => {
   return (
     <>
       {/* Why Section */}
-      <section className="team-skills-one whysection bg-[#d5e9e8] py-16">
+      <section className="team-skills-one whysection bg-kajaria-blue-100 py-16">
         <Container>
           <div className="team-skills-one__info">
             <div className="team-skills-one__content">
               <div className="col-lg-8">
                 <div className="sec-title sec-title--border mb-8">
                   <h6 className="sec-title__tagline">Why</h6>
-                  <h3 className="sec-title__title">Premium Tile Fixing Solutions With Gresbond By Kajaria</h3>
+                  <h3 className="sec-title__title">Premium Tile Fixing Solutions With Lexora</h3>
                 </div>
               </div>
               <div className="team-skills-one__description" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">
@@ -65,10 +65,10 @@ const WhyChooseSection = () => {
                   Are you looking for the best tile-fixing experts for your tiling projects? You're in the right place.
                 </p>
                 <p className="team-skills-one__text text-gray-700 leading-relaxed mb-4">
-                  Gresbond is a product from India's No.1 Tile Company, Kajaria, which provides a premium range of tile and stone fixing solutions in adhesives, grouts, and tile cleaners. With a team of 1000+ experts, Gresbond manufactures technologically advanced tile fixing products that meet global market criteria and boast a vast dealer network. Whether professional architects or end-users, Gresbond caters to the current demand for residential and commercial tiling and stone fixing needs.
+                  Lexora is a product from India's No.1 Tile Company, Kajaria, which provides a premium range of tile and stone fixing solutions in adhesives, grouts, and tile cleaners. With a team of 1000+ experts, Lexora manufactures technologically advanced tile fixing products that meet global market criteria and boast a vast dealer network. Whether professional architects or end-users, Lexora caters to the current demand for residential and commercial tiling and stone fixing needs.
                 </p>
                 <p className="team-skills-one__text text-gray-700 leading-relaxed">
-                  Discover the pinnacle of excellence in tile and stone fixing solutions with Gresbond by Kajaria, a name that instills confidence with its reliability, innovation, and quality craftsmanship. Gresbond by Kajaria is considered one of India's top tile adhesives and grout brands, a testament to its competitive price and top-notch product qualities. It requires no recognition as it is from the house of Kajaria, a brand known for its unwavering commitment to quality and deliverables in India and globally.
+                  Discover the pinnacle of excellence in tile and stone fixing solutions with Lexora, a name that instills confidence with its reliability, innovation, and quality craftsmanship. Lexora is considered one of India's top tile adhesives and grout brands, a testament to its competitive price and top-notch product qualities. It requires no recognition as it is from the house of Kajaria, a brand known for its unwavering commitment to quality and deliverables in India and globally.
                 </p>
               </div>
             </div>
@@ -77,11 +77,11 @@ const WhyChooseSection = () => {
       </section>
 
       {/* Why Choose Section */}
-      <section className="team-skills-one whychoosesection bg-[#d5e9e8]  py-16">
+      <section className="team-skills-one whychoosesection bg-kajaria-blue-100  py-16">
         <Container>
           <div className="team-skills-one__skills">
             <h3 className="team-skills-one__title team-skills-one__skills__title text-2xl font-bold text-gray-900 mb-8">
-              Why Choose Gresbond?
+              Why Choose Lexora?
             </h3>
             <ul className="list-unstyled service-details__list listpoints left-align-text space-y-6">
               {reasons.map((reason) => (

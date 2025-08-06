@@ -15,10 +15,11 @@
   --floens-font3: "Quicksand", sans-serif;
   --floens-font4: "Manrope", sans-serif;
   --floens-text: #070707;
-  --floens-base: #0077b6;
-  --floens-base2: #03045e;
+  --floens-base: #B35600;
+  --floens-base2: #FF861E;
   --floens-white: #ffffff;
-  --floens-black2: #072d6b;
+  --floens-black2: #FF861E;
+  --floens-base3: #FFEAD6;
   --floens-border-color: #DED8D3;
   --section-space: 120px;
   --floens-letter-space-xl: -1.65px;
@@ -47,7 +48,7 @@ code {
   left: 0;
   width: 20px;
   height: 20px;
-  background-color: rgba(0, 119, 182, 0.8);
+  background-color: var(--floens-black2);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -57,7 +58,7 @@ code {
 .custom-cursor__cursor-two {
   width: 8px;
   height: 8px;
-  background-color: #0077b6;
+  background-color: var(--floens-border-color);
   z-index: 10000;
 }
 
@@ -89,7 +90,7 @@ code {
 .floens-btn::before,
 .floens-btn::after {
   content: "";
-  background-color: var(--floens-black2, #072d6b);
+  background-color: var(--floens-black2, #E66C00);
   height: 50%;
   width: 0;
   position: absolute;
@@ -227,7 +228,7 @@ code {
 .sec-title__title {
   margin: 0;
   font-size: 52px;
-  color: var(--floens-black2, #072d6b);
+  color: var(--floens-black2, #E66C00);
   font-weight: bold;
   line-height: 1.09;
   letter-spacing: var(--floens-letter-space-xl, -1.65px);
@@ -318,7 +319,7 @@ code {
 
 /* Mobile menu background */
 .mobile-menu-bg {
-  background: linear-gradient(135deg, #072d6b 0%, #0077b6 100%);
+  background: linear-gradient(167deg, var(--floens-base2) 100%, var(--floens-base3) 100%);
 }
 
 /* Additional section spacing */

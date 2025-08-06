@@ -5,7 +5,7 @@ import FeaturesSection from './FeaturesSection';
 import ProductsSlider from './ProductsSlider';
 import AboutSection from './AboutSection';
 import WhyChooseSection from './WhyChooseSection';
-import VideoSection from './VideoSection';
+// import VideoSection from './VideoSection';
 import ProjectsSection from './ProjectsSection';
 import DealerSection from './DealerSection';
 import FAQSection from './FAQSection';
@@ -34,7 +34,7 @@ const HomePage = () => {
       <ProductsSlider />
       <AboutSection />
       <WhyChooseSection />
-      <VideoSection />
+      {/* <VideoSection /> */}
       <ProjectsSection />
       <FAQSection />
       <BlogSection />

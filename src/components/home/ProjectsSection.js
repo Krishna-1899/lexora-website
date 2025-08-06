@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Container from '../ui/Container';
-import SectionHeader from '../ui/SectionHeader';
+// import SectionHeader from '../ui/SectionHeader';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 

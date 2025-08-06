@@ -3,12 +3,17 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import Container from "../ui/Container";
-import SectionHeader from "../ui/SectionHeader";
+// import SectionHeader from "../ui/SectionHeader";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Import product images
-import lx7Image from "../../assets/images/menu/lx-7.webp";
+import lx1Image from "../../assets/images/menu/lx-1.png";
+import lx2Image from "../../assets/images/menu/lx-2.png";
+import lx3Image from "../../assets/images/menu/lx-3.png";
+import lx4Image from "../../assets/images/menu/lx-4.png";
+import pu129 from "../../assets/images/menu/pu-l29.png";
+
 import lx7SuperFlexImage from "../../assets/images/menu/lx-7-super-flex.png";
 import cx1Image from "../../assets/images/menu/cx-1.webp";
 import cx2Image from "../../assets/images/menu/cx-2.webp";
@@ -24,50 +29,32 @@ const ProductsSlider = () => {
   const products = [
     {
       id: 1,
-      name: "LX 7",
-      image: lx7Image,
+      name: "LX-1",
+      image: lx1Image,
       // link: '/lx-7'
     },
     {
       id: 2,
-      name: "LX 7 Super Flex",
-      image: lx7SuperFlexImage,
+      name: "LX-2",
+      image: lx2Image,
       // link: '/lx-7-super-flex'
     },
     {
       id: 3,
-      name: "CX 1",
-      image: cx1Image,
+      name: "LX-3",
+      image: lx3Image,
       // link: '/cx-1'
     },
     {
       id: 4,
-      name: "CX 2",
-      image: cx2Image,
+      name: "LX-4",
+      image: lx4Image,
       // link: '/cx-2'
     },
     {
-      id: 5,
-      name: "VX 1",
-      image: vx1Image,
-      // link: '/vx-1'
-    },
-    {
-      id: 6,
-      name: "VX 2",
-      image: vx2Image,
-      // link: '/vx-2'
-    },
-    {
-      id: 7,
-      name: "EX 5",
-      image: ex5Image,
-      // link: '/ex-5'
-    },
-    {
       id: 8,
-      name: "PUA 100",
-      image: pua100Image,
+      name: "PU-L29",
+      image: pu129,
       // link: '/pua-100'
     },
   ];
@@ -78,8 +65,8 @@ const ProductsSlider = () => {
     speed: 700,
     slidesToShow: 4,
     // slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 600,
+    autoplay: true,
+    autoplaySpeed: 1800,
     arrows: false,
     responsive: [
       {
@@ -172,7 +159,7 @@ const ProductsSlider = () => {
                       <img
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                        className="w-full h-64 object-contain transition-transform duration-300 group-hover:scale-110"
                       />
                     </div>
 

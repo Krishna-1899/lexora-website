@@ -57,7 +57,7 @@ const Contact = () => {
           <Layout>
         {/* Page Header */}
         <section 
-          className="relative py-24 bg-[#03045e]"
+          className="relative py-24 bg-kajaria-blue-200"
           style={{ 
             backgroundImage: `url(${pageHeaderBg})`,
             backgroundSize: 'cover',
@@ -65,10 +65,9 @@ const Contact = () => {
             backgroundRepeat: 'no-repeat'
           }}
         >
-          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Contact Us</h2>
-          <nav className="flex items-center text-white">
+          <h2 className="text-4xl md:text-5xl font-bold text-kajaria-blue-50 mb-6 text-center">Contact Us</h2>
+          <nav className="flex items-center text-kajaria-blue-50 justify-center">
             <Link to="/" className="flex items-center hover:text-blue-200 transition-colors">
               <i className="icon-home mr-2"></i>
               Home
@@ -107,11 +106,11 @@ const Contact = () => {
                     <div>
                       <p className="text-gray-600 text-sm mb-1">Call Us</p>
                       <a 
-                        href="tel:1800309309" 
+                        href="tel:8758435000" 
                         className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-colors"
                         title="call now"
                       >
-                        1800 309 309
+                        8758435000
                       </a>
                     </div>
                   </div>
@@ -126,11 +125,11 @@ const Contact = () => {
                     <div>
                       <p className="text-gray-600 text-sm mb-1">Email Us</p>
                       <a 
-                        href="mailto:info@kajariagresbond.com" 
+                        href="mailto:lexorachembond@gmail.com" 
                         className="text-xl font-semibold text-gray-900 hover:text-green-600 transition-colors"
                         title="mail now"
                       >
-                        info@kajariagresbond.com
+                        lexorachembond@gmail.com
                       </a>
                     </div>
                   </div>
@@ -146,14 +145,14 @@ const Contact = () => {
                       <p className="text-gray-600 text-sm mb-1">Visit Us</p>
                       <address className="text-lg font-semibold text-gray-900 not-italic leading-relaxed">
                         <a 
-                          href="https://www.google.com/maps?ll=28.506623,77.298307&z=14&t=m&hl=en&gl=IN&mapclient=embed&cid=6587502310853163995" 
+                          href="https://www.google.com/maps/place/LEXORA+CHEMBOND+LLP/@22.800706,70.891414,16z/data=!4m6!3m5!1s0x39598d000877c079:0x9da77e2b5a55dd01!8m2!3d22.8007063!4d70.8914137!16s%2Fg%2F11xrv6wf10?hl=en&entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D" 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="hover:text-orange-600 transition-colors"
                           title="Visit this Location"
                         >
-                          J1/B1 (Extn.), 2nd floor, Mohan Co - op Industrial Estate,<br />
-                          Near Tughalkabad Metro Station, New Delhi, Delhi 110044
+                          Industrial Estate 9, nr. solo sanitaryware, <br />
+                          Lalpar, Morbi, Gujarat 363642
                         </a>
                       </address>
                     </div>
@@ -272,7 +271,7 @@ const Contact = () => {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="floens-btn w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-lg transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="floens-btn w-full text-white font-bold py-4 px-6 rounded-lg transition-colors flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                       >
                         <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                         {!isSubmitting && <i className="icon-right-arrow ml-2"></i>}
@@ -291,8 +290,8 @@ const Contact = () => {
         <div className="container-fluid px-0">
           <div className="w-full h-96">
             <iframe
-              title="Gresbond Office Location"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d112195.21693887505!2d77.298307!3d28.506623!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce775cee6ba19%3A0x5b6b82731b77bbdb!2sGres%20Bond%20By%20Kajaria%20-%20Head%20Office!5e0!3m2!1sen!2sin!4v1731503841064!5m2!1sen!2sin"
+              title="Lexora Office Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.047431951008!2d70.88883877513365!3d22.800706279329923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39598d000877c079%3A0x9da77e2b5a55dd01!2sLEXORA%20CHEMBOND%20LLP!5e0!3m2!1sen!2sin!4v1754502849076!5m2!1sen!2sin"
               className="w-full h-full border-0"
               allowFullScreen
               loading="lazy"

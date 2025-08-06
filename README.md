@@ -1,6 +1,6 @@
-# Kajaria Gresbond React Website
+# Kajaria Lexora React Website
 
-This project is a React implementation of the Gresbond by Kajaria website, built with React and Tailwind CSS.
+This project is a React implementation of the Lexora website, built with React and Tailwind CSS.
 
 ## Features
 

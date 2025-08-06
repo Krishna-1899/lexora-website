@@ -80,7 +80,7 @@
   padding: 30px;
   position: relative;
   overflow: hidden;
-  background-color: #d5e9e8;;
+  background-color: var(--floens-base3);
 }
 
 @media (max-width: 375px) {

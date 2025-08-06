@@ -8,7 +8,7 @@ import aboutBg from '../../assets/images/backgrounds/about-bg-2-1.png';
 
 const AboutSection = () => {
   return (
-    <section className="section-space relative bg-[#d5e9e8]">
+    <section className="section-space relative bg-kajaria-blue-100">
       <div 
         style={{
           backgroundImage: `url(${aboutBg})`,
@@ -43,7 +43,7 @@ const AboutSection = () => {
               {/* Section Title */}
               <div className="sec-title sec-title--border mb-8">
                 <h6 className="sec-title__tagline">about us</h6>
-                <h3 className="sec-title__title">WELCOME TO GRESBOND BY KAJARIA</h3>
+                <h3 className="sec-title__title">WELCOME TO LEXORA</h3>
               </div>
               
               <div className="about-two__content__text" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">
@@ -60,7 +60,7 @@ const AboutSection = () => {
                 </p>
                 
                 <p className="about-two__text text-gray-700 mb-6 leading-relaxed">
-                  <strong>Gresbond by Kajaria</strong> offers you wide range of tile adhesives & grouts for fixing of various categories of tile for faster laying & long lasting applications.
+                  <strong>Lexora</strong> offers you wide range of tile adhesives & grouts for fixing of various categories of tile for faster laying & long lasting applications.
                 </p>
               </div>
               

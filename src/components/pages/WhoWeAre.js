@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Layout from '../layout/Layout';
 
 // Import images
-import aboutMainImage from '../../assets/images/about/about-2-1.webp';
+// import aboutMainImage from '../../assets/images/about/about-2-1.webp';
 import pageHeaderBg from '../../assets/images/backgrounds/page-header-bg-1-1.png';
 import reliableImage1 from '../../assets/images/about/about-2-2.webp';
 import reliableImage2 from '../../assets/images/about/about-2-1.webp';
@@ -81,7 +81,7 @@ const WhoWeAre = () => {
     <Layout>
       {/* Page Header */}
       <section 
-        className="relative py-24 bg-[#03045e]"
+        className="relative py-24 bg-kajaria-blue-200"
         style={{ 
           backgroundImage: `url(${pageHeaderBg})`,
           backgroundSize: 'cover',
@@ -89,10 +89,9 @@ const WhoWeAre = () => {
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Who We Are</h2>
-          <nav className="flex items-center text-white">
+          <h2 className="text-4xl md:text-5xl font-bold text-kajaria-blue-50 mb-6 text-center">Who We Are</h2>
+          <nav className="flex items-center text-kajaria-blue-50 justify-center">
             <Link to="/" className="flex items-center hover:text-blue-200 transition-colors">
               <i className="icon-home mr-2"></i>
               Home
@@ -128,7 +127,7 @@ const WhoWeAre = () => {
                 </p>
 
                 <p className="text-gray-700 mb-8 leading-relaxed text-lg">
-                  Keeping up with the same objective GRESBOND (A unit of Kajaria) aims offers you wide range of tile adhesives & grouts for fixing of various categories of tile for faster laying & long-lasting applications. When tiles are fixed to any surface, most vulnerable point is always the bond between the tile and substrate. We eliminate this weakness by significantly improving the bonding strength of the adhesive to both the tile and substrate.
+                  Keeping up with the same objective LEXORA (A unit of Kajaria) aims offers you wide range of tile adhesives & grouts for fixing of various categories of tile for faster laying & long-lasting applications. When tiles are fixed to any surface, most vulnerable point is always the bond between the tile and substrate. We eliminate this weakness by significantly improving the bonding strength of the adhesive to both the tile and substrate.
                 </p>
               </div>
             </div>
@@ -146,7 +145,7 @@ const WhoWeAre = () => {
 
           <div className="max-w-6xl">
             <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-              At Gresbond, our commitment to delivering world-class tile fixing solutions is powered by our fully automated manufacturing facility in Gailpur, Rajasthan. Built with German-engineered technology and driven by intelligent systems, the plant ensures error-free production, consistent quality, and unmatched reliability in every bag.
+              At Lexora, our commitment to delivering world-class tile fixing solutions is powered by our fully automated manufacturing facility in Gailpur, Rajasthan. Built with German-engineered technology and driven by intelligent systems, the plant ensures error-free production, consistent quality, and unmatched reliability in every bag.
             </p>
 
             <p className="text-gray-700 mb-8 leading-relaxed text-lg">
@@ -179,7 +178,7 @@ const WhoWeAre = () => {
               backgroundPosition: 'center'
             }}
           >
-            <div className="absolute inset-0 bg-[#03045e] bg-opacity-90"></div>
+            <div className="absolute inset-0 bg-kajaria-blue-50 bg-opacity-60"></div>
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-4 min-h-[500px]">
               {/* Tab Navigation */}
               <div className="bg-black bg-opacity-30 p-8">
@@ -188,8 +187,8 @@ const WhoWeAre = () => {
                     onClick={() => setActiveTab('adhesives')}
                     className={`w-full text-left p-4 font-semibold transition-colors rounded-lg ${
                       activeTab === 'adhesives' 
-                        ? 'bg-[#0077b6] text-white' 
-                        : 'text-white hover:bg-[#0077b6] hover:bg-opacity-50'
+                        ? 'bg-kajaria-blue-600 text-white' 
+                        : 'text-white hover:bg-kajaria-blue-600 hover:bg-opacity-50'
                     }`}
                   >
                     Premium Tile Adhesive
@@ -199,8 +198,8 @@ const WhoWeAre = () => {
                     onClick={() => setActiveTab('grouts')}
                     className={`w-full text-left p-4 font-semibold transition-colors rounded-lg ${
                       activeTab === 'grouts' 
-                        ? 'bg-[#0077b6] text-white' 
-                        : 'text-white hover:bg-[#0077b6] hover:bg-opacity-50'
+                        ? 'bg-kajaria-blue-600 text-white' 
+                        : 'text-white hover:bg-kajaria-blue-600 hover:bg-opacity-50'
                     }`}
                   >
                     Grouts
@@ -210,8 +209,8 @@ const WhoWeAre = () => {
                     onClick={() => setActiveTab('cleaner')}
                     className={`w-full text-left p-4 font-semibold transition-colors rounded-lg ${
                       activeTab === 'cleaner' 
-                        ? 'bg-[#0077b6] text-white' 
-                        : 'text-white hover:bg-[#0077b6] hover:bg-opacity-50'
+                        ? 'bg-kajaria-blue-600 text-white' 
+                        : 'text-white hover:bg-kajaria-blue-600 hover:bg-opacity-50'
                     }`}
                   >
                     Premium Tile Cleaner
@@ -221,8 +220,8 @@ const WhoWeAre = () => {
                     onClick={() => setActiveTab('tools')}
                     className={`w-full text-left p-4 font-semibold transition-colors rounded-lg ${
                       activeTab === 'tools' 
-                        ? 'bg-[#0077b6] text-white' 
-                        : 'text-white hover:bg-[#0077b6] hover:bg-opacity-50'
+                        ? 'bg-kajaria-blue-600 text-white' 
+                        : 'text-white hover:bg-kajaria-blue-600 hover:bg-opacity-50'
                     }`}
                   >
                     Tools
@@ -240,7 +239,7 @@ const WhoWeAre = () => {
                   {productTabs[activeTab].products.map((product, index) => (
                     <li key={index} className="flex items-center">
                       <span className="text-green-500 mr-3 text-lg">✓</span>
-                      <Link to="#" className="text-[#0077b6] hover:text-[#03045e] transition-colors font-medium">
+                      <Link to="#" className="text-kajaria-blue-900 hover:text-[#03045e] transition-colors font-medium">
                         {product}
                       </Link>
                     </li>

@@ -4,28 +4,10 @@ import Container from '../ui/Container';
 import { FiArrowRight } from 'react-icons/fi';
 
 // Import blog images
-import blog1Image from '../../assets/images/blog/blog-1-f.webp';
-import blog2Image from '../../assets/images/blog/blog-2-f.webp';  
 import blog3Image from '../../assets/images/blog/blog-3-f.webp';
 
 const BlogSection = () => {
   const blogs = [
-    {
-      id: 1,
-      title: "Importance of Grouting in Tile Installation",
-      image: blog1Image,
-      day: "20",
-      month: "june",
-      link: "/blog/grouting-importance-tile-installation"
-    },
-    {
-      id: 2,
-      title: "How to Apply Epoxy Grout for Tile Joints",
-      image: blog2Image,
-      day: "22", 
-      month: "june",
-      link: "/blog/how-apply-epoxy-grout-tile-joints"
-    },
     {
       id: 3,
       title: "Reasons for Cracks in Marble Flooring",
@@ -66,7 +48,7 @@ const BlogSection = () => {
               data-aos-delay={index * 200}
             >
               {/* Content Section with Light Blue Background */}
-              <div className="bg-blue-100 p-6 rounded-t-lg shadow-lg">
+              <div className="bg-kajaria-blue-100 p-6 rounded-t-lg shadow-lg">
                 <h3 className="text-xl font-bold text-kajaria-blue-900 leading-tight">
                   <Link 
                     to="" 
