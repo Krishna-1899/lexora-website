@@ -1,5 +1,7 @@
 /* Custom styles can be added here */
-
+html, body {
+  overscroll-behavior: none;
+}
 /* Slick slider custom styles */
 .slick-prev,
 .slick-next {

@@ -4,6 +4,7 @@ import { FiChevronDown } from 'react-icons/fi';
 import faqImage1 from '../../assets/images/faq/faq-1-1.jpg';
 import faqImage2 from '../../assets/images/faq/faq-1-2.webp';
 import expertiseImage1 from '../../assets/images/expertise/expertise-1-1.webp';
+import expertiseImage2 from '../../assets/images/blog/blog-3-f.webp';
 
 const FAQSection = () => {
   const [activeIndex, setActiveIndex] = useState(0); // First FAQ open by default
@@ -12,7 +13,7 @@ const FAQSection = () => {
     {
       id: 1,
       question: "Why is Lexora considered one of India's Best Tile Fixing Brands?",
-      answer: "Being from the house of Kajaria (India's No. Tile Company), Lexora offers a premium range of tile and stone fixing solutions - Tile Adhesives, Grouts, and Cleaners. All the products are tried, tested, and professionally designed to meet the diverse needs of both residential and commercial tiling projects."
+      answer: "Being from the house of Lexora (India's top Adhesive Company), Lexora offers a premium range of tile and stone fixing solutions - Tile Adhesives, Grouts, and Cleaners. All the products are tried, tested, and professionally designed to meet the diverse needs of both residential and commercial tiling projects."
     },
     {
       id: 2,
@@ -22,7 +23,7 @@ const FAQSection = () => {
     {
       id: 3,
       question: "How does Lexora ensure the quality of its products?",
-      answer: "Each product undergoes rigorous laboratory testing to meet and exceed industry standards. From the Kajaria house, Lexora always strives for excellence, quality, and commitment to delivering top-notch solutions. We have a vast team of research experts to improve the product's overall quality."
+      answer: "Each product undergoes rigorous laboratory testing to meet and exceed industry standards. From the Lexora house, Lexora always strives for excellence, quality, and commitment to delivering top-notch solutions. We have a vast team of research experts to improve the product's overall quality."
     },
     {
       id: 4,
@@ -67,7 +68,7 @@ const FAQSection = () => {
     {
       id: 12,
       question: "What makes Lexora different from other adhesive brands?",
-      answer: "Lexora combines Kajaria's unrivaled expertise in tiles with cutting-edge technology, ensuring high bond strength, ease of use, and versatility for various tiling needs."
+      answer: "Lexora combines Lexora's unrivaled expertise in tiles with cutting-edge technology, ensuring high bond strength, ease of use, and versatility for various tiling needs."
     }
   ];
 
@@ -76,22 +77,17 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="section-space bg-white">
+    <section className="section-space-two bg-white">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left Side - Images */}
           <div data-aos="fade-left" data-aos-duration="1500">
             <div className="faq-one__image faqgridgalary relative">
-              <div className="faq-one__image__inner grid grid-cols-2 gap-4">
+              <div className="faq-one__image__inner grid gap-4">
                 <img 
                   src={faqImage1}
                   alt="faq" 
                   className="faq-one__image__one w-full h-auto rounded-lg shadow-lg"
-                />
-                <img 
-                  src={faqImage2}
-                  alt="faq" 
-                  className="faq-one__image__two w-full h-auto rounded-lg shadow-lg"
                 />
               </div>
             </div>
@@ -101,6 +97,13 @@ const FAQSection = () => {
               <div className="expertise-one__image expertise-one__image--one">
                 <img 
                   src={expertiseImage1}
+                  alt="expertise" 
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="expertise-one__image expertise-one__image--two">
+                <img 
+                  src={expertiseImage2}
                   alt="expertise" 
                   className="w-full h-auto rounded-lg shadow-lg"
                 />

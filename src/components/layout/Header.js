@@ -4,14 +4,15 @@ import { FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import { FiChevronDown, FiChevronRight } from "react-icons/fi";
 import headerBg from "../../assets/images/backgrounds/about-bg-2-1.png";
 import logoDark from "../../assets/images/logo/logo-light.png";
-import logoLight from "../../assets/images/logo/logo-light.png";
+import logoLight from "../../assets/images/logo/Lexora-logo.png";
 // Import menu images
 import cx1Image from "../../assets/images/menu/lx-1.png";
 import cx2Image from "../../assets/images/menu/lx-2.png";
 import vx1Image from "../../assets/images/menu/lx-3.png";
+import lx3white from "../../assets/images/menu/LX_03-white.png";
+import lx4white from "../../assets/images/menu/LX-04-white.png";
 import vx2Image from "../../assets/images/menu/lx-4.png";
-import ex5Image from "../../assets/images/menu/pu-l29.png";
-import pua100Image from "../../assets/images/menu/ea-100.webp";
+import pua100Image from "../../assets/images/menu/pu-l29.png";
 // Import grout images
 import unsandedImage from "../../assets/images/menu/epoxy-grout.png";
 import admisImage from "../../assets/images/menu/grount-admix.png";
@@ -80,11 +81,13 @@ const Header = () => {
   };
 
   const adhesiveProducts = [
-    { name: "LX-1", img: cx1Image, link: "/cx-1" },
-    { name: "LX-2", img: cx2Image, link: "/cx-2" },
-    { name: "LX-3", img: vx1Image, link: "/vx-1" },
-    { name: "VX-4", img: vx2Image, link: "/vx-2" },
-    { name: "PU-L29", img: ex5Image, link: "/ex-5" },
+    { name: "LX-1", img: cx1Image, link: "/lx-1" },
+    { name: "LX-2", img: cx2Image, link: "/lx-2" },
+    { name: "LX-3", img: vx1Image, link: "/lx-3" },
+    { name: "LX-3 WHITE", img: lx3white},
+    { name: "LX-4", img: vx2Image, link: "/lx-4" },
+    { name: "LX-4 WHITE", img: lx4white},
+    { name: "PU-L29", img: pua100Image, link: "/pu-l29" },
   ];
 
   const groutProducts = [
@@ -301,7 +304,7 @@ const Header = () => {
                     {adhesiveProducts.map((item, index) => (
                       <Link
                         key={index}
-                        to=""
+                        to={item.link}
                         className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded"
                         onClick={() => setProductsMenuOpen(false)}
                       >
@@ -477,7 +480,7 @@ const Header = () => {
                             {adhesiveProducts.map((item, index) => (
                               <li key={index}>
                                 <Link
-                                  to=""
+                                  to={item.link}
                                   className="text-white hover:text-kajaria-blue-700 block py-1"
                                   onClick={toggleMobileMenu}
                                 >

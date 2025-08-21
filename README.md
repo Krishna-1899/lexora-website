@@ -1,4 +1,4 @@
-# Kajaria Lexora React Website
+# Lexora React Website
 
 This project is a React implementation of the Lexora website, built with React and Tailwind CSS.
 

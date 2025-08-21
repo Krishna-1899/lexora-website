@@ -26,9 +26,10 @@ const SectionHeader = ({
       )}
       
       {title && (
-        <h3 className={`sec-title__title text-4xl md:text-5xl font-bold text-gray-900 mb-8 ${titleClassName}`}>
-          {title}
-        </h3>
+        <h3 
+          className={`sec-title__title text-4xl md:text-5xl font-bold text-kajaria-brown-900 mb-8 font-dm-sans ${titleClassName}`}
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
       )}
       
       {subtitle && (

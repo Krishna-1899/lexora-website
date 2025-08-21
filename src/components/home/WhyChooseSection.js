@@ -8,7 +8,7 @@ const WhyChooseSection = () => {
     {
       id: 1,
       title: "Premium Quality:",
-      description: "Lexora products are developed by Kajaria, India's No.1 tile company, ensuring top-notch quality and reliability."
+      description: "Lexora products are India's No.1 Adhesive Company, ensuring top-notch quality and reliability."
     },
     {
       id: 2,
@@ -65,10 +65,10 @@ const WhyChooseSection = () => {
                   Are you looking for the best tile-fixing experts for your tiling projects? You're in the right place.
                 </p>
                 <p className="team-skills-one__text text-gray-700 leading-relaxed mb-4">
-                  Lexora is a product from India's No.1 Tile Company, Kajaria, which provides a premium range of tile and stone fixing solutions in adhesives, grouts, and tile cleaners. With a team of 1000+ experts, Lexora manufactures technologically advanced tile fixing products that meet global market criteria and boast a vast dealer network. Whether professional architects or end-users, Lexora caters to the current demand for residential and commercial tiling and stone fixing needs.
+                  Lexora is a product from India's top Adhesive Company, Lexora, which provides a premium range of tile and stone fixing solutions in adhesives, grouts, and tile cleaners. With a team of 1000+ experts, Lexora manufactures technologically advanced tile fixing products that meet global market criteria and boast a vast dealer network. Whether professional architects or end-users, Lexora caters to the current demand for residential and commercial tiling and stone fixing needs.
                 </p>
                 <p className="team-skills-one__text text-gray-700 leading-relaxed">
-                  Discover the pinnacle of excellence in tile and stone fixing solutions with Lexora, a name that instills confidence with its reliability, innovation, and quality craftsmanship. Lexora is considered one of India's top tile adhesives and grout brands, a testament to its competitive price and top-notch product qualities. It requires no recognition as it is from the house of Kajaria, a brand known for its unwavering commitment to quality and deliverables in India and globally.
+                  Discover the pinnacle of excellence in tile and stone fixing solutions with Lexora, a name that instills confidence with its reliability, innovation, and quality craftsmanship. Lexora is considered one of India's top tile adhesives and grout brands, a testament to its competitive price and top-notch product qualities. It requires no recognition as it is from the house of Lexora, a brand known for its unwavering commitment to quality and deliverables in India and globally.
                 </p>
               </div>
             </div>

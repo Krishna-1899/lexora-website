@@ -115,19 +115,19 @@ const WhoWeAre = () => {
 
               <div className="prose prose-lg max-w-none text-center">
                 <h5 className="text-2xl font-semibold text-gray-900 mb-6">
-                  Kajaria - India's No. 1 Tile Company, is the largest manufacturer of ceramic/vitrified tiles in India.
+                  Lexora - India's top Adhesive Company, is the largest manufacturer of ceramic/vitrified tiles in India.
                 </h5>
 
                 <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-                  All of Kajaria's manufacturing units are equipped with cutting edge modern technology making their products the most desirable building material in this industry. Founded 35 years ago, Kajaria has since then grown stronger with its hard work, innovations and patronage from its discerning customers. And with the Indian consumers rapidly growing appetite for quality building materials, the inspiration behind every Kajaria product is to keep up with their customers' expectations alongside servicing every market demands as per requirement.
+                  All of Lexora's manufacturing units are equipped with cutting edge modern technology making their products the most desirable building material in this industry. Founded 35 years ago, Lexora has since then grown stronger with its hard work, innovations and patronage from its discerning customers. And with the Indian consumers rapidly growing appetite for quality building materials, the inspiration behind every Lexora product is to keep up with their customers' expectations alongside servicing every market demands as per requirement.
                 </p>
 
                 <p className="text-gray-700 mb-6 leading-relaxed text-lg">
-                  The largest manufacturer of ceramic and vitrified tiles in India. Equipped with cutting-edge technology, we at Kajaria strive to deliver quality products and services to our customers. Our team of experts work around the clock to ensure that the quality of our product is never compromised.
+                  The largest manufacturer of ceramic and vitrified tiles in India. Equipped with cutting-edge technology, we at Lexora strive to deliver quality products and services to our customers. Our team of experts work around the clock to ensure that the quality of our product is never compromised.
                 </p>
 
                 <p className="text-gray-700 mb-8 leading-relaxed text-lg">
-                  Keeping up with the same objective LEXORA (A unit of Kajaria) aims offers you wide range of tile adhesives & grouts for fixing of various categories of tile for faster laying & long-lasting applications. When tiles are fixed to any surface, most vulnerable point is always the bond between the tile and substrate. We eliminate this weakness by significantly improving the bonding strength of the adhesive to both the tile and substrate.
+                  Keeping up with the same objective LEXORA (A unit of Lexora) aims offers you wide range of tile adhesives & grouts for fixing of various categories of tile for faster laying & long-lasting applications. When tiles are fixed to any surface, most vulnerable point is always the bond between the tile and substrate. We eliminate this weakness by significantly improving the bonding strength of the adhesive to both the tile and substrate.
                 </p>
               </div>
             </div>

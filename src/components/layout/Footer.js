@@ -8,7 +8,7 @@ import {
   FaLinkedinIn,
   FaPinterest,
 } from "react-icons/fa";
-import logoLight from "../../assets/images/logo/logo-light.png";
+import logoLight from "../../assets/images/logo/Lexora-logo.png";
 import footerBg from "../../assets/images/shapes/footer-bg-1-1.png";
 const Footer = () => {
   return (
@@ -111,7 +111,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to=""
+                  to="/lx-1"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
                   LX-1
@@ -119,7 +119,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to=""
+                  to="/lx-2"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
                   LX-2
@@ -127,15 +127,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to=""
-                  className="hover:text-kajaria-blue-300 transition-colors"
-                >
-                  LX-1
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
+                  to="/lx-3"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
                   LX-3
@@ -146,12 +138,28 @@ const Footer = () => {
                   to=""
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
+                  LX-3 White
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/lx-4"
+                  className="hover:text-kajaria-blue-300 transition-colors"
+                >
                   LX-4
                 </Link>
               </li>
               <li>
                 <Link
                   to=""
+                  className="hover:text-kajaria-blue-300 transition-colors"
+                >
+                  LX-4 White
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/pu-l29"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
                   PU-L29
