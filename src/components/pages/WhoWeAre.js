@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../layout/Layout';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Import images
 // import aboutMainImage from '../../assets/images/about/about-2-1.webp';
@@ -19,6 +21,19 @@ import offerBg from '../../assets/images/backgrounds/offer-bg.jpg';
 
 const WhoWeAre = () => {
   const [activeTab, setActiveTab] = useState('adhesives');
+
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+      mirror: true,
+      offset: 100
+    });
+    
+    // Refresh AOS when component mounts
+    AOS.refresh();
+  }, []);
 
   const projectLogos = [
     { src: nmdcLogo, alt: "NMDC" },
@@ -90,8 +105,8 @@ const WhoWeAre = () => {
         }}
       >
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-kajaria-blue-50 mb-6 text-center">Who We Are</h2>
-          <nav className="flex items-center text-kajaria-blue-50 justify-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-kajaria-blue-50 mb-6 text-center" data-aos="fade-up" data-aos-duration="1000">Who We Are</h2>
+          <nav className="flex items-center text-kajaria-blue-50 justify-center" data-aos="fade-up" data-aos-delay="200">
             <Link to="/" className="flex items-center hover:text-blue-200 transition-colors">
               <i className="icon-home mr-2"></i>
               Home
@@ -105,28 +120,28 @@ const WhoWeAre = () => {
       {/* About Section */}
       <section className="py-20 bg-white" id="about">
         <div className="container mx-auto px-4">
-          <div className="space-y-16">
+          <div className="">
             {/* About Content */}
-            <div className="max-w-6xl mx-auto">
-              <div className="sec-title sec-title--border mb-12">
+            <div className=" mx-auto">
+              <div className="sec-title sec-title--border mb-12" data-aos="fade-up" data-aos-duration="1000">
                 <h6 className="sec-title__tagline">about us</h6>
                 <h3 className="sec-title__title">The Company</h3>
               </div>
 
-              <div className="prose prose-lg max-w-none text-center">
-                <h5 className="text-2xl font-semibold text-gray-900 mb-6">
+              <div className="prose prose-lg max-w-none">
+                <h5 className="text-2xl font-semibold text-gray-900 mb-6" data-aos="fade-up" data-aos-delay="200">
                   Lexora - India's top Adhesive Company, is the largest manufacturer of ceramic/vitrified tiles in India.
                 </h5>
 
-                <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+                <p className="text-gray-700 mb-6 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="300">
                   All of Lexora's manufacturing units are equipped with cutting edge modern technology making their products the most desirable building material in this industry. Founded 35 years ago, Lexora has since then grown stronger with its hard work, innovations and patronage from its discerning customers. And with the Indian consumers rapidly growing appetite for quality building materials, the inspiration behind every Lexora product is to keep up with their customers' expectations alongside servicing every market demands as per requirement.
                 </p>
 
-                <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+                <p className="text-gray-700 mb-6 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="400">
                   The largest manufacturer of adhesive tile chemical in india. Equipped with cutting-edge technology, we at Lexora strive to deliver quality products and services to our customers. Our team of experts work around the clock to ensure that the quality of our product is never compromised.
                 </p>
 
-                <p className="text-gray-700 mb-8 leading-relaxed text-lg">
+                <p className="text-gray-700 mb-8 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="500">
                   Keeping up with the same objective LEXORA (A unit of Lexora) aims offers you wide range of tile adhesives & grouts for fixing of various categories of tile for faster laying & long-lasting applications. When tiles are fixed to any surface, most vulnerable point is always the bond between the tile and substrate. We eliminate this weakness by significantly improving the bonding strength of the adhesive to both the tile and substrate.
                 </p>
               </div>
@@ -138,17 +153,17 @@ const WhoWeAre = () => {
       {/* Manufacturing Facilities Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="sec-title sec-title--border mb-12">
+          <div className="sec-title sec-title--border mb-12" data-aos="fade-up" data-aos-duration="1000">
             <h6 className="sec-title__tagline">our</h6>
             <h3 className="sec-title__title">MANUFACTURING FACILITIES</h3>
           </div>
 
           <div className="max-w-6xl">
-            <p className="text-gray-700 mb-6 leading-relaxed text-lg">
+            <p className="text-gray-700 mb-6 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="200">
               At Lexora, our commitment to delivering world-class tile fixing solutions is powered by our fully automated manufacturing facility in Gailpur, Rajasthan. Built with German-engineered technology and driven by intelligent systems, the plant ensures error-free production, consistent quality, and unmatched reliability in every bag.
             </p>
 
-            <p className="text-gray-700 mb-8 leading-relaxed text-lg">
+            <p className="text-gray-700 mb-8 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="300">
               With a strong focus on process accuracy and zero-defect output, the facility is designed to meet the highest standards of performance and durability. Backed by a robust storage and logistics setup, it ensures faster dispatches and steady product availability across our network.
             </p>
           </div>
@@ -161,7 +176,7 @@ const WhoWeAre = () => {
           <div className="mb-16">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
               <div className="lg:col-span-2">
-                <div className="sec-title">
+                <div className="sec-title" data-aos="fade-up" data-aos-duration="1000">
                   <h6 className="sec-title__tagline">Products</h6>
                   <h3 className="sec-title__title">Tile Adhesives, Grouts and Tile Cleaners:</h3>
                 </div>
@@ -177,11 +192,12 @@ const WhoWeAre = () => {
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
+            data-aos="fade-up" data-aos-duration="1000"
           >
             <div className="absolute inset-0 bg-kajaria-blue-50 bg-opacity-60"></div>
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-4 min-h-[500px]">
               {/* Tab Navigation */}
-              <div className="bg-black bg-opacity-30 p-8">
+              <div className="bg-black bg-opacity-30 p-8" data-aos="fade-right" data-aos-delay="200">
                 <div className="space-y-4">
                   <button 
                     onClick={() => setActiveTab('adhesives')}
@@ -231,13 +247,13 @@ const WhoWeAre = () => {
               </div>
 
               {/* Tab Content */}
-              <div className="lg:col-span-3 p-8 bg-white">
+              <div className="lg:col-span-3 p-8 bg-white" data-aos="fade-left" data-aos-delay="300">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
                   {productTabs[activeTab].title}
                 </h3>
                 <ul className="space-y-3">
                   {productTabs[activeTab].products.map((product, index) => (
-                    <li key={index} className="flex items-center">
+                    <li key={index} className="flex items-center" data-aos="fade-up" data-aos-delay={400 + (index * 100)}>
                       <span className="text-green-500 mr-3 text-lg">✓</span>
                       <Link to="#" className="text-kajaria-blue-900 hover:text-[#03045e] transition-colors font-medium">
                         {product}
@@ -256,13 +272,13 @@ const WhoWeAre = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Images */}
-            <div className="relative">
+            <div className="relative" data-aos="fade-right" data-aos-duration="1000">
               <img 
                 src={reliableImage1} 
                 alt="Projects" 
                 className="w-full rounded-lg shadow-lg"
               />
-              <div className="absolute -bottom-8 -right-8 w-48 h-48 rounded-lg overflow-hidden shadow-lg">
+              <div className="absolute -bottom-8 -right-8 w-48 h-48 rounded-lg overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
                 <img 
                   src={reliableImage2} 
                   alt="Projects" 
@@ -272,21 +288,21 @@ const WhoWeAre = () => {
             </div>
 
             {/* Content */}
-            <div>
+            <div data-aos="fade-left" data-aos-duration="1000">
               <h3 className="text-4xl font-bold text-gray-900 mb-6">Projects</h3>
               
-              <p className="text-gray-700 mb-8 leading-relaxed text-lg">
+              <p className="text-gray-700 mb-8 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="200">
                 Our products are approved with government departments, Public Sector Organization across India Such as Indian railway central region, South east coal fields ltd, Chhattisgarh Projects, NMDC, state Government Schools, other Educational Institutions, and various private developers.
               </p>
 
-              <h6 className="text-xl font-semibold text-gray-900 mb-8">
+              <h6 className="text-xl font-semibold text-gray-900 mb-8" data-aos="fade-up" data-aos-delay="300">
                 Government & Private Approved
               </h6>
 
               {/* Project Logos */}
               <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-8">
                 {projectLogos.map((logo, index) => (
-                  <div key={index} className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border">
+                  <div key={index} className="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow border" data-aos="zoom-in" data-aos-delay={400 + (index * 100)}>
                     <img 
                       src={logo.src} 
                       alt={logo.alt}
@@ -296,7 +312,7 @@ const WhoWeAre = () => {
                 ))}
               </div>
 
-              <p className="text-gray-700 leading-relaxed text-lg">
+              <p className="text-gray-700 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="500">
                 With an unparalleled commitment towards quality, this brand has strived to adopt technologies and standards of the modern times. Be it research or quality, Gres Bond has set its sight on all these factors adopting the optimal techniques in order to deliver quality products making them 100% customer-centric.
               </p>
             </div>

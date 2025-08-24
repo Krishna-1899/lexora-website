@@ -65,7 +65,7 @@ const InstallationInstructions = ({ tabs = [] }) => {
       <div className="absolute inset-0 bg-kajaria-brown-900 bg-opacity-80"></div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="mb-12">
+        <div className="mb-12" data-aos="fade-up" data-aos-duration="1000">
           <SectionHeader 
             tagline="Installation"
             title="Installation<br/>Instructions"
@@ -78,6 +78,7 @@ const InstallationInstructions = ({ tabs = [] }) => {
           {/* Tab Buttons */}
           <div 
             className="lg:col-span-1 bg-kajaria-brown-900 bg-opacity-70 rounded-lg overflow-hidden"
+            data-aos="fade-right" data-aos-duration="1000"
             style={{
               backgroundImage: `url(${offerBg})`,
               backgroundSize: 'cover',
@@ -97,7 +98,7 @@ const InstallationInstructions = ({ tabs = [] }) => {
           </div>
 
           {/* Tab Content */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3" data-aos="fade-left" data-aos-duration="1000">
             {tabs.map((tab, index) => (
               <TabContent key={index} isActive={activeTab === index}>
                 <InstructionList 

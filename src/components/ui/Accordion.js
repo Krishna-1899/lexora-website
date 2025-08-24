@@ -49,14 +49,15 @@ const Accordion = ({ items, defaultActiveIndex = 0 }) => {
   return (
     <div className="space-y-2">
       {items.map((item, index) => (
-        <AccordionItem
-          key={index}
-          title={item.title}
-          isActive={activeIndex === index}
-          onToggle={() => handleToggle(index)}
-        >
-          {item.content}
-        </AccordionItem>
+        <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
+          <AccordionItem
+            title={item.title}
+            isActive={activeIndex === index}
+            onToggle={() => handleToggle(index)}
+          >
+            {item.content}
+          </AccordionItem>
+        </div>
       ))}
     </div>
   );

@@ -16,12 +16,12 @@ const PageHeader = ({ title, breadcrumbs = [] }) => {
       
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 font-dm-sans">
+        <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 font-dm-sans" data-aos="fade-up" data-aos-duration="1000">
           {title}
         </h1>
         
         {/* Breadcrumb */}
-        <nav className="flex items-center space-x-2 text-white">
+        <nav className="flex items-center space-x-2 text-white" data-aos="fade-up" data-aos-delay="200">
           <Link 
             to="/" 
             className="flex items-center hover:text-kajaria-blue-300 transition-colors duration-300"

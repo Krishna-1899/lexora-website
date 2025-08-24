@@ -17,7 +17,7 @@ const ProductFAQ = ({ faqs = [] }) => {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="1000">
           <h3 className="text-3xl md:text-4xl font-bold text-kajaria-brown-900 font-dm-sans">
             Frequently Asked Questions
           </h3>
@@ -25,7 +25,7 @@ const ProductFAQ = ({ faqs = [] }) => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* FAQ Image */}
-          <div className="flex justify-center">
+          <div className="flex justify-center" data-aos="fade-right" data-aos-duration="1000">
             <div className="max-w-md">
               <img 
                 src={faqImage} 
@@ -36,7 +36,7 @@ const ProductFAQ = ({ faqs = [] }) => {
           </div>
 
           {/* FAQ Accordion */}
-          <div>
+          <div data-aos="fade-left" data-aos-duration="1000">
             <Accordion 
               items={faqItems}
               defaultActiveIndex={2} // Third item active by default (matching original)

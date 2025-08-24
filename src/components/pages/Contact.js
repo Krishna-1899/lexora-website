@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '../layout/Layout';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Import background image
 import pageHeaderBg from '../../assets/images/backgrounds/page-header-bg-1-1.png';
@@ -16,6 +18,19 @@ const Contact = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
+
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+      mirror: true,
+      offset: 100
+    });
+    
+    // Refresh AOS when component mounts
+    AOS.refresh();
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -66,8 +81,8 @@ const Contact = () => {
           }}
         >
         <div className="container mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-kajaria-blue-50 mb-6 text-center">Contact Us</h2>
-          <nav className="flex items-center text-kajaria-blue-50 justify-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-kajaria-blue-50 mb-6 text-center" data-aos="fade-up" data-aos-duration="1000">Contact Us</h2>
+          <nav className="flex items-center text-kajaria-blue-50 justify-center" data-aos="fade-up" data-aos-delay="200">
             <Link to="/" className="flex items-center hover:text-blue-200 transition-colors">
               <i className="icon-home mr-2"></i>
               Home
@@ -85,20 +100,20 @@ const Contact = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Information */}
-            <div>
-              <div className="sec-title sec-title--border mb-12">
+            <div data-aos="fade-right" data-aos-duration="1000">
+              <div className="sec-title sec-title--border mb-12" data-aos="fade-up" data-aos-delay="200">
                 <h6 className="sec-title__tagline">contact</h6>
                 <h3 className="sec-title__title">Reach out & connect with us</h3>
               </div>
 
-              <p className="text-gray-700 mb-8 text-lg">
+              <p className="text-gray-700 mb-8 text-lg" data-aos="fade-up" data-aos-delay="300">
                 For enquiry regarding Adhesives, Grouts & Tile Cleaner, Please Contact
               </p>
 
               {/* Contact Info Cards */}
               <div className="space-y-6">
                 {/* Phone */}
-                <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-600 hover:shadow-xl transition-shadow">
+                <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-600 hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="400">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                       <i className="icon-phone-call text-blue-600 text-xl"></i>
@@ -124,7 +139,7 @@ const Contact = () => {
                 </div>
 
                 {/* Email */}
-                <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-600 hover:shadow-xl transition-shadow">
+                <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-600 hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="500">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
                       <i className="icon-paper-plane text-green-600 text-xl"></i>
@@ -143,7 +158,7 @@ const Contact = () => {
                 </div>
 
                 {/* Address */}
-                <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-orange-600 hover:shadow-xl transition-shadow">
+                <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-orange-600 hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="600">
                   <div className="flex items-start">
                     <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4 mt-1">
                       <i className="icon-location text-orange-600 text-xl"></i>
@@ -169,12 +184,12 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div>
-              <div className="bg-white rounded-lg shadow-xl p-8 relative overflow-hidden">
+            <div data-aos="fade-left" data-aos-duration="1000">
+              <div className="bg-white rounded-lg shadow-xl p-8 relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
                 {/* Background removed - image file does not exist */}
                 
                 <div className="relative z-10">
-                  <div className="mb-8">
+                  <div className="mb-8" data-aos="fade-up" data-aos-delay="400">
                     <h2 className="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
                       Get in touch with us and enjoy<br />
                       Top-notch support
@@ -194,7 +209,7 @@ const Contact = () => {
                     </div>
                   )}
 
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6" data-aos="fade-up" data-aos-delay="500">
                     {/* Name */}
                     <div>
                       <input
@@ -293,7 +308,7 @@ const Contact = () => {
       </section>
 
       {/* Google Map */}
-      <section className="py-0">
+      <section className="py-0" data-aos="fade-up" data-aos-duration="1000">
         <div className="container-fluid px-0">
           <div className="w-full h-96">
             <iframe

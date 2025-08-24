@@ -15,7 +15,7 @@ const ProductDetails = ({
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Product Image */}
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex justify-center lg:justify-start" data-aos="fade-right" data-aos-duration="1000">
             <div className="bg-kajaria-blue-50 p-8 rounded-lg max-w-md">
               <img 
                 src={productImage} 
@@ -26,15 +26,15 @@ const ProductDetails = ({
           </div>
 
           {/* Product Information */}
-          <div className="space-y-6">
-            <div>
+          <div className="space-y-6" data-aos="fade-left" data-aos-duration="1000">
+            <div data-aos="fade-up" data-aos-delay="200">
               <h1 className="text-3xl md:text-4xl font-bold text-kajaria-brown-900 mb-4 font-dm-sans">
                 {productName}
               </h1>
             </div>
 
             {/* Description */}
-            <div>
+            <div data-aos="fade-up" data-aos-delay="300">
               <h3 className="text-xl font-bold text-kajaria-brown-900 mb-3">
                 Product Description
               </h3>
@@ -44,7 +44,7 @@ const ProductDetails = ({
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="400">
               <a 
                 // href={tdsLink}
                 target="_blank"

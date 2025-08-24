@@ -74,7 +74,7 @@ const TechnicalData = ({
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Technical Data */}
-          <div>
+          <div data-aos="fade-right" data-aos-duration="1000">
             <SectionHeader 
               tagline="reliable"
               title="Technical Data<br/>(Type 1T)"
@@ -88,7 +88,7 @@ const TechnicalData = ({
           </div>
 
           {/* Images */}
-          <div className="px-10 flex justify-center my-auto">
+          <div className="px-10 flex justify-center my-auto" data-aos="fade-left" data-aos-duration="1000">
             <div className="relative">
               {images.length > 0 && (
                 <div className="relative">

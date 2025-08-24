@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../layout/Layout';
 import PageHeader from '../ui/PageHeader';
 import ProductDetails from './ProductDetails';
 import InstallationInstructions from './InstallationInstructions';
 import Accordion from '../ui/Accordion';
 import SectionHeader from '../ui/SectionHeader';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const PUA100ProductPageTemplate = ({
   pageTitle,
@@ -30,6 +32,19 @@ const PUA100ProductPageTemplate = ({
   disclaimer
 }) => {
 
+  useEffect(() => {
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+      mirror: true,
+      offset: 100
+    });
+    
+    // Refresh AOS when component mounts
+    AOS.refresh();
+  }, []);
+
   // Prepare data for the common ProductDetails component
   const productDetailsProps = {
     productName: productSubtitle, // Use subtitle as the main product name
@@ -45,15 +60,17 @@ const PUA100ProductPageTemplate = ({
       {/* Page Header - Common */}
       <PageHeader 
         title={pageTitle}
-        breadcrumbItems={breadcrumbs}
+        breadcrumbs={breadcrumbs}
       />
 
       {/* Product Details Section - Common */}
-      <ProductDetails {...productDetailsProps} />
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <ProductDetails {...productDetailsProps} />
+      </div>
 
       {/* Accordion Section - Common */}
       {accordionItems && accordionItems.length > 0 && (
-        <section className="py-16 bg-kajaria-blue-50">
+        <section className="py-16 bg-kajaria-blue-50" data-aos="fade-up" data-aos-duration="1000">
           <div className="container mx-auto px-4">
             <Accordion items={accordionItems} defaultActiveIndex={0} />
           </div>
@@ -61,10 +78,12 @@ const PUA100ProductPageTemplate = ({
       )}
 
       {/* Installation Instructions - Common */}
-      <InstallationInstructions installationTabs={installationTabs} />
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <InstallationInstructions installationTabs={installationTabs} />
+      </div>
 
       {/* Working Properties */}
-      <section className="section-space bg-gray-100">
+      <section className="section-space bg-gray-100" data-aos="fade-up" data-aos-duration="1000">
         <div className="container mx-auto px-4">
           <SectionHeader 
             tagline="Properties"
@@ -73,7 +92,7 @@ const PUA100ProductPageTemplate = ({
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* ISO Properties */}
-            <div className="bg-white p-6 rounded-lg shadow">
+            <div className="bg-white p-6 rounded-lg shadow" data-aos="fade-right" data-aos-duration="1000">
               <h4 className="text-lg font-semibold mb-4">
                 Performance Properties (as per ISO 13007 & EN 12004 – R2T)
               </h4>
@@ -100,7 +119,7 @@ const PUA100ProductPageTemplate = ({
             </div>
 
             {/* IS Properties */}
-            <div className="bg-white p-6 rounded-lg shadow">
+            <div className="bg-white p-6 rounded-lg shadow" data-aos="fade-left" data-aos-duration="1000">
               <h4 className="text-lg font-semibold mb-4">
                 Performance Properties (as per IS 15477:2019 – Type 5 'T S2')
               </h4>
@@ -128,7 +147,7 @@ const PUA100ProductPageTemplate = ({
           </div>
 
           {technicalNote && (
-            <div className="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-4">
+            <div className="mt-8 bg-yellow-50 border-l-4 border-yellow-400 p-4" data-aos="fade-up" data-aos-delay="200">
               <p className="text-sm text-gray-700">
                 <strong>Note:</strong> {technicalNote}
               </p>
@@ -138,11 +157,11 @@ const PUA100ProductPageTemplate = ({
       </section>
 
       {/* Additional Information */}
-      <section className="section-space">
+      <section className="section-space" data-aos="fade-up" data-aos-duration="1000">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Column */}
-            <div className="space-y-6">
+            <div className="space-y-6" data-aos="fade-right" data-aos-duration="1000">
               {precautionsAndNotes && (
                 <div>
                   <h4 className="text-xl font-semibold text-kajaria-brown-900 mb-4">
@@ -171,7 +190,7 @@ const PUA100ProductPageTemplate = ({
             </div>
 
             {/* Right Column */}
-            <div className="space-y-6">
+            <div className="space-y-6" data-aos="fade-left" data-aos-duration="1000">
               {packaging && (
                 <div>
                   <h4 className="text-xl font-semibold text-kajaria-brown-900 mb-4">
@@ -215,7 +234,7 @@ const PUA100ProductPageTemplate = ({
           </div>
 
           {disclaimer && (
-            <div className="mt-8 bg-gray-50 p-6 rounded-lg">
+            <div className="mt-8 bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
               <p className="text-sm text-gray-600">
                 <strong>Disclaimer:</strong> {disclaimer}
               </p>
