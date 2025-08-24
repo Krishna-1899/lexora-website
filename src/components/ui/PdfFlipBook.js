@@ -7,11 +7,8 @@ import {
   FaSearchMinus, 
   FaExpand, 
   FaCompress, 
-  FaList, 
-  FaDownload, 
-  FaShare, 
-  FaPrint,
-  FaTimes
+  FaStepBackward,
+  FaStepForward
 } from 'react-icons/fa';
 
 // Images import or use public folder paths
@@ -36,26 +33,15 @@ import page18 from '../../assets/images/catelog/18.png';
 import page19 from '../../assets/images/catelog/19.png';
 import page20 from '../../assets/images/catelog/20.png';
 
-const pages = [page1, page2, page3, page4, page5, page6, page7, page8, page9, page10, page11, page12, page13, page14, page15, page16, page17, page18, page19, page20];
-
-// Table of contents data
-const tableOfContents = [
-  { title: "Tile Leveling System", page: 4 },
-  { title: "Rubber Mallet", page: 4 },
-  { title: "Trowel", page: 6 },
-  { title: "Tile Spacers", page: 6 },
-  { title: "Carbide Tile Grout Saw", page: 8 },
-  { title: "Rubber Float", page: 8 },
-  { title: "ST9-1400 Mixer", page: 10 },
-  { title: "Suction Cup", page: 12 },
-  { title: "Cordless Tile Vibrator", page: 12 },
-  { title: "Tile Shaping", page: 14 },
-  { title: "Hole Marker", page: 14 }
+const pages = [
+  page1, page2, page3, page4, page5,
+  page6, page7, page8, page9, page10,
+  page11, page12, page13, page14, page15,
+  page16, page17, page18, page19, page20
 ];
 
 const ImageFlipBook = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  const [showTOC, setShowTOC] = useState(true);
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [zoom, setZoom] = useState(1);
   const [isDragging, setIsDragging] = useState(false);
@@ -63,46 +49,71 @@ const ImageFlipBook = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [initialDistance, setInitialDistance] = useState(0);
   const [initialZoom, setInitialZoom] = useState(1);
-  
+  const [bookReady, setBookReady] = useState(false);
+
   const flipBookRef = useRef(null);
   const containerRef = useRef(null);
 
-  // Handle page change
+  const isFirstPage = currentPage === 0;
+  const isLastPage = currentPage === pages.length - 1;
+  const isEdgePage = isFirstPage || isLastPage;
+
+  const getPageDisplayInfo = () => {
+    if (currentPage === 0) {
+      return { pageNumber: 1, totalPages: pages.length };
+    } else if (currentPage === pages.length - 1) {
+      return { pageNumber: pages.length, totalPages: pages.length };
+    } else {
+      return { pageNumber: `${currentPage + 1}-${currentPage + 2}`, totalPages: pages.length };
+    }
+  };
+
+  // Safely get pageFlip API if available
+  const getPageFlip = () => {
+    const inst = flipBookRef.current;
+    if (!inst || typeof inst.pageFlip !== 'function') return null;
+    const api = inst.pageFlip();
+    if (!api || typeof api.flip !== 'function') return null;
+    return api;
+  };
+
   const handlePageChange = (e) => {
-    setCurrentPage(e.data);
+    // e.data is the left page index of the current spread
+    setCurrentPage(e.data ?? 0);
   };
 
-  // Navigate to specific page
+  // Navigation helpers (guarded)
   const goToPage = (pageNumber) => {
-    if (flipBookRef.current) {
-      flipBookRef.current.pageFlip().flip(pageNumber);
-    }
+    const api = getPageFlip();
+    if (!api) return;
+    api.flip(pageNumber);
   };
-
-  // Navigate to previous page
   const goToPrevPage = () => {
-    if (flipBookRef.current && currentPage > 0) {
-      flipBookRef.current.pageFlip().flipPrev();
-    }
+    const api = getPageFlip();
+    if (!api) return;
+    if (currentPage > 0) api.flipPrev();
   };
-
-  // Navigate to next page
   const goToNextPage = () => {
-    if (flipBookRef.current && currentPage < pages.length - 1) {
-      flipBookRef.current.pageFlip().flipNext();
-    }
+    const api = getPageFlip();
+    if (!api) return;
+    if (currentPage < pages.length - 1) api.flipNext();
+  };
+  const goToFirstPage = () => {
+    const api = getPageFlip();
+    if (!api) return;
+    if (currentPage > 0) api.flip(0);
+  };
+  const goToLastPage = () => {
+    const api = getPageFlip();
+    if (!api) return;
+    if (currentPage < pages.length - 1) api.flip(pages.length - 1);
   };
 
-  // Zoom functions
-  const zoomIn = () => {
-    setZoom(prev => Math.min(prev + 0.2, 3));
-  };
+  // Zoom controls
+  const zoomIn = () => setZoom((prev) => Math.min(prev + 0.2, 3));
+  const zoomOut = () => setZoom((prev) => Math.max(prev - 0.2, 0.5));
 
-  const zoomOut = () => {
-    setZoom(prev => Math.max(prev - 0.2, 0.5));
-  };
-
-  // Full screen toggle
+  // Fullscreen toggle
   const toggleFullScreen = () => {
     if (!document.fullscreenElement) {
       containerRef.current?.requestFullscreen();
@@ -113,7 +124,7 @@ const ImageFlipBook = () => {
     }
   };
 
-  // Drag functionality for mouse
+  // Mouse drag
   const handleMouseDown = (e) => {
     if (zoom > 1) {
       e.preventDefault();
@@ -125,7 +136,6 @@ const ImageFlipBook = () => {
       });
     }
   };
-
   const handleMouseMove = (e) => {
     if (isDragging && zoom > 1) {
       e.preventDefault();
@@ -136,7 +146,6 @@ const ImageFlipBook = () => {
       });
     }
   };
-
   const handleMouseUp = (e) => {
     if (isDragging) {
       e.preventDefault();
@@ -145,10 +154,9 @@ const ImageFlipBook = () => {
     setIsDragging(false);
   };
 
-  // Touch functionality for mobile
+  // Touch (drag + pinch)
   const handleTouchStart = (e) => {
     if (e.touches.length === 1 && zoom > 1) {
-      // Single touch - dragging
       e.preventDefault();
       e.stopPropagation();
       setIsDragging(true);
@@ -158,23 +166,20 @@ const ImageFlipBook = () => {
         y: touch.clientY - position.y
       });
     } else if (e.touches.length === 2) {
-      // Two touches - pinch to zoom
       e.preventDefault();
       e.stopPropagation();
       const touch1 = e.touches[0];
       const touch2 = e.touches[1];
-      const distance = Math.sqrt(
-        Math.pow(touch2.clientX - touch1.clientX, 2) +
-        Math.pow(touch2.clientY - touch1.clientY, 2)
+      const distance = Math.hypot(
+        touch2.clientX - touch1.clientX,
+        touch2.clientY - touch1.clientY
       );
       setInitialDistance(distance);
       setInitialZoom(zoom);
     }
   };
-
   const handleTouchMove = (e) => {
     if (e.touches.length === 1 && isDragging && zoom > 1) {
-      // Single touch - dragging
       e.preventDefault();
       e.stopPropagation();
       const touch = e.touches[0];
@@ -183,22 +188,19 @@ const ImageFlipBook = () => {
         y: touch.clientY - dragStart.y
       });
     } else if (e.touches.length === 2 && initialDistance > 0) {
-      // Two touches - pinch to zoom
       e.preventDefault();
       e.stopPropagation();
       const touch1 = e.touches[0];
       const touch2 = e.touches[1];
-      const distance = Math.sqrt(
-        Math.pow(touch2.clientX - touch1.clientX, 2) +
-        Math.pow(touch2.clientY - touch1.clientY, 2)
+      const distance = Math.hypot(
+        touch2.clientX - touch1.clientX,
+        touch2.clientY - touch1.clientY
       );
-      
       const scale = distance / initialDistance;
       const newZoom = Math.max(0.5, Math.min(3, initialZoom * scale));
       setZoom(newZoom);
     }
   };
-
   const handleTouchEnd = (e) => {
     if (isDragging) {
       e.preventDefault();
@@ -208,24 +210,30 @@ const ImageFlipBook = () => {
     setInitialDistance(0);
   };
 
-  // Reset position when zoom changes
+  // Reset pan when zoom ≤ 1
   useEffect(() => {
     if (zoom <= 1) {
       setPosition({ x: 0, y: 0 });
     }
   }, [zoom]);
 
-  // Fullscreen change listener
+  // Fullscreen state sync
   useEffect(() => {
     const handleFullscreenChange = () => {
       setIsFullScreen(!!document.fullscreenElement);
     };
-
     document.addEventListener('fullscreenchange', handleFullscreenChange);
-    return () => {
-      document.removeEventListener('fullscreenchange', handleFullscreenChange);
-    };
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
   }, []);
+
+  // Optional: if you still want to force starting on page 0 after init,
+  // wait until the flipbook is ready and then use rAF to ensure DOM is painted.
+  useEffect(() => {
+    if (!bookReady) return;
+    const api = getPageFlip();
+    if (!api) return;
+    // requestAnimationFrame(() => api.flip(0));
+  }, [bookReady]); // eslint-disable-line
 
   return (
     <div 
@@ -241,7 +249,7 @@ const ImageFlipBook = () => {
       <div className="bg-white shadow-sm border-b px-4 py-3 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <span className="text-sm text-gray-600">
-            pages: {currentPage + 1}-{Math.min(currentPage + 2, pages.length)} / {pages.length}
+            pages: {getPageDisplayInfo().pageNumber} / {getPageDisplayInfo().totalPages}
           </span>
         </div>
       </div>
@@ -265,6 +273,29 @@ const ImageFlipBook = () => {
           >
             <FaChevronRight size={20} />
           </button>
+
+          {/* First/Last Page Buttons - Only visible in full screen */}
+          {isFullScreen && (
+            <>
+              <button
+                onClick={goToFirstPage}
+                disabled={currentPage === 0}
+                className="absolute left-4 top-1/4 transform -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                title="Go to First Page"
+              >
+                <FaStepBackward size={16} />
+              </button>
+
+              <button
+                onClick={goToLastPage}
+                disabled={currentPage >= pages.length - 1}
+                className="absolute right-4 top-1/4 transform -translate-y-1/2 z-10 bg-white/80 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                title="Go to Last Page"
+              >
+                <FaStepForward size={16} />
+              </button>
+            </>
+          )}
 
           {/* FlipBook Container */}
           <div 
@@ -298,17 +329,19 @@ const ImageFlipBook = () => {
             )}
             
             <HTMLFlipBook
+              startPage={0}
+              useMouseEvents={true}
               ref={flipBookRef}
               width={500}
               height={350}
               size="stretch"
               minWidth={315}
-              maxWidth={1000}
               maxShadowOpacity={0.5}
-              showCover={false}
+              showCover={true}
               mobileScrollSupport={zoom <= 1}
               onFlip={handlePageChange}
-              className="shadow-2xl"
+              onInit={() => setBookReady(true)} // mark ready when instance is created
+              // className="shadow-2xl"
               style={{
                 pointerEvents: zoom > 1 ? 'none' : 'auto'
               }}
@@ -342,6 +375,17 @@ const ImageFlipBook = () => {
       {/* Bottom Toolbar */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-white/90 backdrop-blur-sm rounded-full shadow-lg px-4 py-2 flex items-center space-x-2">
         <button
+          onClick={goToFirstPage}
+          disabled={currentPage === 0}
+          className="p-2 rounded-full text-gray-600 hover:bg-gray-200 transition-colors disabled:opacity-50"
+          title="Go to First Page"
+        >
+          <FaStepBackward size={16} />
+        </button>
+
+        <div className="w-px h-6 bg-gray-300"></div>
+
+        <button
           onClick={zoomOut}
           disabled={zoom <= 0.5}
           className="p-2 rounded-full text-gray-600 hover:bg-gray-200 transition-colors disabled:opacity-50"
@@ -371,6 +415,17 @@ const ImageFlipBook = () => {
           title={isFullScreen ? "Exit Full Screen" : "Full Screen"}
         >
           {isFullScreen ? <FaCompress size={16} /> : <FaExpand size={16} />}
+        </button>
+
+        <div className="w-px h-6 bg-gray-300"></div>
+
+        <button
+          onClick={goToLastPage}
+          disabled={currentPage >= pages.length - 1}
+          className="p-2 rounded-full text-gray-600 hover:bg-gray-200 transition-colors disabled:opacity-50"
+          title="Go to Last Page"
+        >
+          <FaStepForward size={16} />
         </button>
       </div>
     </div>
