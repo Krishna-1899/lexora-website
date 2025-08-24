@@ -16,6 +16,7 @@ import lx4Image from "../../assets/images/menu/lx-4.png";
 import pu129 from "../../assets/images/menu/pu-l29.png";
 import lx3white from "../../assets/images/menu/LX_03-white.png";
 import lx4white from "../../assets/images/menu/LX-04-white.png";
+import jointFillerImage from "../../assets/images/menu/jointing-mortor.png";
 
 import lx7SuperFlexImage from "../../assets/images/menu/lx-7-super-flex.png";
 import cx1Image from "../../assets/images/menu/cx-1.webp";
@@ -72,6 +73,12 @@ const ProductsSlider = () => {
       id: 8,
       name: "PU-L29",
       image: pu129,
+      // link: '/pua-100'
+    },
+    {
+      id: 9,
+      name: "JOINT FILLER",
+      image: jointFillerImage,
       // link: '/pua-100'
     },
   ];
