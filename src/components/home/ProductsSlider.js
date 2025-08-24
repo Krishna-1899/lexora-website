@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import Container from "../ui/Container";
+import ProductModal from "../ui/ProductModal";
 // import SectionHeader from "../ui/SectionHeader";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -27,6 +28,8 @@ import serviceBg from "../../assets/images/services/service-bg-2-1.png";
 
 const ProductsSlider = () => {
   const sliderRef = useRef(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const products = [
     {
@@ -72,6 +75,16 @@ const ProductsSlider = () => {
       // link: '/pua-100'
     },
   ];
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProduct(null);
+  };
 
   const sliderSettings = {
     dots: false,
@@ -160,8 +173,11 @@ const ProductsSlider = () => {
           <Slider ref={sliderRef} {...sliderSettings}>
             {products.map((product) => (
               <div key={product.id} className="item px-4">
-                <Link to="" className="block">
-                  <div className="service-card-two group relative overflow-hidden transition-all duration-300 transform hover:-translate-y-1">
+                <button 
+                  onClick={() => handleProductClick(product)}
+                  className="block w-full"
+                >
+                  <div className="service-card-two group relative overflow-hidden transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
                     {/* Background Pattern */}
                     <div
                       className="service-card-two__bg"
@@ -184,12 +200,19 @@ const ProductsSlider = () => {
                       </h3>
                     </div>
                   </div>
-                </Link>
+                </button>
               </div>
             ))}
           </Slider>
         </div>
       </div>
+      
+      {/* Product Modal */}
+      <ProductModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        product={selectedProduct}
+      />
     </section>
   );
 };

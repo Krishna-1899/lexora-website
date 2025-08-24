@@ -46,7 +46,7 @@ const ProductDetails = ({
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href={tdsLink}
+                // href={tdsLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="floens-btn inline-flex items-center justify-center"
@@ -56,7 +56,8 @@ const ProductDetails = ({
               </a>
               
               <Link 
-                to={dealerLink}
+                // to={dealerLink}
+                to="#"
                 className="floens-btn floens-btn--border inline-flex items-center justify-center"
               >
                 <span>Find A Dealer</span>

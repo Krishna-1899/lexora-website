@@ -54,6 +54,12 @@ const Footer = () => {
                 >
                   <span className="mr-2">☎</span> 8758435000
                 </a>
+                <a
+                  href="tel:+8758434000"
+                  className="flex items-center hover:text-kajaria-blue-300 transition-colors"
+                >
+                  <span className="mr-2">☎</span> 8758434000
+                </a>
               </li>
             </ul>
           </div>
@@ -62,6 +68,14 @@ const Footer = () => {
           <div>
             <h2 className="text-xl font-bold mb-6">Quick Links</h2>
             <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/catalog"
+                  className="hover:text-kajaria-blue-300 transition-colors"
+                >
+                  Catalog
+                </Link>
+              </li>
               <li>
                 <Link
                   to=""
@@ -135,7 +149,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to=""
+                  to="/lx-3-white"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
                   LX-3 White
@@ -151,7 +165,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to=""
+                  to="/lx-4-white"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
                   LX-4 White
@@ -163,6 +177,14 @@ const Footer = () => {
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
                   PU-L29
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#"
+                  className="hover:text-kajaria-blue-300 transition-colors"
+                >
+                  Joint Filler
                 </Link>
               </li>
             </ul>

@@ -12,7 +12,7 @@ const FloatingWhatsApp = () => {
 
   const handleWhatsAppClick = () => {
     console.log("handl clieked ")
-    const phoneNumber = '918758435000';
+    const phoneNumber = '918758434000';
     const message = encodeURIComponent('Hi! I would like to know more about your products.');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     

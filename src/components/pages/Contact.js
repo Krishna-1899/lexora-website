@@ -112,6 +112,13 @@ const Contact = () => {
                       >
                         8758435000
                       </a>
+                      <a 
+                        href="tel:8758434000" 
+                        className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-colors"
+                        title="call now"
+                      >
+                        8758434000
+                      </a>
                     </div>
                   </div>
                 </div>

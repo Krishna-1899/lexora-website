@@ -13,6 +13,7 @@ import lx3white from "../../assets/images/menu/LX_03-white.png";
 import lx4white from "../../assets/images/menu/LX-04-white.png";
 import vx2Image from "../../assets/images/menu/lx-4.png";
 import pua100Image from "../../assets/images/menu/pu-l29.png";
+import jointFillerImage from "../../assets/images/menu/jointing-mortor.png";
 // Import grout images
 import unsandedImage from "../../assets/images/menu/epoxy-grout.png";
 import admisImage from "../../assets/images/menu/grount-admix.png";
@@ -84,10 +85,11 @@ const Header = () => {
     { name: "LX-1", img: cx1Image, link: "/lx-1" },
     { name: "LX-2", img: cx2Image, link: "/lx-2" },
     { name: "LX-3", img: vx1Image, link: "/lx-3" },
-    { name: "LX-3 WHITE", img: lx3white},
+    { name: "LX-3 WHITE", img: lx3white, link: "/lx-3-white"},
     { name: "LX-4", img: vx2Image, link: "/lx-4" },
-    { name: "LX-4 WHITE", img: lx4white},
+    { name: "LX-4 WHITE", img: lx4white, link: "/lx-4-white"},
     { name: "PU-L29", img: pua100Image, link: "/pu-l29" },
+    { name: "JOINT FILLER", img: jointFillerImage, link: "#" },
   ];
 
   const groutProducts = [
@@ -177,14 +179,14 @@ const Header = () => {
                     Products <FiChevronDown className="ml-1" />
                   </a>
                 </li>
-                {/* <li>
+                <li>
                   <Link
-                    to="/catalogue"
+                    to="/catalog"
                     className="text-gray-800 hover:text-kajaria-blue-700 font-medium transition-colors duration-300"
                   >
-                    Download Catalogue
+                    Catalog
                   </Link>
-                </li> */}
+                </li>
                 {/* <li>
                   <Link
                     to="/where-to-buy"
@@ -314,7 +316,7 @@ const Header = () => {
                             alt={item.name}
                             className="w-20 h-20 mx-auto object-contain mb-3"
                           />
-                          <h3 className="text-xl font-bold text-kajaria-blue-900 group-hover:text-kajaria-blue-700 transition-colors duration-300">
+                          <h3 className="font-bold text-kajaria-blue-900 group-hover:text-kajaria-blue-700 transition-colors duration-300">
                             {item.name}
                           </h3>
                         </div>
@@ -621,6 +623,15 @@ const Header = () => {
                 </li> */}
                 <li>
                   <Link
+                    to="/catalog"
+                    className="text-white hover:text-kajaria-blue-700 block py-2"
+                    onClick={toggleMobileMenu}
+                  >
+                    Catalog
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to="/contact"
                     className="text-white hover:text-kajaria-blue-700 block py-2"
                     onClick={toggleMobileMenu}
@@ -648,6 +659,12 @@ const Header = () => {
                   className="text-white hover:text-kajaria-blue-700"
                 >
                   8758435000
+                </a>
+                <a
+                  href="tel:+8758434000"
+                  className="text-white hover:text-kajaria-blue-700"
+                >
+                  8758434000
                 </a>
               </div>
             </div>

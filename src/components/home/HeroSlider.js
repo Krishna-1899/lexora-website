@@ -17,7 +17,7 @@ const HeroSlider = () => {
     {
       id: 1,
       bgImage: sliderImage1,
-      tagline: "India's No.1 Tile Company",
+      tagline: "India's top Adhesive Company",
       title: 'Strength for next generation',
       link: '/tile-adhesives'
     },

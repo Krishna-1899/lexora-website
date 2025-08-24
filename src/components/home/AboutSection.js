@@ -52,7 +52,7 @@ const AboutSection = () => {
                 </h5>
                 
                 <p className="about-two__text text-gray-700 mb-4 leading-relaxed">
-                  The largest manufacturer of ceramic and vitrified tiles in India. Equipped with cutting-edge technology, we at Lexora strive to deliver quality products and services to our customers. Our team of experts work around the clock to ensure that the quality of our product is never compromised.
+                  The largest manufacturer of adhesive tile chemical in india. Equipped with cutting-edge technology, we at Lexora strive to deliver quality products and services to our customers. Our team of experts work around the clock to ensure that the quality of our product is never compromised.
                 </p>
                 
                 <p className="about-two__text text-gray-700 mb-4 leading-relaxed">
