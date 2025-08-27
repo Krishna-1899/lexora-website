@@ -76,7 +76,7 @@ const ProductPageTemplate = ({
 
       {/* Product Specifications Accordion */}
       {accordionItems && accordionItems.length > 0 && (
-        <section className="py-16 bg-kajaria-blue-50" data-aos="fade-up" data-aos-duration="1000">
+        <section className="py-16 bg-kajaria-blue-50" data-aos="fade-up">
           <div className="container mx-auto px-4">
             <Accordion items={accordionItems} defaultActiveIndex={0} />
           </div>

@@ -33,14 +33,16 @@ export const lx4Configuration = {
   
   // Technical specifications for LX-4 (Type 2T)
   technicalSpecs: [
-    { values: ['Density', '1.7 kg / litre approx.'] },
-    { values: ['Pot Life', '120 Minutes Approx'] },
-    { values: ['Open Time', '30 minutes Approx'] },
-    { values: ['Adjustability', '30 minutes Approx'] },
-    { values: ['Setting Time', 'Approx. 1 Day'] },
-    { values: ['Full Strength', 'Approx. 14 Days'] },
-    { values: ['Tensile Strength', '>1.20 N/mm²'] },
-    { values: ['Shear Strength', '>1.25 N/mm²'] }
+    { values: ['Appearance', 'Free flowing powder'] },
+    { values: ['Colour', 'White & Grey'] },
+    { values: ['Pot life', '3 hrs'] },
+    { values: ['Open time', '20 minutes Approx'] },
+    { values: ['Adjustability time', '10 minutes'] },
+    { values: ['Trafficable time', '24 hrs'] },
+    { values: ['Tensile Adhesion', '>1.60 N/mm² >1.20 N/mm²'] },
+    { values: ['Shear Adhesion', '>1.55 N/mm² >1.30 N/mm² >1.15 N/mm²'] },
+    { values: ['Deformablity (as per annex F)' , '>2.60 mm']},
+    { values: ['EN 12004 Standard', 'C2TES1'] }
   ],
   
   // IS Data for LX-4
@@ -63,14 +65,14 @@ export const lx4Configuration = {
   // LX-4 specific accordion items
   accordionItems: [
     {
-      title: "Key Features And Benefits",
+      title: "KEY FEATURES AND BENEFITS",
       content: (
         <ul className="space-y-4">
           <li className="flex items-start space-x-3">
             <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
               <span className="text-white text-xs">✓</span>
             </span>
-            <p><strong>Superior Bond Strength:</strong> Exceeds EN & ISO C2TE classification for shear bond strength, ensuring a durable and long-lasting installation</p>
+            <p><strong>Superior Bond Strength:</strong> Exceeds EN & ISO C2TES1 classification for shear bond strength, ensuring a durable and long-lasting installation</p>
           </li>
           <li className="flex items-start space-x-3">
             <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
@@ -106,7 +108,7 @@ export const lx4Configuration = {
       )
     },
     {
-      title: "Substrates",
+      title: "SUBSTRATES",
       content: (
         <ul className="space-y-3">
           <li className="flex items-start space-x-3">
@@ -161,7 +163,7 @@ export const lx4Configuration = {
       )
     },
     {
-      title: "Application",
+      title: "APPLICATION",
       content: (
         <ul className="space-y-3">
           <li className="flex items-start space-x-3">
@@ -187,6 +189,46 @@ export const lx4Configuration = {
               <span className="text-white text-xs">✓</span>
             </span>
             <p>Up to 12mm bed thickness</p>
+          </li>
+        </ul>
+      )
+    },
+    {
+      title: "CERTIFICATIONS",
+      content: (
+        <ul className="space-y-3">
+          <li className="flex items-start space-x-3">
+            <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+              <span className="text-white text-xs">✓</span>
+            </span>
+            <p><strong>IS 15477:2019 Type:</strong> 4T</p>
+          </li>
+          <li className="flex items-start space-x-3">
+            <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+              <span className="text-white text-xs">✓</span>
+            </span>
+            <p><strong>EN 12004 / ISO 13007:</strong> C2TES1</p>
+          </li>
+        </ul>
+      )
+    },
+    {
+      title: "PERFORMANCE PROPERTIES : (LX-4 Adhesive mixed with Water):",
+      content: (
+        <p>
+          This adhesive mortar conforms to IS 15477: 2019 - Type 4T Adhesive.
+        </p>
+      )
+    },
+    {
+      title: "PACKAGING",
+      content: (
+        <ul className="space-y-3">
+          <li className="flex items-start space-x-3">
+            <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+              <span className="text-white text-xs">✓</span>
+            </span>
+            <p><strong>PACKAGING :</strong> 20 kg bag (Available in White and Grey)</p>
           </li>
         </ul>
       )
@@ -383,11 +425,11 @@ export const lx4Configuration = {
         <ul className="list-unstyled service-details__list listpoints" style={{maxWidth: '100%', color: 'var(--floens-text, #070707)'}}>
           <li>
             <span className="icon-check"></span>
-            <p>Confirms to IS 15477: 2019 Type 2T "Adhesives for use with Ceramic, Mosaic and Stone Tiles"</p>
+            <p>Confirms to IS 15477: 2019 Type 4T "Adhesives for use with Ceramic, Mosaic and Stone Tiles"</p>
           </li>
           <li>
             <span className="icon-check"></span>
-            <p>Confirms to EN 12004 / ISO 13007 and is an improved cementitious adhesive (C2) with slip resistance (T) and Extended Open time (E) of class C2TE</p>
+            <p>Confirms to EN 12004 / ISO 13007 and is an improved cementitious adhesive (C2) with slip resistance (T) and Extended Open time (E) of class C2TES1</p>
           </li>
         </ul>
         <p className="bluefont"><b>PACKAGING:</b> 20 kg bag (Available in Grey and White (With the name of LX-4))</p>

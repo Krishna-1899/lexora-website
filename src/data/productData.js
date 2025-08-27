@@ -3,6 +3,7 @@ import lx1Image from '../assets/images/menu/lx-1.png';
 import lx2Image from '../assets/images/menu/lx-2.png';
 import lx3Image from '../assets/images/menu/lx-3.png';
 import lx3white from '../assets/images/menu/LX_03-white.png';
+import blockJointingMortarImage from '../assets/images/menu/jointing-mortor.png';
 // Import technical data images (using existing images as placeholders)
 
 import technical1 from '../assets/images/about/about-2-1.webp';
@@ -171,14 +172,15 @@ export const productConfigurations = {
     
     // Technical specifications
     technicalSpecs: [
-      { values: ['Density', '1.79 kg/litre Approx'] },
-      { values: ['Pot Life', '120 Minutes Approx'] },
-      { values: ['Open Time', '20 minutes Approx'] },
-      { values: ['Adjustability', '20 minutes Approx'] },
-      { values: ['Setting Time', 'Approx. 1 Day'] },
-      { values: ['Full Strength', 'Approx. 14 Days'] },
-      { values: ['Tensile Strength', '>0.60 N/mm²'] },
-      { values: ['Shear Strength', '>1.00 N/mm²'] }
+      { values: ['Appearance', 'Free flowing powder'] },
+      { values: ['Colour', 'Grey'] },
+      { values: ['Pot life', '3 hrs'] },
+      { values: ['Open time', '20 minutes Approx'] },
+      { values: ['Adjustability time', '10 minutes'] },
+      { values: ['Trafficable time', '24 hrs'] },
+      { values: ['Tensile Adhesion', '>1.0 N/mm²'] },
+      { values: ['Shear Adhesion', '>1.09 N/mm²'] },
+      { values: ['Standard', 'EN 12004 C1T'] }
     ],
     
     // IS Data
@@ -367,14 +369,15 @@ export const productConfigurations = {
     
     // Technical specifications
     technicalSpecs: [
-      { values: ['Density', '1.79 kg/litre Approx'] },
-      { values: ['Pot Life', '120 Minutes Approx'] },
-      { values: ['Open Time', '20 minutes Approx'] },
-      { values: ['Adjustability', '20 minutes Approx'] },
-      { values: ['Setting Time', 'Approx. 1 Day'] },
-      { values: ['Full Strength', 'Approx. 14 Days'] },
-      { values: ['Tensile Strength', '>0.60 N/mm²'] },
-      { values: ['Shear Strength', '>1.00 N/mm²'] }
+      { values: ['Appearance', 'Free flowing powder'] },
+      { values: ['Colour', 'White & Grey'] },
+      { values: ['Pot life', '3 hrs'] },
+      { values: ['Open time', '20 minutes Approx'] },
+      { values: ['Adjustability time', '10 minutes'] },
+      { values: ['Trafficable time', '24 hrs'] },
+      { values: ['Tensile Adhesion', '>1.50 N/mm² >1.20 N/mm² >1.10 N/mm²'] },
+      { values: ['Shear Adhesion', '>1.40 N/mm² >1.10 N/mm²'] },
+      { values: ['EN 12004 Standard', 'C2T'] }
     ],
     
     // IS Data
@@ -437,7 +440,7 @@ export const productConfigurations = {
         )
       },
       {
-        title: "Advantages",
+        title: "ADVANTAGES",
         content: (
           <ul className="space-y-4">
             <li className="flex items-start space-x-3">
@@ -462,7 +465,7 @@ export const productConfigurations = {
               <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
                 <span className="text-white text-xs">✓</span>
               </span>
-              <p><strong>High-performance:</strong> Meets international classifications EN / ISO CIT and IS 15477:2019 – Type 1T.</p>
+              <p><strong>High-performance:</strong> Meets international classifications EN / ISO C2T and IS 15477:2019 – Type 2T.</p>
             </li>
             <li className="flex items-start space-x-3">
               <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
@@ -535,13 +538,13 @@ export const productConfigurations = {
               <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
                 <span className="text-white text-xs">✓</span>
               </span>
-              <p><strong>IS 15477:2019 Type:</strong> 1T</p>
+              <p><strong>IS 15477:2019 Type:</strong> 2T</p>
             </li>
             <li className="flex items-start space-x-3">
               <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
                 <span className="text-white text-xs">✓</span>
               </span>
-              <p><strong>EN 12004 / ISO 13007:</strong> CIT</p>
+              <p><strong>EN 12004 / ISO 13007:</strong> C2T</p>
             </li>
           </ul>
         )
@@ -550,7 +553,7 @@ export const productConfigurations = {
         title: "PERFORMANCE PROPERTIES : (LX-2 Adhesive mixed with Water):",
         content: (
           <p>
-            This adhesive mortar conforms to IS 15477: 2019 - Type 1T Adhesive.
+            This adhesive mortar conforms to IS 15477: 2019 - Type 2T Adhesive.
           </p>
         )
       },
@@ -562,7 +565,7 @@ export const productConfigurations = {
               <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
                 <span className="text-white text-xs">✓</span>
               </span>
-              <p><strong>PACKAGING :</strong> 20 kg bag (Available in White and Grey (With the name of LX-1))</p>
+              <p><strong>PACKAGING :</strong> 20 kg bag (Available in White and Grey)</p>
             </li>
           </ul>
         )
@@ -753,14 +756,16 @@ export const productConfigurations = {
     dealerLink: "/where-to-buy",
     altText: "LX-3 Premium Tile Adhesive",
     technicalSpecs: [
-      { values: ['Density', '1.7 kg / litre approx.'] },
-      { values: ['Pot Life', '120 Minutes Approx'] },
-      { values: ['Open Time', '30 minutes Approx'] },
-      { values: ['Adjustability', '30 minutes Approx'] },
-      { values: ['Setting Time', 'Approx. 1 Day'] },
-      { values: ['Full Strength', 'Approx. 14 Days'] },
-      { values: ['Tensile Strength', '>1.20 N/mm²'] },
-      { values: ['Shear Strength', '>1.25 N/mm²'] }
+      { values: ['Appearance', 'Free flowing powder'] },
+      { values: ['Colour', 'White & Grey'] },
+      { values: ['Pot life', '3 hrs'] },
+      { values: ['Open time', '20 minutes Approx'] },
+      { values: ['Adjustability time', '10 minutes'] },
+      { values: ['Trafficable time', '24 hrs'] },
+      { values: ['Tensile Adhesion', '>1.60 N/mm² >1.20 N/mm²'] },
+      { values: ['Shear Adhesion', '>1.55 N/mm² >1.30 N/mm² >1.15 N/mm²'] },
+      { values: ['Deformablity (as per annex F)' , '>2.60 mm']},
+      { values: ['EN 12004 Standard', 'C2TE'] }
     ],
     isData: [
       { values: ['', 'Tensile Adhesion', ''], isHeader: true },
@@ -818,6 +823,136 @@ export const productConfigurations = {
             </li>
           </ul>
         )
+      },{
+        title: "Advantages",
+        content: (
+          <ul className="space-y-4">
+            <li className="flex items-start space-x-3">
+              <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+                <span className="text-white text-xs">✓</span>
+              </span>
+              <p><strong>Single-component, easy to use:</strong> Simply add water for a ready-mixed solution</p>
+            </li>
+            <li className="flex items-start space-x-3">
+              <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+                <span className="text-white text-xs">✓</span>
+              </span>
+              <p><strong>Interior applications:</strong> Ideal for use on interior floors and walls.</p>
+            </li>
+            <li className="flex items-start space-x-3">
+              <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+                <span className="text-white text-xs">✓</span>
+              </span>
+              <p><strong>Economical:</strong> Cost-effective solution for tile installation.</p>
+            </li>
+            <li className="flex items-start space-x-3">
+              <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+                <span className="text-white text-xs">✓</span>
+              </span>
+              <p><strong>High-performance:</strong> Meets international classifications EN 12004 - C2TE – Type 3.</p>
+            </li>
+            <li className="flex items-start space-x-3">
+              <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+                <span className="text-white text-xs">✓</span>
+              </span>
+              <p><strong>Versatile:</strong> Bonds to various substrates including concrete, concrete masonry and cement-based surfaces.</p>
+            </li>
+          </ul>
+        )
+      },
+      {
+        title: "SUBSTRATES",
+        content: (
+          <div>
+            <ul className="space-y-3 mb-4">
+              <li className="flex items-start space-x-3">
+                <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                <p>Concrete</p>
+              </li>
+              <li className="flex items-start space-x-3">
+                <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                <p>Concrete Masonry</p>
+              </li>
+              <li className="flex items-start space-x-3">
+                <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                <p>Cement Mortar Beds</p>
+              </li>
+              <li className="flex items-start space-x-3">
+                <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                <p>Cement Plaster</p>
+              </li>
+              <li className="flex items-start space-x-3">
+                <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                <p>Brick Masonry</p>
+              </li>
+              <li className="flex items-start space-x-3">
+                <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+                  <span className="text-white text-xs">✓</span>
+                </span>
+                <p>Existing Natural Stone* (cleaned and roughened)</p>
+              </li>
+            </ul>
+            <p><strong>Note:</strong> Surfaces must be cleaned and roughened before installation of tiles or stones</p>
+          </div>
+        )
+      },
+      {
+        title: "APPLICATION",
+        content: (
+          <p>
+            LX-3 is designed for dry areas of interior floors and walls. It can be used for installing all types of ceramic tiles and small format natural stones on concrete and various cement-based substrates. The maximum bed thickness is 12mm.
+          </p>
+        )
+      },
+      {
+        title: "CERTIFICATIONS",
+        content: (
+          <ul className="space-y-3">
+            <li className="flex items-start space-x-3">
+              <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+                <span className="text-white text-xs">✓</span>
+              </span>
+              <p><strong>IS 15477:2019 Type:</strong> 3T</p>
+            </li>
+            <li className="flex items-start space-x-3">
+              <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+                <span className="text-white text-xs">✓</span>
+              </span>
+              <p><strong>EN 12004 / ISO 13007:</strong> C2TE</p>
+            </li>
+          </ul>
+        )
+      },
+      {
+        title: "PERFORMANCE PROPERTIES : (LX-3 Adhesive mixed with Water):",
+        content: (
+          <p>
+            This adhesive mortar conforms to IS 15477: 2019 - Type 3T Adhesive.
+          </p>
+        )
+      },
+      {
+        title: "PACKAGING",
+        content: (
+          <ul className="space-y-3">
+            <li className="flex items-start space-x-3">
+              <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
+                <span className="text-white text-xs">✓</span>
+              </span>
+              <p><strong>PACKAGING :</strong> 20 kg bag (Available in White and Grey)</p>
+            </li>
+          </ul>
+        )
       }
     ],
     applicationSteps: commonApplicationSteps,
@@ -839,6 +974,17 @@ export const productConfigurations = {
   },
   // LX-4 Product Configuration (imported from separate file)
   'lx-4': lx4Configuration,
+  'block-jointing-mortar': {
+    pageTitle: "BLOCK JOINTING MORTAR",
+    productSubtitle: "High-Performance Jointing Mortar for Block Masonry",
+    description: "LEXORA is a non-refractory mortar, used for laying masonry units like AAC blocks. It is a self-curing mortar made from cement, selected ne sand and polymeric additives, which ensure good bonding and durable strength between the blocks.",
+    tdsLink: "/assets/tds/block-jointing-mortar.pdf",
+    dealerLink: "/where-to-buy",
+    altText: "Block Jointing Mortar",
+    breadcrumbs: [{ label: 'BLOCK JOINTING MORTAR', link: null }],
+    productName: "BLOCK JOINTING MORTAR",
+    productImage: blockJointingMortarImage,
+  },
   // Continue adding other products...
 };
 

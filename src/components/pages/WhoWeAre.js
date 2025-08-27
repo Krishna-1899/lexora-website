@@ -18,7 +18,7 @@ import cgLogo from '../../assets/images/resources/brand-1-4.png';
 import dlfLogo from '../../assets/images/resources/brand-1-5.png';
 import emaarLogo from '../../assets/images/resources/brand-1-6.png';
 import offerBg from '../../assets/images/backgrounds/offer-bg.jpg';
-
+import { FiArrowRight } from 'react-icons/fi';
 const WhoWeAre = () => {
   const [activeTab, setActiveTab] = useState('adhesives');
 
@@ -141,7 +141,7 @@ const WhoWeAre = () => {
                 </p>
 
                 <p className="text-gray-700 mb-8 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="500">
-                  Keeping up with the same objective LEXORA (A unit of Lexora) aims offers you wide range of tile adhesives & grouts for fixing of various categories of tile for faster laying & long-lasting applications. When tiles are fixed to any surface, most vulnerable point is always the bond between the tile and substrate. We eliminate this weakness by significantly improving the bonding strength of the adhesive to both the tile and substrate.
+                  Keeping up with the same objective LEXORA aims offers you wide range of tile adhesives & grouts for fixing of various categories of tile for faster laying & long-lasting applications. When tiles are fixed to any surface, most vulnerable point is always the bond between the tile and substrate. We eliminate this weakness by significantly improving the bonding strength of the adhesive to both the tile and substrate.
                 </p>
               </div>
             </div>
@@ -185,81 +185,85 @@ const WhoWeAre = () => {
 
           {/* Product Tabs */}
           <div 
-            className="relative rounded-lg overflow-hidden min-h-[500px]"
+            className="bg-white overflow-hidden mb-12 relative"
             style={{ 
               backgroundImage: `url(${offerBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
-            data-aos="fade-up" data-aos-duration="1000"
+            data-aos="fade-up" 
+            data-aos-delay="100"
           >
-            <div className="absolute inset-0 bg-kajaria-blue-50 bg-opacity-60"></div>
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-4 min-h-[500px]">
-              {/* Tab Navigation */}
-              <div className="bg-black bg-opacity-30 p-8" data-aos="fade-right" data-aos-delay="200">
-                <div className="space-y-4">
-                  <button 
+            <div className="relative z-10 flex flex-col lg:flex-row p-2">
+              {/* Tab Buttons */}
+              <div className="w-full lg:w-1/3 flex justify-center px-4 pt-4 lg:pt-0 lg:px-0">
+                <ul className="flex flex-col w-full lg:w-11/12 justify-center">
+                  <li 
+                    className={`tab-btn cursor-pointer transition-all duration-300 ${activeTab === 'adhesives' ? 'bg-kajaria-blue-600 text-white' : 'text-kajaria-blue-700 hover:bg-kajaria-blue-900 bg-white hover:text-white'}`}
                     onClick={() => setActiveTab('adhesives')}
-                    className={`w-full text-left p-4 font-semibold transition-colors rounded-lg ${
-                      activeTab === 'adhesives' 
-                        ? 'bg-kajaria-blue-600 text-white' 
-                        : 'text-white hover:bg-kajaria-blue-600 hover:bg-opacity-50'
-                    }`}
                   >
-                    Premium Tile Adhesive
-                    <span className="float-right">→</span>
-                  </button>
-                  <button 
+                    <button type="button" className="tab-btn__inner w-full text-left p-3 sm:p-4 md:p-6 flex items-center justify-between hover:bg-kajaria-blue-600 transition-all duration-300">
+                      <span className="font-medium">Tile Adhesives</span>
+                      <span className="tab-btn__icon">
+                        <FiArrowRight className="text-x" />
+                      </span>
+                    </button>
+                  </li>
+                  <li 
+                    className={`tab-btn cursor-pointer transition-all duration-300 ${activeTab === 'grouts' ? 'bg-kajaria-blue-600 text-white' : 'text-kajaria-blue-700 hover:bg-kajaria-blue-900 bg-white hover:text-white'}`}
                     onClick={() => setActiveTab('grouts')}
-                    className={`w-full text-left p-4 font-semibold transition-colors rounded-lg ${
-                      activeTab === 'grouts' 
-                        ? 'bg-kajaria-blue-600 text-white' 
-                        : 'text-white hover:bg-kajaria-blue-600 hover:bg-opacity-50'
-                    }`}
                   >
-                    Grouts
-                    <span className="float-right">→</span>
-                  </button>
-                  <button 
+                    <button type="button" className="tab-btn__inner w-full text-left p-3 sm:p-4 md:p-6 flex items-center justify-between transition-all duration-300">
+                      <span className="font-medium">Grouts</span>
+                      <span className="tab-btn__icon">
+                        <FiArrowRight className="text-xl" />
+                      </span>
+                    </button>
+                  </li>
+                  <li 
+                    className={`tab-btn cursor-pointer transition-all duration-300 ${activeTab === 'cleaner' ? 'bg-kajaria-blue-600 text-white' : 'text-kajaria-blue-700 hover:bg-kajaria-blue-900 bg-white hover:text-white'}`}
                     onClick={() => setActiveTab('cleaner')}
-                    className={`w-full text-left p-4 font-semibold transition-colors rounded-lg ${
-                      activeTab === 'cleaner' 
-                        ? 'bg-kajaria-blue-600 text-white' 
-                        : 'text-white hover:bg-kajaria-blue-600 hover:bg-opacity-50'
-                    }`}
                   >
-                    Premium Tile Cleaner
-                    <span className="float-right">→</span>
-                  </button>
-                  <button 
+                    <button type="button" className="tab-btn__inner w-full text-left p-3 sm:p-4 md:p-6 flex items-center justify-between transition-all duration-300">
+                      <span className="font-medium">Tile Cleaners</span>
+                      <span className="tab-btn__icon">
+                        <FiArrowRight className="text-xl" />
+                      </span>
+                    </button>
+                  </li>
+                  <li 
+                    className={`tab-btn cursor-pointer transition-all duration-300 ${activeTab === 'tools' ? 'bg-kajaria-blue-600 text-white' : 'text-kajaria-blue-700 hover:bg-kajaria-blue-900 bg-white hover:text-white'}`}
                     onClick={() => setActiveTab('tools')}
-                    className={`w-full text-left p-4 font-semibold transition-colors rounded-lg ${
-                      activeTab === 'tools' 
-                        ? 'bg-kajaria-blue-600 text-white' 
-                        : 'text-white hover:bg-kajaria-blue-600 hover:bg-opacity-50'
-                    }`}
                   >
-                    Tools
-                    <span className="float-right">→</span>
-                  </button>
-                </div>
-              </div>
-
-              {/* Tab Content */}
-              <div className="lg:col-span-3 p-8 bg-white" data-aos="fade-left" data-aos-delay="300">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  {productTabs[activeTab].title}
-                </h3>
-                <ul className="space-y-3">
-                  {productTabs[activeTab].products.map((product, index) => (
-                    <li key={index} className="flex items-center" data-aos="fade-up" data-aos-delay={400 + (index * 100)}>
-                      <span className="text-green-500 mr-3 text-lg">✓</span>
-                      <Link to="#" className="text-kajaria-blue-900 hover:text-[#03045e] transition-colors font-medium">
-                        {product}
-                      </Link>
-                    </li>
-                  ))}
+                    <button type="button" className="tab-btn__inner w-full text-left p-3 sm:p-4 md:p-6 flex items-center justify-between transition-all duration-300">
+                      <span className="font-medium">Tools</span>
+                      <span className="tab-btn__icon">
+                        <FiArrowRight className="text-xl" />
+                      </span>
+                    </button>
+                  </li>
                 </ul>
+              </div>
+              
+              {/* Tab Content */}
+              <div className="w-full lg:w-2/3 p-4 sm:p-6 md:p-8 justify-center">
+                <div className='p-4 sm:p-6 md:p-8 bg-white rounded-lg lg:rounded-none'>
+                  <div className="items-center justify-center ">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                      {productTabs[activeTab].title}
+                    </h3>
+                    <ul className="space-y-3">
+                      {productTabs[activeTab].products.map((product, index) => (
+                        <li key={index} className="flex items-center">
+                          <span className="text-green-500 mr-3 text-lg">✓</span>
+                          <Link to="#" className="text-kajaria-blue-900 hover:text-[#03045e] transition-colors font-medium">
+                            {product}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -49,7 +49,7 @@ const Accordion = ({ items, defaultActiveIndex = 0 }) => {
   return (
     <div className="space-y-2">
       {items.map((item, index) => (
-        <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
+        <div key={index}>
           <AccordionItem
             title={item.title}
             isActive={activeIndex === index}

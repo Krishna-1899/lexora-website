@@ -1,11 +1,13 @@
 import React from 'react';
 import ProductPageTemplate from '../product/ProductPageTemplate';
 import { lx4Configuration } from '../../data/lx4Data';
+import lx4WhiteImage from '../../assets/images/menu/LX-04-white.png';
 
 const LX4WhiteProductPage = () => {
   // Get LX-4 configuration and modify it for LX-4 WHITE
   const lx4WhiteConfig = {
     ...lx4Configuration,
+    productImage: lx4WhiteImage,
     pageTitle: "LX-4 WHITE - White Cement Based, High Polymer Modified, Tile/Stone Adhesive",
     breadcrumbs: [{ label: 'LX-4 WHITE', link: null }],
     productName: "LX-4 WHITE - White Cement Based, High Polymer Modified, Tile/Stone Adhesive",

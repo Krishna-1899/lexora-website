@@ -88,7 +88,7 @@ const Header = () => {
     { name: "LX-4", img: lx4Image, link: "/lx-4" },
     { name: "LX-4 WHITE", img: lx4white, link: "/lx-4-white"},
     { name: "PU-L29", img: pul29Image, link: "/pu-l29" },
-    { name: "JOINT FILLER", img: jointFillerImage, link: "#" },
+    { name: "BLOCK JOINTING MORTAR", img: jointFillerImage, link: "/block-jointing-mortar" },
   ];
 
   const groutProducts = [

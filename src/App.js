@@ -8,11 +8,13 @@ import LX1ProductPage from './components/pages/LX1ProductPage';
 import LX2ProductPage from './components/pages/LX2ProductPage';
 import LX3ProductPage from './components/pages/LX3ProductPage';
 import LX4ProductPage from './components/pages/LX4ProductPage';
+import BlockJointMortarProductPage from './components/pages/BlockJointMortar';
 import PUL29ProductPage from './components/pages/PUL29ProductPage';
 import LX3WhiteProductPage from './components/pages/LX3WhiteProductPage';
 import LX4WhiteProductPage from './components/pages/LX4WhiteProductPage';
 import FloatingWhatsApp from './components/ui/FloatingWhatsApp';
 import ScrollToTop from './components/ui/ScrollToTop';
+
 import './App.css';
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
         <Route path="/lx-3-white" element={<LX3WhiteProductPage />} />
         <Route path="/lx-4-white" element={<LX4WhiteProductPage />} />
         <Route path="/pu-l29" element={<PUL29ProductPage />} />
+        <Route path="/block-jointing-mortar" element={<BlockJointMortarProductPage />} />
         {/* Add more routes here as needed */}
       </Routes>
       

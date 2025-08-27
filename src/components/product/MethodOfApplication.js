@@ -16,7 +16,7 @@ const MethodStep = ({ stepNumber, image, description, altText }) => {
           {/* <div className="flex-shrink-0 w-8 h-8 bg-kajaria-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
             {stepNumber}
           </div> */}
-          <p className="text-sm text-gray-700 leading-relaxed">
+          <p className="text-[10px] sm:text-[10px] md:text-[10px] lg:text-[12px] xl:text-[14px] text-gray-700 leading-relaxed">
             {description}
           </p>
         </div>
@@ -35,7 +35,7 @@ const MethodOfApplication = ({ steps = [] }) => {
           centered
         />
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-12">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-7 gap-6 mt-12">
           {steps.map((step, index) => (
             <div key={index} data-aos="fade-up" data-aos-delay={index * 200}>
               <MethodStep
