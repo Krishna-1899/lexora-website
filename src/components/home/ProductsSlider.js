@@ -137,7 +137,7 @@ const ProductsSlider = () => {
   };
 
   return (
-    <section className="section-space-two bg-white">
+    <section className="section-space-two bg-white" id="products">
       <Container>
         {/* Section Title */}
         <div className="sec-title mb-12" data-aos="fade-up">

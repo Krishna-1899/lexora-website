@@ -146,10 +146,17 @@ const HeroSlider = () => {
                       ? 'opacity-100 translate-y-0' 
                       : 'opacity-0 translate-y-[120px]'
                   }`}>
-                    <Link to="" className="floens-btn relative">
+                    <a 
+                      href="#products" 
+                      onClick={(e) => {
+                        e.preventDefault();
+                        document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      className="floens-btn relative"
+                    >
                       <span>discover more</span>
                       <FiChevronRight className="absolute top-1/2 right-5 transform -translate-y-1/2 text-2xl" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
