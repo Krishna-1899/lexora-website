@@ -8,7 +8,7 @@ import SectionHeader from '../ui/SectionHeader';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const PUA100ProductPageTemplate = ({
+const PUL29ProductPageTemplate = ({
   pageTitle,
   breadcrumbs,
   productName,
@@ -246,4 +246,4 @@ const PUA100ProductPageTemplate = ({
   );
 };
 
-export default PUA100ProductPageTemplate;
+export default PUL29ProductPageTemplate;

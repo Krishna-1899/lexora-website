@@ -6,13 +6,13 @@ import headerBg from "../../assets/images/backgrounds/about-bg-2-1.png";
 import logoDark from "../../assets/images/logo/logo-light.png";
 import logoLight from "../../assets/images/logo/Lexora-logo.png";
 // Import menu images
-import cx1Image from "../../assets/images/menu/lx-1.png";
-import cx2Image from "../../assets/images/menu/lx-2.png";
-import vx1Image from "../../assets/images/menu/lx-3.png";
+import lx1Image from "../../assets/images/menu/lx-1.png";
+import lx2Image from "../../assets/images/menu/lx-2.png";
+import lx3Image from "../../assets/images/menu/lx-3.png";
 import lx3white from "../../assets/images/menu/LX_03-white.png";
 import lx4white from "../../assets/images/menu/LX-04-white.png";
-import vx2Image from "../../assets/images/menu/lx-4.png";
-import pua100Image from "../../assets/images/menu/pu-l29.png";
+import lx4Image from "../../assets/images/menu/lx-4.png";
+import pul29Image from "../../assets/images/menu/pu-l29.png";
 import jointFillerImage from "../../assets/images/menu/jointing-mortor.png";
 // Import grout images
 import unsandedImage from "../../assets/images/menu/epoxy-grout.png";
@@ -25,7 +25,6 @@ import tc2Image from "../../assets/images/menu/tile-clener2.png";
 import levelingPlierImage from "../../assets/images/menu/leveling-plier-head.webp";
 import rubberMalletImage from "../../assets/images/menu/rubber-mallet-head.webp";
 import trowelImage from "../../assets/images/menu/trowel-head.webp";
-import tileSpacersImage from "../../assets/images/menu/tile-spacers-head.webp";
 import carbideGroutImage from "../../assets/images/menu/carbide-grout-head.webp";
 import rubberFloatImage from "../../assets/images/menu/rubber-float-head.webp";
 import st9MixerImage from "../../assets/images/menu/st9-1400-mixer-head.webp";
@@ -82,13 +81,13 @@ const Header = () => {
   };
 
   const adhesiveProducts = [
-    { name: "LX-1", img: cx1Image, link: "/lx-1" },
-    { name: "LX-2", img: cx2Image, link: "/lx-2" },
-    { name: "LX-3", img: vx1Image, link: "/lx-3" },
+    { name: "LX-1", img: lx1Image, link: "/lx-1" },
+    { name: "LX-2", img: lx2Image, link: "/lx-2" },
+    { name: "LX-3", img: lx3Image, link: "/lx-3" },
     { name: "LX-3 WHITE", img: lx3white, link: "/lx-3-white"},
-    { name: "LX-4", img: vx2Image, link: "/lx-4" },
+    { name: "LX-4", img: lx4Image, link: "/lx-4" },
     { name: "LX-4 WHITE", img: lx4white, link: "/lx-4-white"},
-    { name: "PU-L29", img: pua100Image, link: "/pu-l29" },
+    { name: "PU-L29", img: pul29Image, link: "/pu-l29" },
     { name: "JOINT FILLER", img: jointFillerImage, link: "#" },
   ];
 
@@ -110,7 +109,6 @@ const Header = () => {
     },
     { name: "RUBBER MALLET", img: rubberMalletImage, link: "/rubber-mallet" },
     { name: "TROWEL", img: trowelImage, link: "/trowel" },
-    { name: "TILE SPACERS", img: tileSpacersImage, link: "/tile-spacers" },
     {
       name: "CARBIDE TILE GROUT SAW",
       img: carbideGroutImage,

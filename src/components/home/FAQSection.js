@@ -33,7 +33,7 @@ const FAQSection = () => {
     {
       id: 5,
       question: "How do I choose the right products for my project?",
-      answer: "Consider factors like the type of tiles, substrate, location (indoor/outdoor), and specific project requirements. Lexora's product descriptions provide detailed guidance. VX1 and VX2 are specially designed for vitrified tiles, while the CX range of tile adhesives is for ceramic tiles. EX-5 is specially manufactured for Outdoor tiling projects. Likewise, KE 100 grouts are for regular tiling projects, while KE 100 Duet can be used for commercial projects. Follow our detailed guide to check the right products for your tiling projects."
+      answer: "Consider factors like the type of tiles, substrate, location (indoor/outdoor), and specific project requirements. Lexora's product descriptions provide detailed guidance."
     },
     {
       id: 6,

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Layout from '../layout/Layout';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 // Import background image
 import pageHeaderBg from '../../assets/images/backgrounds/page-header-bg-1-1.png';
 const Contact = () => {
@@ -116,24 +116,26 @@ const Contact = () => {
                 <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-600 hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="400">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                      <i className="icon-phone-call text-blue-600 text-xl"></i>
+                      <FaPhone className="text-blue-600 text-xl" />
                     </div>
                     <div>
                       <p className="text-gray-600 text-sm mb-1">Call Us</p>
-                      <a 
-                        href="tel:8758435000" 
-                        className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-colors"
-                        title="call now"
-                      >
-                        8758435000
-                      </a>
-                      <a 
-                        href="tel:8758434000" 
-                        className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-colors"
-                        title="call now"
-                      >
-                        8758434000
-                      </a>
+                      <div className="flex flex-col gap-2">
+                        <a 
+                          href="tel:8758435000" 
+                          className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-colors"
+                          title="call now"
+                        >
+                          8758435000
+                        </a>
+                        <a 
+                          href="tel:8758434000" 
+                          className="text-xl font-semibold text-gray-900 hover:text-blue-600 transition-colors"
+                          title="call now"
+                        >
+                          8758434000
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -142,7 +144,7 @@ const Contact = () => {
                 <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-600 hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="500">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                      <i className="icon-paper-plane text-green-600 text-xl"></i>
+                      <FaEnvelope className="text-green-600 text-xl" />
                     </div>
                     <div>
                       <p className="text-gray-600 text-sm mb-1">Email Us</p>
@@ -161,7 +163,7 @@ const Contact = () => {
                 <div className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-orange-600 hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="600">
                   <div className="flex items-start">
                     <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mr-4 mt-1">
-                      <i className="icon-location text-orange-600 text-xl"></i>
+                      <FaMapMarkerAlt className="text-orange-600 text-xl" />
                     </div>
                     <div>
                       <p className="text-gray-600 text-sm mb-1">Visit Us</p>

@@ -302,7 +302,7 @@ export const lx4Configuration = {
     {
       label: "Grouting",
       content: [
-        "Begin grouting after 24 hours at 70°F (21°C) using Lexora's KE-100 series grout or unsanded grout."
+        "Begin grouting after 24 hours at 70°F (21°C) using Lexora's Grout series grout or unsanded grout."
       ]
     },
     {

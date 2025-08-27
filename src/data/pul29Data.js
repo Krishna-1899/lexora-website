@@ -1,7 +1,7 @@
 import React from "react";
 import pul29Image from "../assets/images/menu/pu-l29.png";
 
-export const pua100Configuration = {
+export const pul29Configuration = {
   // Page header configuration
   pageTitle: "LEXORA | PU-L29",
   breadcrumbs: [{ label: "PU-L29", link: null }],

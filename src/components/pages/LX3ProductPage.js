@@ -2,12 +2,12 @@ import React from 'react';
 import ProductPageTemplate from '../product/ProductPageTemplate';
 import { productConfigurations } from '../../data/productData';
 
-const EX5ProductPage = () => {
-  const config = productConfigurations['ex-5'];
-
+const LX3ProductPage = () => {
+  const config = productConfigurations['lx-3'];
+  
   return (
     <ProductPageTemplate {...config} />
   );
 };
 
-export default EX5ProductPage;
+export default LX3ProductPage;

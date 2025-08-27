@@ -1,7 +1,8 @@
 // Import product images
-import cx1Image from '../assets/images/menu/lx-1.png';
-import cx2Image from '../assets/images/menu/lx-2.png';
+import lx1Image from '../assets/images/menu/lx-1.png';
+import lx2Image from '../assets/images/menu/lx-2.png';
 import lx3Image from '../assets/images/menu/lx-3.png';
+import lx3white from '../assets/images/menu/LX_03-white.png';
 // Import technical data images (using existing images as placeholders)
 
 import technical1 from '../assets/images/about/about-2-1.webp';
@@ -23,14 +24,9 @@ import technicalImage11 from '../assets/images/application_method/11.webp';
 import technicalImage12 from '../assets/images/application_method/12.webp';
 import technicalImage13 from '../assets/images/application_method/13.webp';
 
-// Import EX-5 configuration
-import { ex5Configuration } from './ex5Data';
 
 // Import LX-4 configuration
-import { lx4Configuration } from './vx2Data';
-
-// Import PUA-100 configuration
-import { pua100Configuration } from './pua100Data';
+import { lx4Configuration } from './lx4Data';
 
 
 // Common installation instruction tabs that can be used across products
@@ -167,7 +163,7 @@ export const productConfigurations = {
     
     // Product Details Props
     productName: "LX-1 - Floor and Wall Tile Adhesive",
-    productImage: cx1Image,
+    productImage: lx1Image,
     description: "LX-1 is a polymer-based tile adhesive specifically formulated for fixing ceramic tiles and small format natural stone, clay tiles, terracotta and quarry tiles of regular size. It is suitable for both vertical and horizontal surfaces, over the cementitious substrate for indoor application, in dry as well as wet areas. Easy to use with just water mixing, LX-1 is perfect for dry areas and occasional moisture environments like bathrooms and kitchens.",
     tdsLink: "/assets/tds/lx-1.pdf",
     dealerLink: "/where-to-buy",
@@ -319,7 +315,7 @@ export const productConfigurations = {
               <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
                 <span className="text-white text-xs">✓</span>
               </span>
-              <p>20 kg bag (Available in Grey and White (With the name of CX-2))</p>
+              <p>20 kg bag (Available in Grey and White (With the name of LX-2))</p>
             </li>
           </ul>
         )
@@ -358,13 +354,13 @@ export const productConfigurations = {
     ]
   },
   
-  // CX-2 Product Configuration
+  // LX-2 Product Configuration
   'lx-2': {
     pageTitle: "LX-2 - White Cement Based, Polymer Modified, Tile/Stone Adhesive",
     breadcrumbs: [{ label: 'LX-2', link: null }],
     productName: "LX-2 - White Cement Based, Polymer Modified, Tile/Stone Adhesive",
-    productImage: cx2Image,
-    description: "CX-2 is a premium, white cement-based tile adhesive specifically formulated for interior wall and floor installations. Designed to preserve the aesthetic appeal of light-colored tiles and stones, this polymer modified adhesive delivers exceptional bond strength and flexibility. Ideal for fixing small format ceramic, natural stone, clay, terracotta, and quarry tiles, CX-2 is suitable for both dry and wet areas. Its user-friendly formulation requires only water for mixing, ensuring efficient application. Optimized for bed thicknesses up to 6mm, with the potential for 12mm in specific areas, CX-2 provides a reliable solution for cementitious substrates.",
+    productImage: lx2Image,
+    description: "LX-2 is a premium, white cement-based tile adhesive specifically formulated for interior wall and floor installations. Designed to preserve the aesthetic appeal of light-colored tiles and stones, this polymer modified adhesive delivers exceptional bond strength and flexibility. Ideal for fixing small format ceramic, natural stone, clay, terracotta, and quarry tiles, LX-2 is suitable for both dry and wet areas. Its user-friendly formulation requires only water for mixing, ensuring efficient application. Optimized for bed thicknesses up to 6mm, with the potential for 12mm in specific areas, LX-2 provides a reliable solution for cementitious substrates.",
     tdsLink: "/assets/tds/lx-2.pdf",
     dealerLink: "/where-to-buy",
     altText: "LX-2 White Color Adhesive",
@@ -395,7 +391,7 @@ export const productConfigurations = {
     
     technicalImages: [technical1, technical2, technical3, technical4],
     
-    // CX-2 specific accordion items
+    // LX-2 specific accordion items
     accordionItems: [
       {
         title: "KEY FEATURES AND BENEFITS:",
@@ -573,7 +569,7 @@ export const productConfigurations = {
       }
     ],
     
-    // CX-2 specific application steps
+    // LX-2 specific application steps
     applicationSteps: [
       {
         image: technicalImage1,
@@ -642,7 +638,7 @@ export const productConfigurations = {
       }
     ],
     
-    // CX-2 specific installation tabs
+    // LX-2 specific installation tabs
     installationTabs: [
       {
         label: "Surface Preparation",
@@ -690,8 +686,8 @@ export const productConfigurations = {
       {
         label: "Grouting",
         content: [
-          "Begin grouting after a minimum curing time of 24 hours at 70°F (21°C). Use Lexora's KE-100 series epoxy grout or unsanded grout mixed with KGA-100 Grout Admix.",
-          "For maximum stain resistance on interior spacer joints, use KE-100 Stain- resistant Grout."
+          "Begin grouting after a minimum curing time of 24 hours at 70°F (21°C). Use Lexora's Grout series epoxy grout or unsanded grout mixed with Grout Admix.",
+          "For maximum stain resistance on interior spacer joints, use Grout Stain- resistant Grout."
         ]
       },
       {
@@ -717,7 +713,7 @@ export const productConfigurations = {
       }
     ],
     
-    // CX-2 specific FAQs
+    // LX-2 specific FAQs
     faqs: [
       {
         question: "What is LX-2 Tile Adhesive?",
@@ -841,16 +837,8 @@ export const productConfigurations = {
       }
     ]
   },
-  
-  // EX-5 Product Configuration (imported from separate file)
-  'ex-5': ex5Configuration,
-  
   // LX-4 Product Configuration (imported from separate file)
   'lx-4': lx4Configuration,
-  
-  // PUA-100 Product Configuration (imported from separate file)
-  'pu-L29': pua100Configuration
-  
   // Continue adding other products...
 };
 

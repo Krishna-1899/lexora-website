@@ -1,10 +1,8 @@
 import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import Container from "../ui/Container";
 import ProductModal from "../ui/ProductModal";
-// import SectionHeader from "../ui/SectionHeader";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -17,14 +15,6 @@ import pu129 from "../../assets/images/menu/pu-l29.png";
 import lx3white from "../../assets/images/menu/LX_03-white.png";
 import lx4white from "../../assets/images/menu/LX-04-white.png";
 import jointFillerImage from "../../assets/images/menu/jointing-mortor.png";
-
-import lx7SuperFlexImage from "../../assets/images/menu/lx-7-super-flex.png";
-import cx1Image from "../../assets/images/menu/cx-1.webp";
-import cx2Image from "../../assets/images/menu/cx-2.webp";
-import vx1Image from "../../assets/images/menu/vx-1.webp";
-import vx2Image from "../../assets/images/menu/vx-2.webp";
-import ex5Image from "../../assets/images/menu/ex-5.webp";
-import pua100Image from "../../assets/images/menu/ea-100.webp";
 import serviceBg from "../../assets/images/services/service-bg-2-1.png";
 
 const ProductsSlider = () => {
@@ -37,49 +27,41 @@ const ProductsSlider = () => {
       id: 1,
       name: "LX-1",
       image: lx1Image,
-      // link: '/lx-7'
     },
     {
       id: 2,
       name: "LX-2",
       image: lx2Image,
-      // link: '/lx-7-super-flex'
     },
     {
       id: 3,
       name: "LX-3",
       image: lx3Image,
-      // link: '/cx-1'
     },
     {
       id: 4,
       name: "LX-4",
       image: lx4Image,
-      // link: '/cx-2'
     },
     {
       id: 5,
       name: "LX-3 WHITE",
       image: lx3white,
-      // link: '/cx-2'
     },
     {
       id: 6,
       name: "LX-4 WHITE",
       image: lx4white,
-      // link: '/cx-2'
     },
     {
       id: 8,
       name: "PU-L29",
       image: pu129,
-      // link: '/pua-100'
     },
     {
       id: 9,
       name: "JOINT FILLER",
       image: jointFillerImage,
-      // link: '/pua-100'
     },
   ];
 
@@ -98,7 +80,6 @@ const ProductsSlider = () => {
     infinite: true,
     speed: 700,
     slidesToShow: 4,
-    // slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 1800,
     arrows: false,

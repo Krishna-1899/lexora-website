@@ -48,29 +48,28 @@ const WhoWeAre = () => {
     adhesives: {
       title: 'Premium Tile Adhesive',
       products: [
-        'CX-1 Premium Tile Adhesive',
-        'VX-1 Premium Tile Adhesive',
-        'CX-2 White Premium Tile Adhesive',
-        'VX-2 White Premium Tile Adhesive',
-        'EX-5 Heavy Duty Premium Tile Adhesive',
-        'LX-7 Tiles adhesive for concrete Floor',
-        'EA-100 High Strength Epoxy Tile Adhesive'
+        'LX-1 Premium Tile Adhesive',
+        'LX-2 White Premium Tile Adhesive',
+        'LX-3 Premium Tile Adhesive',
+        'LX-4 Premium Tile Adhesive',
+        'PU-L29 Premium Tile Adhesive',
+        'LX-3 White Premium Tile Adhesive',
+        'LX-4 White Premium Tile Adhesive'
       ]
     },
     grouts: {
       title: 'Grouts',
       products: [
-        'KE-100 Duet Epoxy Grout',
-        'KE-100 Premium Epoxy Grout',
-        'KE-100 Glitter Epoxy Grout',
-        'Premium Unsanded Grout',
-        'KGA-01 Grout Admix For Interior & Exterior Tiles'
+        'Epoxy Grout',
+        'TileGrout',
+        'Grout Admix'
       ]
     },
     cleaner: {
       title: 'Premium Tile Cleaner',
       products: [
-        'TC-1 Tile Cleaner'
+        'TC-1 Tile Cleaner',
+        'TC-2 Tile Cleaner'
       ]
     },
     tools: {

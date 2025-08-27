@@ -33,7 +33,7 @@ const ProductModal = ({ isOpen, onClose, product }) => {
       },
       'LX-2': {
         name: 'LX-2 - White Cement Based, Polymer Modified, Tile/Stone Adhesive',
-        description: 'CX-2 is a premium, white cement-based tile adhesive specifically formulated for interior wall and floor installations. Designed to preserve the aesthetic appeal of light-colored tiles and stones, this polymer modified adhesive delivers exceptional bond strength and flexibility.',
+        description: 'LX-2 is a premium, white cement-based tile adhesive specifically formulated for interior wall and floor installations. Designed to preserve the aesthetic appeal of light-colored tiles and stones, this polymer modified adhesive delivers exceptional bond strength and flexibility.',
         link: '/lx-2'
       },
       'LX-3': {

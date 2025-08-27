@@ -1,6 +1,7 @@
 import React from 'react';
 import ProductPageTemplate from '../product/ProductPageTemplate';
 import { productConfigurations } from '../../data/productData';
+import lx3white from '../../assets/images/menu/LX_03-white.png';
 
 const LX3WhiteProductPage = () => {
   // Get LX-3 configuration and modify it for LX-3 WHITE
@@ -8,6 +9,7 @@ const LX3WhiteProductPage = () => {
   
   const lx3WhiteConfig = {
     ...lx3Config,
+    productImage: lx3white,
     pageTitle: "LX-3 WHITE - White Cement Based, High Performance Tile Adhesive",
     breadcrumbs: [{ label: 'LX-3 WHITE', link: null }],
     productName: "LX-3 WHITE - White Cement Based, High Performance Tile Adhesive",

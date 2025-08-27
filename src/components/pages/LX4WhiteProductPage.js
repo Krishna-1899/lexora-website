@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductPageTemplate from '../product/ProductPageTemplate';
-import { lx4Configuration } from '../../data/vx2Data';
+import { lx4Configuration } from '../../data/lx4Data';
 
 const LX4WhiteProductPage = () => {
   // Get LX-4 configuration and modify it for LX-4 WHITE
