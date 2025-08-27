@@ -24,7 +24,7 @@ const FloatingWhatsApp = () => {
   return (
     <>
       {/* Floating WhatsApp Button */}
-      <div className="fixed bottom-6 right-6 z-[9999]">
+      <div className="fixed bottom-6 right-4 z-[9999]">
         <div className="relative">
           {/* Ripple Effect - Behind the button */}
           <div className="absolute inset-0 rounded-full bg-green-500 animate-ping opacity-20 pointer-events-none"></div>
@@ -53,7 +53,7 @@ const FloatingWhatsApp = () => {
 
       {/* Notification Badge (optional - shows for first few seconds) */}
       {isVisible && (
-        <div className="fixed bottom-6 right-24 z-[9998] animate-bounce pointer-events-none select-none">
+        <div className="hidden md:block fixed bottom-6 right-32 z-[9998] animate-bounce pointer-events-none select-none">
           <div className="bg-red-500 text-white text-xs px-2 py-1 rounded-full shadow-lg select-none">
             New
           </div>
