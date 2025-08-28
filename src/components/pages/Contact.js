@@ -44,24 +44,46 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     try {
-      // Here you would typically send the data to your backend
-      console.log('Form submitted:', formData);
+      // Create FormData object for traditional form submission
+      const formDataObj = new FormData();
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        pincode: '',
-        interest: '',
-        message: ''
+      // Add all form fields to FormData
+      Object.keys(formData).forEach(key => {
+        formDataObj.append(key, formData[key]);
       });
+      
+      // Add Formspree specific fields
+      formDataObj.append('_subject', 'New Contact Form Submission - Lexora');
+      formDataObj.append('_next', window.location.href);
+      formDataObj.append('_captcha', 'false');
+
+      // Send form data to Formspree
+      const response = await fetch('https://formspree.io/f/mnnbjaor', {
+        method: 'POST',
+        body: formDataObj,
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          pincode: '',
+          interest: '',
+          message: ''
+        });
+        
+        // Show success message for 5 seconds then clear
+        setTimeout(() => {
+          setSubmitStatus('');
+        }, 5000);
+      } else {
+        setSubmitStatus('error');
+      }
     } catch (error) {
+      console.error('Form submission error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -211,7 +233,18 @@ const Contact = () => {
                     </div>
                   )}
 
-                  <form onSubmit={handleSubmit} className="space-y-6" data-aos="fade-up" data-aos-delay="500">
+                  <form 
+                    action="https://formspree.io/f/mnnbjaor" 
+                    method="POST"
+                    onSubmit={handleSubmit} 
+                    className="space-y-6" 
+                    data-aos="fade-up" 
+                    data-aos-delay="500"
+                  >
+                    {/* Hidden field for Formspree */}
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - Lexora" />
+                    <input type="hidden" name="_next" value={window.location.href} />
+                    <input type="hidden" name="_captcha" value="false" />
                     {/* Name */}
                     <div>
                       <input

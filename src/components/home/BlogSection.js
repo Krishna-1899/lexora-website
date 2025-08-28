@@ -19,7 +19,7 @@ const BlogSection = () => {
   ];
 
   return (
-    <section className="section-space-two bg-white ">
+    <section className="section-space-two bg-white " id="blog-section">
       <Container>
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between mb-12">

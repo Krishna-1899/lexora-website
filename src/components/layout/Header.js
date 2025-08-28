@@ -650,20 +650,22 @@ const Header = () => {
                   lexorachembond@gmail.com
                 </a>
               </div>
-              <div className="flex items-center">
-                <i className="text-kajaria-blue-700 mr-2">☎</i>
-                <a
-                  href="tel:+8758435000"
-                  className="text-white hover:text-kajaria-blue-700"
-                >
-                  8758435000
-                </a>
-                <a
-                  href="tel:+8758434000"
-                  className="text-white hover:text-kajaria-blue-700"
-                >
-                  8758434000
-                </a>
+              <div className="flex items-center gap-4">
+                <i className="text-kajaria-blue-700">☎</i>
+                <div className="flex flex-col gap-2">
+                  <a
+                    href="tel:+8758435000"
+                    className="text-white hover:text-kajaria-blue-700"
+                  >
+                    8758435000
+                  </a>
+                  <a
+                    href="tel:+8758434000"
+                    className="text-white hover:text-kajaria-blue-700"
+                  >
+                    8758434000
+                  </a>
+                </div>
               </div>
             </div>
           </div>

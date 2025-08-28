@@ -36,7 +36,9 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="flex items-start hover:text-kajaria-blue-300 transition-colors"
                 >
-                  Industrial Estate 9, nr. solo sanitaryware, Lalpar, Morbi, Gujarat 363642
+                  Lexora chembond LLP, <br />
+                  Lalpar Industrial Estate-9, Nr. 8 A national highway, lalpar, <br />
+                  Morbi-363642.
                 </a>
               </li>
               <li>
@@ -78,18 +80,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to=""
+                  to="/#blog-section"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
                   Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="hover:text-kajaria-blue-300 transition-colors"
-                >
-                  Rewards Points
                 </Link>
               </li>
               <li>
@@ -102,7 +96,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to=""
+                  to="/#video-section"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
                   Video Gallery
@@ -264,32 +258,24 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-4 mb-4 md:mb-0">
             <a
-              href=""
-              // target="_blank"
+              href="https://www.facebook.com/share/178rfuAbU9/"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-kajaria-blue-800 hover:bg-kajaria-blue-600 transition-colors"
             >
               <FaFacebookF />
             </a>
             <a
-              href=""
-              // target="_blank"
-              rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full flex items-center justify-center bg-kajaria-blue-800 hover:bg-kajaria-blue-600 transition-colors"
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href=""
-              // target="_blank"
+              href="https://www.instagram.com/lexora_chembond?igsh=MXNreTRlaHpldndxdw=="
+              target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-kajaria-blue-800 hover:bg-kajaria-blue-600 transition-colors"
             >
               <FaInstagram />
             </a>
             <a
-              href=""
-              // target="_blank"
+              href="https://www.youtube.com/@lexorachembond"
+              target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-kajaria-blue-800 hover:bg-kajaria-blue-600 transition-colors"
             >
@@ -297,7 +283,15 @@ const Footer = () => {
             </a>
             <a
               href=""
-              // target="_blank"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full flex items-center justify-center bg-kajaria-blue-800 hover:bg-kajaria-blue-600 transition-colors"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href=""
+              target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 rounded-full flex items-center justify-center bg-kajaria-blue-800 hover:bg-kajaria-blue-600 transition-colors"
             >

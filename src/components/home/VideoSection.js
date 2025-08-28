@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
 import { FaPlay } from 'react-icons/fa';
 import Container from '../ui/Container';
-import videoBg from '../../assets/images/backgrounds/video-bg-1.webp';
+import videoBg from '../../assets/images/lexora chembond.mp4';
+import thumnail from '../../assets/images/img85.jpg';
 import sliderVideoBg from '../../assets/images/resources/slider-video-bg.png';
 
 const VideoSection = () => {
   const [showVideo, setShowVideo] = useState(false);
   
   return (
-    <section className="section-space bg-white">
+    <section className="relative pt-10" id="video-section">
       <Container>
         <div className="sec-title sec-title--center mb-12" data-aos="fade-up">
           <h6 className="sec-title__tagline">Discover</h6>
           <h3 className="sec-title__title">Discover Why Premium Adhesive is Key for Trendy Large Slab Installation!</h3>
         </div>
-        <div className="video-one__wrapper relative rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <div className="relative rounded-lg overflow-visible z-10" data-aos="fade-up" data-aos-delay="200">
           {!showVideo ? (
             <div 
-              className="relative h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center"
-              style={{ backgroundImage: `url(${videoBg})` }}
+              className="relative h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center -mb-40 md:-mb-32 lg:-mb-40 rounded-lg"
+              style={{ backgroundImage: `url(${thumnail})` }}
             >
               <div className="absolute inset-0 bg-black bg-opacity-30"></div>
               
@@ -39,15 +40,16 @@ const VideoSection = () => {
               </div>
             </div>
           ) : (
-            <div className="aspect-w-16 aspect-h-9">
-              <iframe 
+            <div className="aspect-w-16 aspect-h-9 -mb-40 md:-mb-32 lg:-mb-40 rounded-lg overflow-hidden">
+              <video src={videoBg} autoPlay controls loop className='w-full h-[400px] md:h-[500px]' />
+              {/* <iframe 
                 src="https://www.youtube.com/embed/LIG3lebNp-o?autoplay=1" 
                 title="Importance of Using Premium Adhesive to Install Trendy Large Slabs" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
                 className="w-full h-[400px] md:h-[500px]"
-              ></iframe>
+              ></iframe> */}
             </div>
           )}
         </div>

@@ -53,7 +53,7 @@ const FloatingWhatsApp = () => {
 
       {/* Notification Badge (optional - shows for first few seconds) */}
       {isVisible && (
-        <div className="hidden md:block fixed bottom-6 right-32 z-[9998] animate-bounce pointer-events-none select-none">
+        <div className="hidden md:block fixed bottom-6 right-20 z-[9998] animate-bounce pointer-events-none select-none">
           <div className="bg-red-500 text-white text-xs px-2 py-1 rounded-full shadow-lg select-none">
             New
           </div>

@@ -72,7 +72,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="section-space-bottom relative">
+    <section className="section-space-bottom pt-56 pb-16 relative">
       {/* Background with Parallax Effect */}
       <div 
         className="projects-two__bg absolute inset-0 bg-cover bg-center bg-fixed"
