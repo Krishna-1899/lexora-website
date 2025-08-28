@@ -61,7 +61,7 @@ const Contact = () => {
       formDataObj.append('_captcha', 'false');
 
       // Send form data to Formspree
-      const response = await fetch('https://formspree.io/f/mnnbjaor', {
+      const response = await fetch('https://formspree.io/f/xgvloewa', {
         method: 'POST',
         body: formDataObj,
       });
@@ -113,7 +113,7 @@ const Contact = () => {
         // Create a temporary form element
         const tempForm = document.createElement('form');
         tempForm.method = 'POST';
-        tempForm.action = 'https://formspree.io/f/mnnbjaor';
+        tempForm.action = 'https://formspree.io/f/xgvloewa';
         tempForm.style.display = 'none';
         
         // Add form fields
