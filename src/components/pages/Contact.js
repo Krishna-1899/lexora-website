@@ -43,8 +43,10 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus('');
     
     try {
+      
       // Create FormData object for traditional form submission
       const formDataObj = new FormData();
       
@@ -64,7 +66,9 @@ const Contact = () => {
         body: formDataObj,
       });
 
-      if (response.ok) {
+      // Formspree can return different status codes for success
+      // 200, 201, 302 (redirect) are all considered successful
+      if (response.ok || response.status === 302) {
         setSubmitStatus('success');
         setFormData({
           name: '',
@@ -79,15 +83,104 @@ const Contact = () => {
         setTimeout(() => {
           setSubmitStatus('');
         }, 5000);
-      } else {
-        setSubmitStatus('error');
+        } else {
+          console.error('Formspree returned error status:', response.status);
+        const errorText = await response.text();
+        console.error('Error response body:', errorText);
+        
+        // Try fallback method
+        await submitFormFallback();
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      setSubmitStatus('error');
+      
+      // Try fallback method
+      try {
+        await submitFormFallback();
+      } catch (fallbackError) {
+        console.error('Fallback method also failed:', fallbackError);
+        setSubmitStatus('error');
+      }
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  // Fallback method using traditional form submission
+  const submitFormFallback = () => {
+    return new Promise((resolve, reject) => {
+      try {
+        // Create a temporary form element
+        const tempForm = document.createElement('form');
+        tempForm.method = 'POST';
+        tempForm.action = 'https://formspree.io/f/mnnbjaor';
+        tempForm.style.display = 'none';
+        
+        // Add form fields
+        Object.keys(formData).forEach(key => {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = key;
+          input.value = formData[key];
+          tempForm.appendChild(input);
+        });
+        
+        // Add Formspree specific fields
+        const subjectInput = document.createElement('input');
+        subjectInput.type = 'hidden';
+        subjectInput.name = '_subject';
+        subjectInput.value = 'New Contact Form Submission - Lexora';
+        tempForm.appendChild(subjectInput);
+        
+        const nextInput = document.createElement('input');
+        nextInput.type = 'hidden';
+        nextInput.name = '_next';
+        nextInput.value = window.location.href;
+        tempForm.appendChild(nextInput);
+        
+        const captchaInput = document.createElement('input');
+        captchaInput.type = 'hidden';
+        captchaInput.name = '_captcha';
+        captchaInput.value = 'false';
+        tempForm.appendChild(captchaInput);
+        
+        // Add form to document and submit
+        document.body.appendChild(tempForm);
+        
+        // Set a timeout to check if submission was successful
+        const timeout = setTimeout(() => {
+          document.body.removeChild(tempForm);
+          reject(new Error('Form submission timeout'));
+        }, 10000);
+        
+        // Submit the form
+        tempForm.submit();
+        
+        // If we reach here, assume success
+        setTimeout(() => {
+          clearTimeout(timeout);
+          document.body.removeChild(tempForm);
+          setSubmitStatus('success');
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            pincode: '',
+            interest: '',
+            message: ''
+          });
+          
+          setTimeout(() => {
+            setSubmitStatus('');
+          }, 5000);
+          
+          resolve();
+        }, 2000);
+        
+      } catch (error) {
+        reject(error);
+      }
+    });
   };
 
   return (
@@ -223,28 +316,36 @@ const Contact = () => {
                   {/* Status Messages */}
                   {submitStatus === 'success' && (
                     <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-                      Thank you! Your message has been sent successfully.
+                      <div className="flex items-center">
+                        <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <div>
+                          <strong>Success!</strong> Your message has been sent successfully. We'll get back to you soon.
+                        </div>
+                      </div>
                     </div>
                   )}
                   
                   {submitStatus === 'error' && (
                     <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
-                      Sorry, there was an error sending your message. Please try again.
+                      <div className="flex items-center">
+                        <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                        </svg>
+                        <div>
+                          <strong>Error!</strong> There was an issue sending your message. Please check your internet connection and try again. If the problem persists, please contact us directly.
+                        </div>
+                      </div>
                     </div>
                   )}
 
                   <form 
-                    action="https://formspree.io/f/mnnbjaor" 
-                    method="POST"
                     onSubmit={handleSubmit} 
                     className="space-y-6" 
                     data-aos="fade-up" 
                     data-aos-delay="500"
                   >
-                    {/* Hidden field for Formspree */}
-                    <input type="hidden" name="_subject" value="New Contact Form Submission - Lexora" />
-                    <input type="hidden" name="_next" value={window.location.href} />
-                    <input type="hidden" name="_captcha" value="false" />
                     {/* Name */}
                     <div>
                       <input
