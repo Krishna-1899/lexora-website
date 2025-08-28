@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Container from '../ui/Container';
 import { FiChevronDown } from 'react-icons/fi';
 import faqImage1 from '../../assets/images/faq/faq-1-1.jpg';
-import faqImage2 from '../../assets/images/faq/faq-1-2.webp';
 import expertiseImage1 from '../../assets/images/expertise/expertise-1-1.webp';
 import expertiseImage2 from '../../assets/images/blog/blog-3-f.webp';
 
@@ -93,19 +92,19 @@ const FAQSection = () => {
             </div>
             
             {/* Expertise Images */}
-            <div className="expertise-one__images-grid grid grid-cols-2 gap-4 mt-6">
-              <div className="expertise-one__image expertise-one__image--one">
+            <div className="grid grid-cols-2 gap-4 mt-6">
+              <div className="object-contain">
                 <img 
                   src={expertiseImage1}
                   alt="expertise" 
-                  className="w-full h-auto rounded-lg shadow-lg"
+                  className="w-full h-full rounded-lg shadow-lg object-contain"
                 />
               </div>
-              <div className="expertise-one__image expertise-one__image--two">
+              <div className="object-contain">
                 <img 
                   src={expertiseImage2}
                   alt="expertise" 
-                  className="w-full h-auto rounded-lg shadow-lg"
+                  className="w-full h-full rounded-lg shadow-lg object-cover"
                 />
               </div>
             </div>
