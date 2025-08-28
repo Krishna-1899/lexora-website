@@ -60,6 +60,11 @@ const ProductModal = ({ isOpen, onClose, product }) => {
         name: 'LEXORA PU-L29 - Highly Flexible, Two-Component Polyurethane Adhesive',
         description: 'LEXORA PU-L29 is a high-performance, two-component polyurethane thinset adhesive designed for superior bonding of tiles and stone on both interior and exterior floors and walls. Engineered for exceptional flexibility, it is ideal for a wide range of substrates.',
         link: '/pu-l29'
+      },
+      "JOINT FILLER": {
+        name: "JOINT FILLER - Joint Filler",
+        description: "LEXORA is a non-refractory mortar, used for laying masonry units like AAC blocks. It is a self-curing mortar made from cement, selected natural sand and polymeric additives, which ensure good bonding and durable strength between the blocks.",
+        link: '/block-jointing-mortar'
       }
     };
 
