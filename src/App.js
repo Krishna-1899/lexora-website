@@ -16,6 +16,8 @@ import FloatingWhatsApp from './components/ui/FloatingWhatsApp';
 import ScrollToTop from './components/ui/ScrollToTop';
 import EpoxyGroutProductPage from './components/pages/EpoxyGrout';
 import './App.css';
+import GroutAdmix from './components/pages/GroutAdmix';
+import TileGroutProductPage from './components/pages/TileGrout';
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
         <Route path="/pu-l29" element={<PUL29ProductPage />} />
         <Route path="/block-jointing-mortar" element={<BlockJointMortarProductPage />} />
         <Route path="/epoxy-grout" element={<EpoxyGroutProductPage />} />
+        <Route path="/grout-admix" element={<GroutAdmix/>} />
+        <Route path="/tile-grout" element={<TileGroutProductPage/>} />
         {/* Add more routes here as needed */}
       </Routes>
       

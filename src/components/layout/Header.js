@@ -97,8 +97,8 @@ const Header = () => {
       img: unsandedImage,
       link: "/epoxy-grout",
     },
-    { name: "Grout Admix", img: admisImage, link: "/kga-01" },
-    { name: "Tile Grout", img: admisImage2, link: "/kga-02"}
+    { name: "Grout Admix", img: admisImage, link: "/grout-admix" },
+    { name: "Tile Grout", img: admisImage2, link: "/tile-grout"}
   ];
 
   const toolProducts = [

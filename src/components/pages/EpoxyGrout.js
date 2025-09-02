@@ -4,13 +4,9 @@ import "aos/dist/aos.css";
 import epoxyGroutImage from "../../assets/images/menu/epoxy-grout.png";
 import Layout from "../layout/Layout";
 import PageHeader from "../ui/PageHeader";
-import { Link } from "react-router-dom";
-import { FaDownload, FaSearch } from "react-icons/fa";
 import epoxyGroutImage1 from "../../assets/images/menu/epoxy_part_one.png";
 import epoxyGroutImage2 from "../../assets/images/menu/epoxy_part_two.png";
 import epoxyGroutImage3 from "../../assets/images/menu/epoxy_part_three.png";
-import TechnicalData from "../product/TechnicalData";
-import { DataTable } from "../product/TechnicalData";
 const EpoxyGroutProductPage = () => {
   useEffect(() => {
     // Initialize AOS
