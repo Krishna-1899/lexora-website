@@ -18,7 +18,7 @@ const VideoSection = () => {
         <div className="relative rounded-lg overflow-visible z-10" data-aos="fade-up" data-aos-delay="200">
           {!showVideo ? (
             <div 
-              className="relative h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center -mb-40 md:-mb-32 lg:-mb-40 rounded-lg"
+              className="relative h-[400px] md:h-[500px] bg-cover bg-center flex items-center justify-center rounded-lg"
               style={{ backgroundImage: `url(${thumnail})` }}
             >
               <div className="absolute inset-0 bg-black bg-opacity-30"></div>
@@ -40,7 +40,7 @@ const VideoSection = () => {
               </div>
             </div>
           ) : (
-            <div className="aspect-w-16 aspect-h-9 -mb-40 md:-mb-32 lg:-mb-40 rounded-lg overflow-hidden">
+            <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
               <video src={videoBg} autoPlay controls loop className='w-full h-[400px] md:h-[500px]' />
               {/* <iframe 
                 src="https://www.youtube.com/embed/LIG3lebNp-o?autoplay=1" 

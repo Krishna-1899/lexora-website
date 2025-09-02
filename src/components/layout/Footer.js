@@ -175,10 +175,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="#"
+                  to="/block-jointing-mortar"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  Joint Filler
+                  Block Jointing Mortar
                 </Link>
               </li>
             </ul>
@@ -190,7 +190,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to=""
+                  to="/epoxy-grout"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
                   Epoxy Grout

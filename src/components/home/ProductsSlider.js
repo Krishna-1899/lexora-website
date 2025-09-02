@@ -60,7 +60,7 @@ const ProductsSlider = () => {
     },
     {
       id: 9,
-      name: "JOINT FILLER",
+      name: "BLOCK JOINTING MORTAR",
       image: jointFillerImage,
     },
   ];

@@ -14,7 +14,7 @@ import LX3WhiteProductPage from './components/pages/LX3WhiteProductPage';
 import LX4WhiteProductPage from './components/pages/LX4WhiteProductPage';
 import FloatingWhatsApp from './components/ui/FloatingWhatsApp';
 import ScrollToTop from './components/ui/ScrollToTop';
-
+import EpoxyGroutProductPage from './components/pages/EpoxyGrout';
 import './App.css';
 
 function App() {
@@ -34,6 +34,7 @@ function App() {
         <Route path="/lx-4-white" element={<LX4WhiteProductPage />} />
         <Route path="/pu-l29" element={<PUL29ProductPage />} />
         <Route path="/block-jointing-mortar" element={<BlockJointMortarProductPage />} />
+        <Route path="/epoxy-grout" element={<EpoxyGroutProductPage />} />
         {/* Add more routes here as needed */}
       </Routes>
       

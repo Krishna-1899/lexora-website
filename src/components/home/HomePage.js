@@ -58,7 +58,7 @@ const HomePage = () => {
       <AboutSection />
       <WhyChooseSection />
       <VideoSection />
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
       <FAQSection />
       <BlogSection />
       <DealerSection />

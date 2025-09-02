@@ -22,9 +22,9 @@ import appMethod12 from '../assets/images/application_method/12.webp';
 import appMethod13 from '../assets/images/application_method/13.webp';
 
 export const lx4Configuration = {
-  pageTitle: "LX-4 - White Cement Based, High Polymer Modified, Tile/Stone Adhesive",
+  pageTitle: "LX-4 - For Fixing Marble & Slabs",
   breadcrumbs: [{ label: 'LX-4', link: null }],
-  productName: "LX-4 - White Cement Based, High Polymer Modified, Tile/Stone Adhesive",
+  productName: "LX-4 - For Fixing Marble & Slabs",
   productImage: lx4Image,
   description: "LX-4 is a high-performance, polymer-modified, white cement-based adhesive for low-porosity tiles (vitrified, semi-vitrified) and natural stones, suitable for both interior and exterior floors, and interior walls. It provides excellent bond strength, water resistance, and ease of use, ideal for showers, wet areas, and swimming pools. LX-4 is perfect for renovations, allowing for quick tile-over-tile installations, and is suitable for mosaics, terrazzo, and light-colored natural stones. Confirms to IS 15477: 2019 Type 2T \"Adhesives for use with Ceramic, Mosaic and Stone Tiles\". Note: Not recommended for direct use onto gypsum plaster (wall finishes), paint or metal. Not suitable for tiles and stones with mesh backing.",
   tdsLink: "/assets/tds/lx-4.pdf",
@@ -228,7 +228,7 @@ export const lx4Configuration = {
             <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
               <span className="text-white text-xs">✓</span>
             </span>
-            <p><strong>PACKAGING :</strong> 20 kg bag (Available in White and Grey)</p>
+            <p><strong>PACKAGING :</strong> 20 kg bag Available in Grey with the name of LX-4</p>
           </li>
         </ul>
       )

@@ -95,7 +95,7 @@ const Header = () => {
     {
       name: "Epoxy Grout",
       img: unsandedImage,
-      link: "/premium-unsanded-grout",
+      link: "/epoxy-grout",
     },
     { name: "Grout Admix", img: admisImage, link: "/kga-01" },
     { name: "Tile Grout", img: admisImage2, link: "/kga-02"}
@@ -328,7 +328,7 @@ const Header = () => {
                     {groutProducts.map((item, index) => (
                       <Link
                         key={index}
-                        to=""
+                        to={item.link}
                         className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded"
                         onClick={() => setProductsMenuOpen(false)}
                       >
@@ -501,7 +501,7 @@ const Header = () => {
                             {groutProducts.map((item, index) => (
                               <li key={index}>
                                 <Link
-                                  to=""
+                                  to={item.link}
                                   className="text-white hover:text-kajaria-blue-700 block py-1"
                                   onClick={toggleMobileMenu}
                                 >

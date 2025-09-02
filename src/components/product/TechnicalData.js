@@ -113,7 +113,7 @@ const TechnicalData = ({
         </div>
 
         {/* Coverage Information */}
-        {coverage && (
+        {/* {coverage && (
           <div className="mt-12 bg-white p-6 rounded-lg">
             <h3 className="text-2xl font-bold text-kajaria-brown-900 mb-4">
               Coverage
@@ -122,7 +122,7 @@ const TechnicalData = ({
               {coverage}
             </p>
           </div>
-        )}
+        )} */}
 
         {/* IS Data */}
         {isData.length > 0 && (
@@ -171,5 +171,5 @@ const TechnicalData = ({
     </section>
   );
 };
-
+export { DataTable };
 export default TechnicalData;

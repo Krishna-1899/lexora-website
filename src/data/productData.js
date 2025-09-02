@@ -159,11 +159,11 @@ const commonApplicationSteps = [
 export const productConfigurations = {
   'lx-1': {
     // Page Header Props
-    pageTitle: "LX-1 - Floor and Wall Tile Adhesive",
+    pageTitle: "LX-1 -  For Fixing Floor Tiles",
     breadcrumbs: [{ label: 'LX-1', link: null }],
     
     // Product Details Props
-    productName: "LX-1 - Floor and Wall Tile Adhesive",
+    productName: "LX-1 -  For Fixing Floor Tiles",
     productImage: lx1Image,
     description: "LX-1 is a polymer-based tile adhesive specifically formulated for fixing ceramic tiles and small format natural stone, clay tiles, terracotta and quarry tiles of regular size. It is suitable for both vertical and horizontal surfaces, over the cementitious substrate for indoor application, in dry as well as wet areas. Easy to use with just water mixing, LX-1 is perfect for dry areas and occasional moisture environments like bathrooms and kitchens.",
     tdsLink: "/assets/tds/lx-1.pdf",
@@ -180,7 +180,7 @@ export const productConfigurations = {
       { values: ['Trafficable time', '24 hrs'] },
       { values: ['Tensile Adhesion', '>1.0 N/mm²'] },
       { values: ['Shear Adhesion', '>1.09 N/mm²'] },
-      { values: ['Standard', 'EN 12004 C1T'] }
+      { values: ['EN 12004 Standard', ' C1T'] }
     ],
     
     // IS Data
@@ -317,7 +317,7 @@ export const productConfigurations = {
               <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
                 <span className="text-white text-xs">✓</span>
               </span>
-              <p>20 kg bag (Available in Grey and White (With the name of LX-2))</p>
+              <p>20 kg bag (Available in Grey (With the name of LX-1))</p>
             </li>
           </ul>
         )
@@ -358,9 +358,9 @@ export const productConfigurations = {
   
   // LX-2 Product Configuration
   'lx-2': {
-    pageTitle: "LX-2 - White Cement Based, Polymer Modified, Tile/Stone Adhesive",
+    pageTitle: "LX-2 - For Fixing wall & Vitrified Tiles",
     breadcrumbs: [{ label: 'LX-2', link: null }],
-    productName: "LX-2 - White Cement Based, Polymer Modified, Tile/Stone Adhesive",
+    productName: "LX-2 - For Fixing wall & Vitrified Tiles",
     productImage: lx2Image,
     description: "LX-2 is a premium, white cement-based tile adhesive specifically formulated for interior wall and floor installations. Designed to preserve the aesthetic appeal of light-colored tiles and stones, this polymer modified adhesive delivers exceptional bond strength and flexibility. Ideal for fixing small format ceramic, natural stone, clay, terracotta, and quarry tiles, LX-2 is suitable for both dry and wet areas. Its user-friendly formulation requires only water for mixing, ensuring efficient application. Optimized for bed thicknesses up to 6mm, with the potential for 12mm in specific areas, LX-2 provides a reliable solution for cementitious substrates.",
     tdsLink: "/assets/tds/lx-2.pdf",
@@ -565,7 +565,7 @@ export const productConfigurations = {
               <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
                 <span className="text-white text-xs">✓</span>
               </span>
-              <p><strong>PACKAGING :</strong> 20 kg bag (Available in White and Grey)</p>
+              <p><strong>PACKAGING :</strong> 20 kg bag Available in Grey (With the name of LX-2)</p>
             </li>
           </ul>
         )
@@ -747,9 +747,9 @@ export const productConfigurations = {
   
   // VX-1 Product Configuration
   'lx-3': {
-    pageTitle: "LX-3 - Type 2T Tile Adhesive",
+    pageTitle: "LX-3 - For Fixing Vitrified Tiles",
     breadcrumbs: [{ label: 'LX-3', link: null }],
-    productName: "LX-3 - Type 2T Tile Adhesive",
+    productName: "LX-3 - For Fixing Vitrified Tiles",
     productImage: lx3Image,
     description: "LX-3 is a high-performance, polymer-modified, grey cement-based adhesive specifically designed for fixing low-porosity tiles (vitrified, semi-vitrified) and natural stones on interior and exterior floors, walls-interiors, and even swimming pools. It offers exceptional bond strength, water resistance, and ease of use. The adhesive is water-resistant and is suitable for use in showers, wet areas and swimming pools. Also, ideal for renovation (tile-over-tile) for quick & easy installation works.",
     tdsLink: "/assets/tds/lx-3.pdf",
@@ -949,7 +949,7 @@ export const productConfigurations = {
               <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
                 <span className="text-white text-xs">✓</span>
               </span>
-              <p><strong>PACKAGING :</strong> 20 kg bag (Available in White and Grey)</p>
+              <p><strong>PACKAGING :</strong> 20 kg bag Available in Grey with the name of LX-3</p>
             </li>
           </ul>
         )
