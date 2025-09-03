@@ -182,7 +182,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="sbr-latex" className="hover:text-kajaria-blue-300 transition-colors">
+                <Link to="/sbr-latex" className="hover:text-kajaria-blue-300 transition-colors">
                   SBR Latex
                 </Link>
               </li>
