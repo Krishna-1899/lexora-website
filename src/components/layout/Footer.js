@@ -181,6 +181,11 @@ const Footer = () => {
                   Block Jointing Mortar
                 </Link>
               </li>
+              <li>
+                <Link to="sbr-latex" className="hover:text-kajaria-blue-300 transition-colors">
+                  SBR Latex
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -198,7 +203,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to=""
+                  to="/grout-admix"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
                   Grout Admix
@@ -218,18 +223,10 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to=""
+                  to="/tile-cleaner"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
                   TC-1
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to=""
-                  className="hover:text-kajaria-blue-300 transition-colors"
-                >
-                  TC-2
                 </Link>
               </li>
             </ul>

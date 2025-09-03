@@ -94,7 +94,19 @@ const EpoxyGroutProductPage = () => {
             </div>
           </div>
         </section>
-        <section className="py-16 bg-white">
+        <section className="pb-10 bg-white">
+          <div className="flex justify-center lg:hidden lg:justify-en pb-10 sm:p-0" data-aos="fade-right" data-aos-duration="1000">
+            <div className="bg-kajaria-blue-50 py-8 pl-20 pr-32 rounded-lg max-w-md relative overflow-hidden">
+              <img src={epoxyGroutImage1} alt={altText} className="object-contain absolute top-[37%] left-2 sm:-left-4 w-20 h-20 sm:w-36 sm:h-36" />
+              <img 
+                src={productImage} 
+                alt={altText}
+                className="object-contain w-full h-full"
+              />
+              <img src={epoxyGroutImage3} alt={altText} className="object-contain absolute top-[37%] right-14 sm:right-14 w-20 h-20 sm:w-36 sm:h-36" />
+              <img src={epoxyGroutImage2} alt={altText} className="object-contain w-20 h-20 sm:w-40 sm:h-40 absolute top-[37%] right-0 sm:-right-4" />
+            </div>
+          </div>
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Product Information */}
@@ -252,7 +264,7 @@ const EpoxyGroutProductPage = () => {
                 </div>
               </div>
               {/* Product Image */}
-              <div className="flex justify-center lg:justify-start" data-aos="fade-right" data-aos-duration="1000">
+              <div className="lg:flex justify-center hidden lg:justify-end" data-aos="fade-right" data-aos-duration="1000">
                 <div className="bg-kajaria-blue-50 py-8 pl-20 pr-32 rounded-lg max-w-md relative overflow-hidden">
                   <img src={epoxyGroutImage1} alt={altText} className="object-contain absolute top-[37%] left-2 sm:-left-4 w-20 h-20 sm:w-36 sm:h-36" />
                   <img 

@@ -18,6 +18,8 @@ import EpoxyGroutProductPage from './components/pages/EpoxyGrout';
 import './App.css';
 import GroutAdmix from './components/pages/GroutAdmix';
 import TileGroutProductPage from './components/pages/TileGrout';
+import SBRLatexPage from './components/pages/SBRLatex';
+import TileCleanerPage from './components/pages/TileCleaner';
 
 function App() {
   return (
@@ -39,6 +41,8 @@ function App() {
         <Route path="/epoxy-grout" element={<EpoxyGroutProductPage />} />
         <Route path="/grout-admix" element={<GroutAdmix/>} />
         <Route path="/tile-grout" element={<TileGroutProductPage/>} />
+        <Route path="/sbr-latex" element={<SBRLatexPage/>}/> 
+        <Route path="/tile-cleaner" element={<TileCleanerPage/>}/> 
         {/* Add more routes here as needed */}
       </Routes>
       

@@ -21,6 +21,8 @@ import admisImage2 from "../../assets/images/menu/tile-grout.png";
 // Import cleaner image
 import tc1Image from "../../assets/images/menu/tile-cleaner.png";
 import tc2Image from "../../assets/images/menu/tile-clener2.png";
+//latex
+import sbrLatex from "../../assets/images/menu/sbr-latex.png"
 // Import tool images
 import levelingPlierImage from "../../assets/images/menu/leveling-plier-head.webp";
 import rubberMalletImage from "../../assets/images/menu/rubber-mallet-head.webp";
@@ -84,11 +86,15 @@ const Header = () => {
     { name: "LX-1", img: lx1Image, link: "/lx-1" },
     { name: "LX-2", img: lx2Image, link: "/lx-2" },
     { name: "LX-3", img: lx3Image, link: "/lx-3" },
-    { name: "LX-3 WHITE", img: lx3white, link: "/lx-3-white"},
+    { name: "LX-3 WHITE", img: lx3white, link: "/lx-3-white" },
     { name: "LX-4", img: lx4Image, link: "/lx-4" },
-    { name: "LX-4 WHITE", img: lx4white, link: "/lx-4-white"},
+    { name: "LX-4 WHITE", img: lx4white, link: "/lx-4-white" },
     { name: "PU-L29", img: pul29Image, link: "/pu-l29" },
-    { name: "BLOCK JOINTING MORTAR", img: jointFillerImage, link: "/block-jointing-mortar" },
+    {
+      name: "BLOCK JOINTING MORTAR",
+      img: jointFillerImage,
+      link: "/block-jointing-mortar",
+    },
   ];
 
   const groutProducts = [
@@ -98,7 +104,7 @@ const Header = () => {
       link: "/epoxy-grout",
     },
     { name: "Grout Admix", img: admisImage, link: "/grout-admix" },
-    { name: "Tile Grout", img: admisImage2, link: "/tile-grout"}
+    { name: "Tile Grout", img: admisImage2, link: "/tile-grout" },
   ];
 
   const toolProducts = [
@@ -286,6 +292,16 @@ const Header = () => {
                   >
                     <h5 className="text-lg">Tools</h5>
                   </div>
+                  <div
+                    className={`py-3 px-4 font-medium cursor-pointer transition-all duration-300 ${
+                      activeTab === "latex"
+                        ? "bg-kajaria-blue-700 text-white"
+                        : "hover:bg-white hover:bg-opacity-10"
+                    }`}
+                    onClick={() => handleTabClick("latex")}
+                  >
+                    <h5 className="text-lg">SBR Latex</h5>
+                  </div>
                   <Link
                     to=""
                     className="floens-btn mt-6 inline-flex items-center"
@@ -350,39 +366,21 @@ const Header = () => {
                 {activeTab === "tile-cleaner" && (
                   <div className="grid grid-cols-4 gap-6">
                     <Link
-                      to=""
+                      to="/tile-cleaner"
                       className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded"
                       onClick={() => setProductsMenuOpen(false)}
                     >
                       {/* <div className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded cursor-pointer"> */}
-                        <div className="bg-kajaria-blue-50 p-4 transition-all duration-300 group-hover:bg-kajaria-blue-100">
-                          <img
-                            src={tc2Image}
-                            alt="TC-1"
-                            className="w-20 mx-auto object-contain mb-3"
-                          />
-                          <h3 className="text-xl font-bold text-kajaria-blue-900 group-hover:text-kajaria-blue-700 transition-colors duration-300">
-                            TC-1
-                          </h3>
-                        </div>
-                      {/* </div> */}
-                    </Link>
-                    <Link
-                      to=""
-                      className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded"
-                      onClick={() => setProductsMenuOpen(false)}
-                    >
-                      {/* <div className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded cursor-pointer"> */}
-                        <div className="bg-kajaria-blue-50 p-4 transition-all duration-300 group-hover:bg-kajaria-blue-100">
-                          <img
-                            src={tc1Image}
-                            alt="TC-1"
-                            className="w-20 mx-auto object-contain mb-3"
-                          />
-                          <h3 className="text-xl font-bold text-kajaria-blue-900 group-hover:text-kajaria-blue-700 transition-colors duration-300">
-                            TC-1
-                          </h3>
-                        </div>
+                      <div className="bg-kajaria-blue-50 p-4 transition-all duration-300 group-hover:bg-kajaria-blue-100">
+                        <img
+                          src={tc1Image}
+                          alt="TC-1"
+                          className="w-20 mx-auto object-contain mb-3"
+                        />
+                        <h3 className="text-xl font-bold text-kajaria-blue-900 group-hover:text-kajaria-blue-700 transition-colors duration-300">
+                          TC-1
+                        </h3>
+                      </div>
                       {/* </div> */}
                     </Link>
                   </div>
@@ -411,6 +409,28 @@ const Header = () => {
                     ))}
                   </div>
                 )}
+                {activeTab === "latex" && (
+                  <div className="grid grid-cols-4 gap-6">
+                    <Link
+                      to="/sbr-latex"
+                      className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded"
+                      onClick={() => setProductsMenuOpen(false)}
+                    >
+                      {/* <div className="text-center group hover:shadow-lg transition-all duration-300 p-4 rounded cursor-pointer"> */}
+                      <div className="bg-kajaria-blue-50 p-4 transition-all duration-300 group-hover:bg-kajaria-blue-100">
+                        <img
+                          src={sbrLatex}
+                          alt="Sbr latex"
+                          className="w-20 mx-auto object-contain mb-3"
+                        />
+                        <h3 className="text-xl font-bold text-kajaria-blue-900 group-hover:text-kajaria-blue-700 transition-colors duration-300">
+                          SBR Latex
+                        </h3>
+                      </div>
+                      {/* </div> */}
+                    </Link>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -430,11 +450,7 @@ const Header = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden">
           <div className="fixed right-0 top-0 w-4/5 h-full bg-kajaria-blue-900 overflow-y-auto">
             <div className="flex justify-between items-center p-4 border-b border-gray-700 relative z-10">
-              <img
-                src={logoLight}
-                alt="Lexora logo"
-                className="w-auto h-10"
-              />
+              <img src={logoLight} alt="Lexora logo" className="w-auto h-10" />
               <button
                 className="text-white hover:text-kajaria-blue-700"
                 onClick={toggleMobileMenu}
@@ -521,7 +537,7 @@ const Header = () => {
                           <ul className="pl-4 mt-2 space-y-2">
                             <li>
                               <Link
-                                to=""
+                                to="/tile-cleaner"
                                 className="text-white hover:text-kajaria-blue-700 block py-1"
                                 onClick={toggleMobileMenu}
                               >
@@ -549,6 +565,25 @@ const Header = () => {
                                 </Link>
                               </li>
                             ))}
+                          </ul>
+                        </details>
+                      </li>
+                      <li>
+                        <details className="text-white">
+                          <summary className="flex justify-between items-center py-2 cursor-pointer">
+                            SBR Latex
+                            <FiChevronDown />
+                          </summary>
+                          <ul className="pl-4 mt-2 space-y-2">
+                            <li>
+                              <Link
+                                to="/sbr-latex"
+                                className="text-white hover:text-kajaria-blue-700 block py-1"
+                                onClick={toggleMobileMenu}
+                              >
+                                SBR Latex
+                              </Link>
+                            </li>
                           </ul>
                         </details>
                       </li>
