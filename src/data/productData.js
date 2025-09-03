@@ -976,14 +976,52 @@ export const productConfigurations = {
   'lx-4': lx4Configuration,
   'block-jointing-mortar': {
     pageTitle: "BLOCK JOINTING MORTAR",
-    productSubtitle: "High-Performance Jointing Mortar for Block Masonry",
-    description: "LEXORA is a non-refractory mortar, used for laying masonry units like AAC blocks. It is a self-curing mortar made from cement, selected ne sand and polymeric additives, which ensure good bonding and durable strength between the blocks.",
+    productSubtitle: "For Fixing Blocks",
+    description: "LEXORA is a non-refractory mortar, used for laying masonry units like AAC blocks. It is a self curing mortar made from cement, selected fine sand and polymeric additives, which ensure good bonding and durable strength between the blocks.",
     tdsLink: "/assets/tds/block-jointing-mortar.pdf",
     dealerLink: "/where-to-buy",
     altText: "Block Jointing Mortar",
     breadcrumbs: [{ label: 'BLOCK JOINTING MORTAR', link: null }],
     productName: "BLOCK JOINTING MORTAR",
     productImage: blockJointingMortarImage,
+    benefits: [
+      "For 4mm bed thickness",
+      "Suitable for insulated blocks",
+      "Block mounting full wall in 2-3 days",
+      "The chiselling and conducting can be carried out after 14days",
+      "The Plastering can be carried out after 7 days",
+      "Can be applied with 90% material transfer",
+      "Self curing adhesive"
+    ],
+    packing: "40 kg",
+    color: "GREY",
+    additionalSections: [
+      {
+        title: "Description",
+        content: "LEXORA is a non-refractory mortar, used for laying masonry units like AAC blocks. It is a self curing mortar made from cement, selected fine sand and polymeric additives, which ensure good bonding and durable strength between the blocks."
+      },
+      {
+        title: "Benefits",
+        type: "list",
+        content: [
+          "For 4mm bed thickness",
+          "Suitable for insulated blocks", 
+          "Block mounting full wall in 2-3 days",
+          "The chiselling and conducting can be carried out after 14days",
+          "The Plastering can be carried out after 7 days",
+          "Can be applied with 90% material transfer",
+          "Self curing adhesive"
+        ]
+      },
+      {
+        title: "Packing",
+        content: "40 kg"
+      },
+      {
+        title: "Color",
+        content: "GREY"
+      }
+    ]
   },
   // Continue adding other products...
 };

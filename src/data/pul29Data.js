@@ -291,6 +291,14 @@ export const pul29Configuration = {
         </div>
       ),
     },
+    {
+      title: "Packaging",
+      content: (
+        <div>
+          <p><strong>Packaging :</strong> Part - A 3200gm + Part - B 800gm</p>
+        </div>
+      ),
+    }
   ],
 
   // Installation tabs
