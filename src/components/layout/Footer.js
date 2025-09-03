@@ -211,7 +211,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to=""
+                  to="/tile-grout"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
                   Tile Grout
