@@ -26,34 +26,34 @@ const ProductModal = ({ isOpen, onClose, product }) => {
   // Get product data from the product configurations
   const getProductData = (productName) => {
     const productConfigs = {
-      'LX-1': {
-        name: 'LX-1 -  For Fixing Floor Tiles',
-        description: 'LX-1 is a polymer-based tile adhesive specifically formulated for fixing ceramic tiles and small format natural stone, clay tiles, terracotta and quarry tiles of regular size. It is suitable for both vertical and horizontal surfaces, over the cementitious substrate for indoor application, in dry as well as wet areas.',
+      'LX-01': {
+        name: 'LX-01 -  For Fixing Floor Tiles',
+        description: 'LX-01 is a polymer-based tile adhesive specifically formulated for fixing ceramic tiles and small format natural stone, clay tiles, terracotta and quarry tiles of regular size. It is suitable for both vertical and horizontal surfaces, over the cementitious substrate for indoor application, in dry as well as wet areas.',
         link: '/lx-1'
       },
-      'LX-2': {
-        name: 'LX-2 - For Fixing wall & Vitrified Tiles',
-        description: 'LX-2 is a premium, white cement-based tile adhesive specifically formulated for interior wall and floor installations. Designed to preserve the aesthetic appeal of light-colored tiles and stones, this polymer modified adhesive delivers exceptional bond strength and flexibility.',
+      'LX-02': {
+        name: 'LX-02 - For Fixing wall & Vitrified Tiles',
+        description: 'LX-02 is a premium, white cement-based tile adhesive specifically formulated for interior wall and floor installations. Designed to preserve the aesthetic appeal of light-colored tiles and stones, this polymer modified adhesive delivers exceptional bond strength and flexibility.',
         link: '/lx-2'
       },
-      'LX-3': {
-        name: 'LX-3 - For Fixing Vitrified Tiles',
-        description: 'LX-3 is a high-performance, polymer-modified, grey cement-based adhesive specifically designed for fixing low-porosity tiles (vitrified, semi-vitrified) and natural stones on interior and exterior floors, walls-interiors, and even swimming pools.',
+      'LX-03': {
+        name: 'LX-03 - For Fixing Vitrified Tiles',
+        description: 'LX-03 is a high-performance, polymer-modified, grey cement-based adhesive specifically designed for fixing low-porosity tiles (vitrified, semi-vitrified) and natural stones on interior and exterior floors, walls-interiors, and even swimming pools.',
         link: '/lx-3'
       },
-      'LX-4': {
-        name: 'LX-4 - For Fixing Marble & Slabs',
-        description: 'LX-4 is a high-performance, polymer-modified, white cement-based adhesive for low-porosity tiles (vitrified, semi-vitrified) and natural stones, suitable for both interior and exterior floors, and interior walls.',
+      'LX-04': {
+        name: 'LX-04 - For Fixing Marble & Slabs',
+        description: 'LX-04 is a high-performance, polymer-modified, white cement-based adhesive for low-porosity tiles (vitrified, semi-vitrified) and natural stones, suitable for both interior and exterior floors, and interior walls.',
         link: '/lx-4'
       },
-      'LX-3 WHITE': {
-        name: 'LX-3 WHITE - For Fixing Vitrified Tiles',
-        description: 'LX-3 WHITE is a high-performance, polymer-modified, white cement-based adhesive specifically designed for fixing low-porosity tiles (vitrified, semi-vitrified) and natural stones on interior and exterior floors, walls-interiors, and even swimming pools. It offers exceptional bond strength, water resistance, and ease of use. The white cement base preserves the aesthetic appeal of light-colored tiles and stones.',
+      'LX-03 WHITE': {
+        name: 'LX-03 WHITE - For Fixing Vitrified Tiles',
+        description: 'LX-03 WHITE is a high-performance, polymer-modified, white cement-based adhesive specifically designed for fixing low-porosity tiles (vitrified, semi-vitrified) and natural stones on interior and exterior floors, walls-interiors, and even swimming pools. It offers exceptional bond strength, water resistance, and ease of use. The white cement base preserves the aesthetic appeal of light-colored tiles and stones.',
         link: '/lx-3-white'
       },
-      'LX-4 WHITE': {
-        name: 'LX-4 WHITE - For Fixing Marble & Slabs',
-        description: 'LX-4 WHITE is a high-performance, polymer-modified, white cement-based adhesive for low-porosity tiles (vitrified, semi-vitrified) and natural stones, suitable for both interior and exterior floors, and interior walls. It provides excellent bond strength, water resistance, and ease of use, ideal for showers, wet areas, and swimming pools. The white cement base ensures the aesthetic appeal of light-colored tiles and stones is preserved.',
+      'LX-04 WHITE': {
+        name: 'LX-04 WHITE - For Fixing Marble & Slabs',
+        description: 'LX-04 WHITE is a high-performance, polymer-modified, white cement-based adhesive for low-porosity tiles (vitrified, semi-vitrified) and natural stones, suitable for both interior and exterior floors, and interior walls. It provides excellent bond strength, water resistance, and ease of use, ideal for showers, wet areas, and swimming pools. The white cement base ensures the aesthetic appeal of light-colored tiles and stones is preserved.',
         link: '/lx-4-white'
       },
       'PU-L29': {

@@ -26,7 +26,7 @@ import technicalImage12 from '../assets/images/application_method/12.webp';
 import technicalImage13 from '../assets/images/application_method/13.webp';
 
 
-// Import LX-4 configuration
+// Import LX-04 configuration
 import { lx4Configuration } from './lx4Data';
 
 
@@ -159,16 +159,16 @@ const commonApplicationSteps = [
 export const productConfigurations = {
   'lx-1': {
     // Page Header Props
-    pageTitle: "LX-1 -  For Fixing Floor Tiles",
-    breadcrumbs: [{ label: 'LX-1', link: null }],
+    pageTitle: "LX-01 -  For Fixing Floor Tiles",
+    breadcrumbs: [{ label: 'LX-01', link: null }],
     
     // Product Details Props
-    productName: "LX-1 -  For Fixing Floor Tiles",
+    productName: "LX-01 -  For Fixing Floor Tiles",
     productImage: lx1Image,
-    description: "LX-1 is a polymer-based tile adhesive specifically formulated for fixing ceramic tiles and small format natural stone, clay tiles, terracotta and quarry tiles of regular size. It is suitable for both vertical and horizontal surfaces, over the cementitious substrate for indoor application, in dry as well as wet areas. Easy to use with just water mixing, LX-1 is perfect for dry areas and occasional moisture environments like bathrooms and kitchens.",
+    description: "LX-01 is a polymer-based tile adhesive specifically formulated for fixing ceramic tiles and small format natural stone, clay tiles, terracotta and quarry tiles of regular size. It is suitable for both vertical and horizontal surfaces, over the cementitious substrate for indoor application, in dry as well as wet areas. Easy to use with just water mixing, LX-01 is perfect for dry areas and occasional moisture environments like bathrooms and kitchens.",
     tdsLink: "/assets/tds/lx-1.pdf",
     dealerLink: "/where-to-buy",
-    altText: "LX-1 for Ceramic Floor Tiles",
+    altText: "LX-01 for Ceramic Floor Tiles",
     
     // Technical specifications
     technicalSpecs: [
@@ -286,7 +286,7 @@ export const productConfigurations = {
         title: "APPLICATION",
         content: (
           <p>
-            LX-1 is designed for dry areas of interior floors and walls. It can be used for installing all types of ceramic tiles and small format natural stones on concrete and various cement-based substrates. The maximum bed thickness is 12mm
+            LX-01 is designed for dry areas of interior floors and walls. It can be used for installing all types of ceramic tiles and small format natural stones on concrete and various cement-based substrates. The maximum bed thickness is 12mm
           </p>
         )
       },
@@ -317,7 +317,7 @@ export const productConfigurations = {
               <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
                 <span className="text-white text-xs">✓</span>
               </span>
-              <p>20 kg bag (Available in Grey (With the name of LX-1))</p>
+              <p>20 kg bag (Available in Grey (With the name of LX-01))</p>
             </li>
           </ul>
         )
@@ -342,30 +342,30 @@ export const productConfigurations = {
         answer: "Mix LX1 Tile Adhesive by adding the powder to water in the recommended ratio and stirring until a smooth, lump-free paste is formed. For large batches, use a mechanical mixer to ensure consistency."
       },
       {
-        question: "What makes LX-1 Tile Adhesive different from other cement-based adhesives?",
-        answer: "LX-1 is polymer-modified, enhancing its bonding strength, flexibility, and durability compared to standard cement-based adhesives. It offers comprehensive solutions for walls, floors, and roofs for residential and commercial tiling projects."
+        question: "What makes LX-01 Tile Adhesive different from other cement-based adhesives?",
+        answer: "LX-01 is polymer-modified, enhancing its bonding strength, flexibility, and durability compared to standard cement-based adhesives. It offers comprehensive solutions for walls, floors, and roofs for residential and commercial tiling projects."
       },
       {
-        question: "Is LX-1 Tile Adhesive a glue or a cement-based bonding agent?",
+        question: "Is LX-01 Tile Adhesive a glue or a cement-based bonding agent?",
         answer: "It is a grey-colored polymer-modified cement-based bonding agent that acts as a strong adhesive, providing the benefits of both traditional cement and modern polymer-enhanced glues."
       },
       {
-        question: "What is the best way to apply LX-1 Tile Adhesive for optimal results?",
+        question: "What is the best way to apply LX-01 Tile Adhesive for optimal results?",
         answer: "Mix using an electric chemical mixer and make a lump-free paste. Use a notched trowel to ensure an even thickness and proper coverage. Apply one coating on the surface and one coating on the tiles. Press the tiles firmly into the adhesive and adjust to maintain alignment and spacing."
       }
     ]
   },
   
-  // LX-2 Product Configuration
+  // LX-02 Product Configuration
   'lx-2': {
-    pageTitle: "LX-2 - For Fixing wall & Vitrified Tiles",
-    breadcrumbs: [{ label: 'LX-2', link: null }],
-    productName: "LX-2 - For Fixing wall & Vitrified Tiles",
+    pageTitle: "LX-02 - For Fixing wall & Vitrified Tiles",
+    breadcrumbs: [{ label: 'LX-02', link: null }],
+    productName: "LX-02 - For Fixing wall & Vitrified Tiles",
     productImage: lx2Image,
-    description: "LX-2 is a premium, white cement-based tile adhesive specifically formulated for interior wall and floor installations. Designed to preserve the aesthetic appeal of light-colored tiles and stones, this polymer modified adhesive delivers exceptional bond strength and flexibility. Ideal for fixing small format ceramic, natural stone, clay, terracotta, and quarry tiles, LX-2 is suitable for both dry and wet areas. Its user-friendly formulation requires only water for mixing, ensuring efficient application. Optimized for bed thicknesses up to 6mm, with the potential for 12mm in specific areas, LX-2 provides a reliable solution for cementitious substrates.",
+    description: "LX-02 is a premium, white cement-based tile adhesive specifically formulated for interior wall and floor installations. Designed to preserve the aesthetic appeal of light-colored tiles and stones, this polymer modified adhesive delivers exceptional bond strength and flexibility. Ideal for fixing small format ceramic, natural stone, clay, terracotta, and quarry tiles, LX-02 is suitable for both dry and wet areas. Its user-friendly formulation requires only water for mixing, ensuring efficient application. Optimized for bed thicknesses up to 6mm, with the potential for 12mm in specific areas, LX-02 provides a reliable solution for cementitious substrates.",
     tdsLink: "/assets/tds/lx-2.pdf",
     dealerLink: "/where-to-buy",
-    altText: "LX-2 White Color Adhesive",
+    altText: "LX-02 White Color Adhesive",
     
     // Technical specifications
     technicalSpecs: [
@@ -394,7 +394,7 @@ export const productConfigurations = {
     
     technicalImages: [technical1, technical2, technical3, technical4],
     
-    // LX-2 specific accordion items
+    // LX-02 specific accordion items
     accordionItems: [
       {
         title: "KEY FEATURES AND BENEFITS:",
@@ -526,7 +526,7 @@ export const productConfigurations = {
         title: "APPLICATION",
         content: (
           <p>
-            LX-2 is designed for dry areas of interior floors and walls. It can be used for installing all types of ceramic tiles and small format natural stones on concrete and various cement-based substrates. The maximum bed thickness is 12mm.
+            LX-02 is designed for dry areas of interior floors and walls. It can be used for installing all types of ceramic tiles and small format natural stones on concrete and various cement-based substrates. The maximum bed thickness is 12mm.
           </p>
         )
       },
@@ -550,7 +550,7 @@ export const productConfigurations = {
         )
       },
       {
-        title: "PERFORMANCE PROPERTIES : (LX-2 Adhesive mixed with Water):",
+        title: "PERFORMANCE PROPERTIES : (LX-02 Adhesive mixed with Water):",
         content: (
           <p>
             This adhesive mortar conforms to IS 15477: 2019 - Type 2T Adhesive.
@@ -565,14 +565,14 @@ export const productConfigurations = {
               <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
                 <span className="text-white text-xs">✓</span>
               </span>
-              <p><strong>PACKAGING :</strong> 20 kg bag Available in Grey (With the name of LX-2)</p>
+              <p><strong>PACKAGING :</strong> 20 kg bag Available in Grey (With the name of LX-02)</p>
             </li>
           </ul>
         )
       }
     ],
     
-    // LX-2 specific application steps
+    // LX-02 specific application steps
     applicationSteps: [
       {
         image: technicalImage1,
@@ -586,8 +586,8 @@ export const productConfigurations = {
       },
       {
         image: technicalImage1,
-        description: "Add 20 Kg LX-2 Thin Set Adhesive in to water and mix it till attains Uniform Paste",
-        altText: "Step 3: Add LX-2 adhesive powder"
+        description: "Add 20 Kg LX-02 Thin Set Adhesive in to water and mix it till attains Uniform Paste",
+        altText: "Step 3: Add LX-02 adhesive powder"
       },
       {
         image: technicalImage2,
@@ -641,7 +641,7 @@ export const productConfigurations = {
       }
     ],
     
-    // LX-2 specific installation tabs
+    // LX-02 specific installation tabs
     installationTabs: [
       {
         label: "Surface Preparation",
@@ -658,7 +658,7 @@ export const productConfigurations = {
         label: "Mixing",
         content: [
           "Pour clean, potable water into a clean mixing bowl.",
-          "Add LX-2 powder to the water (approximately 5 - 5.5 liters of water per 20 kg of powder).",
+          "Add LX-02 powder to the water (approximately 5 - 5.5 liters of water per 20 kg of powder).",
           "Mix by hand or with a slow-speed mixer until a smooth, trowelable consistency is achieved.",
           "Allow the adhesive to slake for 5 minutes.",
           "Adjust consistency if necessary.",
@@ -716,45 +716,45 @@ export const productConfigurations = {
       }
     ],
     
-    // LX-2 specific FAQs
+    // LX-02 specific FAQs
     faqs: [
       {
-        question: "What is LX-2 Tile Adhesive?",
-        answer: "LX-2 is a premium white-colored waterproof tile adhesive designed to fix ceramic tiles on floors and walls. It provides a strong bond and is ideal for areas exposed to moisture. It also keeps the shine of white tiles."
+        question: "What is LX-02 Tile Adhesive?",
+        answer: "LX-02 is a premium white-colored waterproof tile adhesive designed to fix ceramic tiles on floors and walls. It provides a strong bond and is ideal for areas exposed to moisture. It also keeps the shine of white tiles."
       },
       {
-        question: "Can LX-2 be used for both floor and wall tile installations?",
-        answer: "LX-2 is versatile and can be used to fix tiles on floors and walls in residential and commercial areas. It provides excellent adhesion and durability in all applications."
+        question: "Can LX-02 be used for both floor and wall tile installations?",
+        answer: "LX-02 is versatile and can be used to fix tiles on floors and walls in residential and commercial areas. It provides excellent adhesion and durability in all applications."
       },
       {
-        question: "What is the difference between LX-1 and LX-2?",
-        answer: "Both have the same qualities, but the only difference is the color of the tile adhesive. LX-1 is a cement-like grey color, whereas LX-2 is a white powder, making the light-colored tile solid and beautiful."
+        question: "What is the difference between LX-01 and LX-02?",
+        answer: "Both have the same qualities, but the only difference is the color of the tile adhesive. LX-01 is a cement-like grey color, whereas LX-02 is a white powder, making the light-colored tile solid and beautiful."
       },
       {
-        question: "How does LX-2 Tile Adhesive enhance tile fixing?",
-        answer: "LX-2 provides a strong bond and powerful glue kind application that resists moisture penetration, ensuring long-lasting tile fixing in areas prone to water exposure, such as bathrooms and kitchens."
+        question: "How does LX-02 Tile Adhesive enhance tile fixing?",
+        answer: "LX-02 provides a strong bond and powerful glue kind application that resists moisture penetration, ensuring long-lasting tile fixing in areas prone to water exposure, such as bathrooms and kitchens."
       },
       {
-        question: "Is LX-2 suitable for outdoor tiling projects?",
-        answer: "LX-2's waterproof and durable properties make it suitable for outdoor tiling projects. It ensures that tiles remain securely in place despite weather conditions. Apply LX-2 using a notched trowel to spread the adhesive evenly. Press the tiles firmly, ensuring proper alignment and spacing for a secure bond."
+        question: "Is LX-02 suitable for outdoor tiling projects?",
+        answer: "LX-02's waterproof and durable properties make it suitable for outdoor tiling projects. It ensures that tiles remain securely in place despite weather conditions. Apply LX-02 using a notched trowel to spread the adhesive evenly. Press the tiles firmly, ensuring proper alignment and spacing for a secure bond."
       },
       {
-        question: "What surfaces can LX-2 Tile Adhesive be used on?",
-        answer: "LX-2 can be used on various surfaces, including concrete, plaster, and existing tiles, making it versatile for different tiling projects."
+        question: "What surfaces can LX-02 Tile Adhesive be used on?",
+        answer: "LX-02 can be used on various surfaces, including concrete, plaster, and existing tiles, making it versatile for different tiling projects."
       }
     ]
   },
   
   // VX-1 Product Configuration
   'lx-3': {
-    pageTitle: "LX-3 - For Fixing Vitrified Tiles",
-    breadcrumbs: [{ label: 'LX-3', link: null }],
-    productName: "LX-3 - For Fixing Vitrified Tiles",
+    pageTitle: "LX-03 - For Fixing Vitrified Tiles",
+    breadcrumbs: [{ label: 'LX-03', link: null }],
+    productName: "LX-03 - For Fixing Vitrified Tiles",
     productImage: lx3Image,
-    description: "LX-3 is a high-performance, polymer-modified, grey cement-based adhesive specifically designed for fixing low-porosity tiles (vitrified, semi-vitrified) and natural stones on interior and exterior floors, walls-interiors, and even swimming pools. It offers exceptional bond strength, water resistance, and ease of use. The adhesive is water-resistant and is suitable for use in showers, wet areas and swimming pools. Also, ideal for renovation (tile-over-tile) for quick & easy installation works.",
+    description: "LX-03 is a high-performance, polymer-modified, grey cement-based adhesive specifically designed for fixing low-porosity tiles (vitrified, semi-vitrified) and natural stones on interior and exterior floors, walls-interiors, and even swimming pools. It offers exceptional bond strength, water resistance, and ease of use. The adhesive is water-resistant and is suitable for use in showers, wet areas and swimming pools. Also, ideal for renovation (tile-over-tile) for quick & easy installation works.",
     tdsLink: "/assets/tds/lx-3.pdf",
     dealerLink: "/where-to-buy",
-    altText: "LX-3 Premium Tile Adhesive",
+    altText: "LX-03 Premium Tile Adhesive",
     technicalSpecs: [
       { values: ['Appearance', 'Free flowing powder'] },
       { values: ['Colour', 'White & Grey'] },
@@ -910,7 +910,7 @@ export const productConfigurations = {
         title: "APPLICATION",
         content: (
           <p>
-            LX-3 is designed for dry areas of interior floors and walls. It can be used for installing all types of ceramic tiles and small format natural stones on concrete and various cement-based substrates. The maximum bed thickness is 12mm.
+            LX-03 is designed for dry areas of interior floors and walls. It can be used for installing all types of ceramic tiles and small format natural stones on concrete and various cement-based substrates. The maximum bed thickness is 12mm.
           </p>
         )
       },
@@ -934,7 +934,7 @@ export const productConfigurations = {
         )
       },
       {
-        title: "PERFORMANCE PROPERTIES : (LX-3 Adhesive mixed with Water):",
+        title: "PERFORMANCE PROPERTIES : (LX-03 Adhesive mixed with Water):",
         content: (
           <p>
             This adhesive mortar conforms to IS 15477: 2019 - Type 3T Adhesive.
@@ -949,7 +949,7 @@ export const productConfigurations = {
               <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
                 <span className="text-white text-xs">✓</span>
               </span>
-              <p><strong>PACKAGING :</strong> 20 kg bag Available in Grey with the name of LX-3</p>
+              <p><strong>PACKAGING :</strong> 20 kg bag Available in Grey with the name of LX-03</p>
             </li>
           </ul>
         )
@@ -959,20 +959,20 @@ export const productConfigurations = {
     installationTabs: commonInstallationTabs,
     faqs: [
       {
-        question: "What is LX-3 Tile Adhesive used for?",
-        answer: "This is used to fix tiles on walls and floors, including ceramic, vitrified, and large wall tiles, for residential and commercial purposes. Its LX-3 name stands due to its compatibility with vitrified tiles with zero porosity."
+        question: "What is LX-03 Tile Adhesive used for?",
+        answer: "This is used to fix tiles on walls and floors, including ceramic, vitrified, and large wall tiles, for residential and commercial purposes. Its LX-03 name stands due to its compatibility with vitrified tiles with zero porosity."
       },
       {
-        question: "Can LX-3 Tile Adhesive be used in wet areas like bathrooms?",
+        question: "Can LX-03 Tile Adhesive be used in wet areas like bathrooms?",
         answer: "Yes, it is suitable for use in wet areas such as bathrooms. It provides a solid and durable bond and prevents seepage and leakage."
       },
       {
-        question: "Is LX-3 Tile Adhesive suitable for tile-on-tile application?",
+        question: "Is LX-03 Tile Adhesive suitable for tile-on-tile application?",
         answer: "It is formulated for heavy-duty applications for fixing vitrified and large-size tiles. It also works effectively for tile-on-tile applications, ensuring strong bonding and adhesion."
       }
     ]
   },
-  // LX-4 Product Configuration (imported from separate file)
+  // LX-04 Product Configuration (imported from separate file)
   'lx-4': lx4Configuration,
   'block-jointing-mortar': {
     pageTitle: "BLOCK JOINTING MORTAR",

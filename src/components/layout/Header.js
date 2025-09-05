@@ -83,12 +83,12 @@ const Header = () => {
   };
 
   const adhesiveProducts = [
-    { name: "LX-1", img: lx1Image, link: "/lx-1" },
-    { name: "LX-2", img: lx2Image, link: "/lx-2" },
-    { name: "LX-3", img: lx3Image, link: "/lx-3" },
-    { name: "LX-3 WHITE", img: lx3white, link: "/lx-3-white" },
-    { name: "LX-4", img: lx4Image, link: "/lx-4" },
-    { name: "LX-4 WHITE", img: lx4white, link: "/lx-4-white" },
+    { name: "LX-01", img: lx1Image, link: "/lx-1" },
+    { name: "LX-02", img: lx2Image, link: "/lx-2" },
+    { name: "LX-03", img: lx3Image, link: "/lx-3" },
+    { name: "LX-03 WHITE", img: lx3white, link: "/lx-3-white" },
+    { name: "LX-04", img: lx4Image, link: "/lx-4" },
+    { name: "LX-04 WHITE", img: lx4white, link: "/lx-4-white" },
     { name: "PU-L29", img: pul29Image, link: "/pu-l29" },
     {
       name: "BLOCK JOINTING MORTAR",
@@ -284,16 +284,6 @@ const Header = () => {
                   </div>
                   <div
                     className={`py-3 px-4 font-medium cursor-pointer transition-all duration-300 ${
-                      activeTab === "tool"
-                        ? "bg-kajaria-blue-700 text-white"
-                        : "hover:bg-white hover:bg-opacity-10"
-                    }`}
-                    onClick={() => handleTabClick("tool")}
-                  >
-                    <h5 className="text-lg">Tools</h5>
-                  </div>
-                  <div
-                    className={`py-3 px-4 font-medium cursor-pointer transition-all duration-300 ${
                       activeTab === "latex"
                         ? "bg-kajaria-blue-700 text-white"
                         : "hover:bg-white hover:bg-opacity-10"
@@ -302,6 +292,17 @@ const Header = () => {
                   >
                     <h5 className="text-lg">SBR Latex</h5>
                   </div>
+                  <div
+                    className={`py-3 px-4 font-medium cursor-pointer transition-all duration-300 ${
+                      activeTab === "tool"
+                        ? "bg-kajaria-blue-700 text-white"
+                        : "hover:bg-white hover:bg-opacity-10"
+                    }`}
+                    onClick={() => handleTabClick("tool")}
+                  >
+                    <h5 className="text-lg">Tools</h5>
+                  </div>
+                  
                   <Link
                     to=""
                     className="floens-btn mt-6 inline-flex items-center"
@@ -550,6 +551,25 @@ const Header = () => {
                       <li>
                         <details className="text-white">
                           <summary className="flex justify-between items-center py-2 cursor-pointer">
+                            SBR Latex
+                            <FiChevronDown />
+                          </summary>
+                          <ul className="pl-4 mt-2 space-y-2">
+                            <li>
+                              <Link
+                                to="/sbr-latex"
+                                className="text-white hover:text-kajaria-blue-700 block py-1"
+                                onClick={toggleMobileMenu}
+                              >
+                                SBR Latex
+                              </Link>
+                            </li>
+                          </ul>
+                        </details>
+                      </li>
+                      <li>
+                        <details className="text-white">
+                          <summary className="flex justify-between items-center py-2 cursor-pointer">
                             Tools
                             <FiChevronDown />
                           </summary>
@@ -568,25 +588,7 @@ const Header = () => {
                           </ul>
                         </details>
                       </li>
-                      <li>
-                        <details className="text-white">
-                          <summary className="flex justify-between items-center py-2 cursor-pointer">
-                            SBR Latex
-                            <FiChevronDown />
-                          </summary>
-                          <ul className="pl-4 mt-2 space-y-2">
-                            <li>
-                              <Link
-                                to="/sbr-latex"
-                                className="text-white hover:text-kajaria-blue-700 block py-1"
-                                onClick={toggleMobileMenu}
-                              >
-                                SBR Latex
-                              </Link>
-                            </li>
-                          </ul>
-                        </details>
-                      </li>
+                      
                     </ul>
                   </details>
                 </li>

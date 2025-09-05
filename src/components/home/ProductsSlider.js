@@ -25,32 +25,32 @@ const ProductsSlider = () => {
   const products = [
     {
       id: 1,
-      name: "LX-1",
+      name: "LX-01",
       image: lx1Image,
     },
     {
       id: 2,
-      name: "LX-2",
+      name: "LX-02",
       image: lx2Image,
     },
     {
       id: 3,
-      name: "LX-3",
+      name: "LX-03",
       image: lx3Image,
     },
     {
       id: 4,
-      name: "LX-4",
+      name: "LX-04",
       image: lx4Image,
     },
     {
       id: 5,
-      name: "LX-3 WHITE",
+      name: "LX-03 WHITE",
       image: lx3white,
     },
     {
       id: 6,
-      name: "LX-4 WHITE",
+      name: "LX-04 WHITE",
       image: lx4white,
     },
     {

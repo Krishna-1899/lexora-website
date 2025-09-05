@@ -4,15 +4,15 @@ import { lx4Configuration } from '../../data/lx4Data';
 import lx4WhiteImage from '../../assets/images/menu/LX-04-white.png';
 
 const LX4WhiteProductPage = () => {
-  // Get LX-4 configuration and modify it for LX-4 WHITE
+  // Get LX-04 configuration and modify it for LX-04 WHITE
   const lx4WhiteConfig = {
     ...lx4Configuration,
     productImage: lx4WhiteImage,
-    pageTitle: "LX-4 WHITE - White Cement Based, High Polymer Modified, Tile/Stone Adhesive",
-    breadcrumbs: [{ label: 'LX-4 WHITE', link: null }],
-    productName: "LX-4 WHITE - White Cement Based, High Polymer Modified, Tile/Stone Adhesive",
-    description: "LX-4 WHITE is a high-performance, polymer-modified, white cement-based adhesive for low-porosity tiles (vitrified, semi-vitrified) and natural stones, suitable for both interior and exterior floors, and interior walls. It provides excellent bond strength, water resistance, and ease of use, ideal for showers, wet areas, and swimming pools. The white cement base ensures the aesthetic appeal of light-colored tiles and stones is preserved.",
-    altText: "LX-4 WHITE White Color Adhesive for Tiles & Marbles",
+    pageTitle: "LX-04 WHITE - White Cement Based, High Polymer Modified, Tile/Stone Adhesive",
+    breadcrumbs: [{ label: 'LX-04 WHITE', link: null }],
+    productName: "LX-04 WHITE - White Cement Based, High Polymer Modified, Tile/Stone Adhesive",
+    description: "LX-04 WHITE is a high-performance, polymer-modified, white cement-based adhesive for low-porosity tiles (vitrified, semi-vitrified) and natural stones, suitable for both interior and exterior floors, and interior walls. It provides excellent bond strength, water resistance, and ease of use, ideal for showers, wet areas, and swimming pools. The white cement base ensures the aesthetic appeal of light-colored tiles and stones is preserved.",
+    altText: "LX-04 WHITE White Color Adhesive for Tiles & Marbles",
     accordionItems: [
       {
         title: "KEY FEATURES AND BENEFITS",
@@ -163,7 +163,7 @@ const LX4WhiteProductPage = () => {
         )
       },
       {
-        title: "PERFORMANCE PROPERTIES : (LX-4 Adhesive mixed with Water):",
+        title: "PERFORMANCE PROPERTIES : (LX-04 Adhesive mixed with Water):",
         content: (
           <p>
             This adhesive mortar conforms to IS 15477: 2019 - Type 4T Adhesive.
@@ -178,7 +178,7 @@ const LX4WhiteProductPage = () => {
               <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
                 <span className="text-white text-xs">✓</span>
               </span>
-              <p><strong>PACKAGING :</strong> 20 kg bag Available in White with the name of LX-4</p>
+              <p><strong>PACKAGING :</strong> 20 kg bag Available in White with the name of LX-04</p>
             </li>
           </ul>
         )

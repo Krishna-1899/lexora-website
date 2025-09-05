@@ -4,17 +4,17 @@ import { productConfigurations } from '../../data/productData';
 import lx3white from '../../assets/images/menu/LX_03-white.png';
 
 const LX3WhiteProductPage = () => {
-  // Get LX-3 configuration and modify it for LX-3 WHITE
+  // Get LX-03 configuration and modify it for LX-03 WHITE
   const lx3Config = productConfigurations['lx-3'];
   
   const lx3WhiteConfig = {
     ...lx3Config,
     productImage: lx3white,
-    pageTitle: "LX-3 WHITE - For Fixing Vitrified Tiles",
-    breadcrumbs: [{ label: 'LX-3 WHITE', link: null }],
-    productName: "LX-3 WHITE - For Fixing Vitrified Tiles",
-    description: "LX-3 WHITE is a high-performance, polymer-modified, white cement-based adhesive specifically designed for fixing low-porosity tiles (vitrified, semi-vitrified) and natural stones on interior and exterior floors, walls-interiors, and even swimming pools. It offers exceptional bond strength, water resistance, and ease of use. The white cement base preserves the aesthetic appeal of light-colored tiles and stones.",
-    altText: "LX-3 WHITE White Color Adhesive for Tiles & Marbles",
+    pageTitle: "LX-03 WHITE - For Fixing Vitrified Tiles",
+    breadcrumbs: [{ label: 'LX-03 WHITE', link: null }],
+    productName: "LX-03 WHITE - For Fixing Vitrified Tiles",
+    description: "LX-03 WHITE is a high-performance, polymer-modified, white cement-based adhesive specifically designed for fixing low-porosity tiles (vitrified, semi-vitrified) and natural stones on interior and exterior floors, walls-interiors, and even swimming pools. It offers exceptional bond strength, water resistance, and ease of use. The white cement base preserves the aesthetic appeal of light-colored tiles and stones.",
+    altText: "LX-03 WHITE White Color Adhesive for Tiles & Marbles",
     accordionItems: [
       {
         title: "Key Features And Benefits",
@@ -145,7 +145,7 @@ const LX3WhiteProductPage = () => {
         title: "APPLICATION",
         content: (
           <p>
-            LX-3 is designed for dry areas of interior floors and walls. It can be used for installing all types of ceramic tiles and small format natural stones on concrete and various cement-based substrates. The maximum bed thickness is 12mm.
+            LX-03 is designed for dry areas of interior floors and walls. It can be used for installing all types of ceramic tiles and small format natural stones on concrete and various cement-based substrates. The maximum bed thickness is 12mm.
           </p>
         )
       },
@@ -169,7 +169,7 @@ const LX3WhiteProductPage = () => {
         )
       },
       {
-        title: "PERFORMANCE PROPERTIES : (LX-3 Adhesive mixed with Water):",
+        title: "PERFORMANCE PROPERTIES : (LX-03 Adhesive mixed with Water):",
         content: (
           <p>
             This adhesive mortar conforms to IS 15477: 2019 - Type 3T Adhesive.
@@ -184,7 +184,7 @@ const LX3WhiteProductPage = () => {
               <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
                 <span className="text-white text-xs">✓</span>
               </span>
-              <p><strong>PACKAGING :</strong> 20 kg bag Available in White with the name of LX-3 WHITE</p>
+              <p><strong>PACKAGING :</strong> 20 kg bag Available in White with the name of LX-03 WHITE</p>
             </li>
           </ul>
         )

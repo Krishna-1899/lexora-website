@@ -48,13 +48,13 @@ const WhoWeAre = () => {
     adhesives: {
       title: 'Premium Tile Adhesive',
       products: [
-        'LX-1 Premium Tile Adhesive',
-        'LX-2 White Premium Tile Adhesive',
-        'LX-3 Premium Tile Adhesive',
-        'LX-4 Premium Tile Adhesive',
+        'LX-01 Premium Tile Adhesive',
+        'LX-02 White Premium Tile Adhesive',
+        'LX-03 Premium Tile Adhesive',
+        'LX-04 Premium Tile Adhesive',
         'PU-L29 Premium Tile Adhesive',
-        'LX-3 White Premium Tile Adhesive',
-        'LX-4 White Premium Tile Adhesive'
+        'LX-03 White Premium Tile Adhesive',
+        'LX-04 White Premium Tile Adhesive'
       ]
     },
     grouts: {

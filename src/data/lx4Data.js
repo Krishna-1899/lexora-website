@@ -22,16 +22,16 @@ import appMethod12 from '../assets/images/application_method/12.webp';
 import appMethod13 from '../assets/images/application_method/13.webp';
 
 export const lx4Configuration = {
-  pageTitle: "LX-4 - For Fixing Marble & Slabs",
-  breadcrumbs: [{ label: 'LX-4', link: null }],
-  productName: "LX-4 - For Fixing Marble & Slabs",
+  pageTitle: "LX-04 - For Fixing Marble & Slabs",
+  breadcrumbs: [{ label: 'LX-04', link: null }],
+  productName: "LX-04 - For Fixing Marble & Slabs",
   productImage: lx4Image,
-  description: "LX-4 is a high-performance, polymer-modified, white cement-based adhesive for low-porosity tiles (vitrified, semi-vitrified) and natural stones, suitable for both interior and exterior floors, and interior walls. It provides excellent bond strength, water resistance, and ease of use, ideal for showers, wet areas, and swimming pools. LX-4 is perfect for renovations, allowing for quick tile-over-tile installations, and is suitable for mosaics, terrazzo, and light-colored natural stones. Confirms to IS 15477: 2019 Type 2T \"Adhesives for use with Ceramic, Mosaic and Stone Tiles\". Note: Not recommended for direct use onto gypsum plaster (wall finishes), paint or metal. Not suitable for tiles and stones with mesh backing.",
+  description: "LX-04 is a high-performance, polymer-modified, white cement-based adhesive for low-porosity tiles (vitrified, semi-vitrified) and natural stones, suitable for both interior and exterior floors, and interior walls. It provides excellent bond strength, water resistance, and ease of use, ideal for showers, wet areas, and swimming pools. LX-04 is perfect for renovations, allowing for quick tile-over-tile installations, and is suitable for mosaics, terrazzo, and light-colored natural stones. Confirms to IS 15477: 2019 Type 2T \"Adhesives for use with Ceramic, Mosaic and Stone Tiles\". Note: Not recommended for direct use onto gypsum plaster (wall finishes), paint or metal. Not suitable for tiles and stones with mesh backing.",
   tdsLink: "/assets/tds/lx-4.pdf",
   dealerLink: "/where-to-buy",
-  altText: "LX-4 White Color Adhesive for Tiles & Marbles",
+  altText: "LX-04 White Color Adhesive for Tiles & Marbles",
   
-  // Technical specifications for LX-4 (Type 2T)
+  // Technical specifications for LX-04 (Type 2T)
   technicalSpecs: [
     { values: ['Appearance', 'Free flowing powder'] },
     { values: ['Colour', 'White & Grey'] },
@@ -45,7 +45,7 @@ export const lx4Configuration = {
     { values: ['EN 12004 Standard', 'C2TES1'] }
   ],
   
-  // IS Data for LX-4
+  // IS Data for LX-04
   isData: [
     { values: ['', 'Tensile Adhesion', ''], isHeader: true },
     { values: ['Wet Conditions - Annex A (Clause 5.1)', 'Minimum 1.00 N/mm²', '1.15-1.25 N/mm²'] },
@@ -62,7 +62,7 @@ export const lx4Configuration = {
   
   technicalImages: [technical1, technical2, technical3, technical4],
   
-  // LX-4 specific accordion items
+  // LX-04 specific accordion items
   accordionItems: [
     {
       title: "KEY FEATURES AND BENEFITS",
@@ -213,7 +213,7 @@ export const lx4Configuration = {
       )
     },
     {
-      title: "PERFORMANCE PROPERTIES : (LX-4 Adhesive mixed with Water):",
+      title: "PERFORMANCE PROPERTIES : (LX-04 Adhesive mixed with Water):",
       content: (
         <p>
           This adhesive mortar conforms to IS 15477: 2019 - Type 4T Adhesive.
@@ -228,14 +228,14 @@ export const lx4Configuration = {
             <span className="flex-shrink-0 w-5 h-5 bg-kajaria-blue-600 rounded-full flex items-center justify-center mt-1">
               <span className="text-white text-xs">✓</span>
             </span>
-            <p><strong>PACKAGING :</strong> 20 kg bag Available in Grey with the name of LX-4</p>
+            <p><strong>PACKAGING :</strong> 20 kg bag Available in Grey with the name of LX-04</p>
           </li>
         </ul>
       )
     }
   ],
   
-  // LX-4 specific application steps
+  // LX-04 specific application steps
   applicationSteps: [
     {
       image: appMethod1,
@@ -249,8 +249,8 @@ export const lx4Configuration = {
     },
     {
       image: appMethod3,
-      description: "Add 20 Kg LX-4 Thin Set Adhesive into water and mix it till it attains a Uniform Paste.",
-      altText: "Step 3: Add LX-4 adhesive powder"
+      description: "Add 20 Kg LX-04 Thin Set Adhesive into water and mix it till it attains a Uniform Paste.",
+      altText: "Step 3: Add LX-04 adhesive powder"
     },
     {
       image: appMethod4,
@@ -304,7 +304,7 @@ export const lx4Configuration = {
     }
   ],
   
-  // LX-4 specific installation tabs (standard format)
+  // LX-04 specific installation tabs (standard format)
   installationTabs: [
     {
       label: "Surface Preparation",
@@ -320,7 +320,7 @@ export const lx4Configuration = {
       label: "Mixing",
       content: [
         "Pour clean water into a mixing bowl.",
-        "Gradually add LX-4 powder (5 - 5.5 liters per 20 kg).",
+        "Gradually add LX-04 powder (5 - 5.5 liters per 20 kg).",
         "Mix until smooth and trowelable consistency. Let it slake for 5 minutes.",
         "Remix before applying with the appropriate trowel size.",
         "For large format tiles or exterior applications, consult Lexora technical services."
@@ -365,14 +365,14 @@ export const lx4Configuration = {
       label: "Limitation",
       content: [
         "Trowel Selection: The size of the notched trowel will depend on the size and type of tile you're installing. For larger tiles or uneven substrates, a bigger notch size is recommended to ensure full coverage.",
-        "Weather Conditions: While LX-4 can be used for exterior applications, extreme heat or cold can affect drying times. Always check the weather forecast and adjust working practices accordingly.",
+        "Weather Conditions: While LX-04 can be used for exterior applications, extreme heat or cold can affect drying times. Always check the weather forecast and adjust working practices accordingly.",
         "Substrate Preparation: Proper surface preparation is crucial for a successful tile installation. Don't underestimate the importance of a clean, sound, and level substrate.",
-        "Working Time: Once mixed, LX-4 has a working time of about 15–20 minutes. It's important to work efficiently and avoid mixing large quantities at once to prevent wastage."
+        "Working Time: Once mixed, LX-04 has a working time of about 15–20 minutes. It's important to work efficiently and avoid mixing large quantities at once to prevent wastage."
       ]
     }
   ],
   
-  // LX-4 specific FAQs
+  // LX-04 specific FAQs
   faqs: [
     {
       question: "What is LX4 Tile Adhesive?",
@@ -400,7 +400,7 @@ export const lx4Configuration = {
     },
     {
       question: "Is LX4 Tile Adhesive better than traditional cement for tile fixing?",
-      answer: "It provides better adhesion, flexibility, and water resistance than traditional cement. Tiles fixed with traditional cement may lose after some years, but LX-4 ensures durability in the long run."
+      answer: "It provides better adhesion, flexibility, and water resistance than traditional cement. Tiles fixed with traditional cement may lose after some years, but LX-04 ensures durability in the long run."
     },
     {
       question: "What is the price of LX4 Tile Adhesive?",
@@ -432,7 +432,7 @@ export const lx4Configuration = {
             <p>Confirms to EN 12004 / ISO 13007 and is an improved cementitious adhesive (C2) with slip resistance (T) and Extended Open time (E) of class C2TES1</p>
           </li>
         </ul>
-        <p className="bluefont"><b>PACKAGING:</b> 20 kg bag (Available in Grey and White (With the name of LX-4))</p>
+        <p className="bluefont"><b>PACKAGING:</b> 20 kg bag (Available in Grey and White (With the name of LX-04))</p>
         <p className="bluefont"><b>COVERAGE:</b></p>
         <ul className="list-unstyled service-details__list listpoints" style={{maxWidth: '100%', color: 'var(--floens-text, #070707)'}}>
           <li>

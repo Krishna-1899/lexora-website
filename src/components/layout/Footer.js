@@ -122,7 +122,7 @@ const Footer = () => {
                   to="/lx-1"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  LX-1
+                  LX-01
                 </Link>
               </li>
               <li>
@@ -130,7 +130,7 @@ const Footer = () => {
                   to="/lx-2"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  LX-2
+                  LX-02
                 </Link>
               </li>
               <li>
@@ -138,7 +138,7 @@ const Footer = () => {
                   to="/lx-3"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  LX-3
+                  LX-03
                 </Link>
               </li>
               <li>
@@ -146,7 +146,7 @@ const Footer = () => {
                   to="/lx-3-white"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  LX-3 White
+                  LX-03 White
                 </Link>
               </li>
               <li>
@@ -154,7 +154,7 @@ const Footer = () => {
                   to="/lx-4"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  LX-4
+                  LX-04
                 </Link>
               </li>
               <li>
@@ -162,7 +162,7 @@ const Footer = () => {
                   to="/lx-4-white"
                   className="hover:text-kajaria-blue-300 transition-colors"
                 >
-                  LX-4 White
+                  LX-04 White
                 </Link>
               </li>
               <li>

@@ -77,7 +77,7 @@ const TechnicalData = ({
           <div data-aos="fade-right" data-aos-duration="1000">
             <SectionHeader 
               tagline="reliable"
-              title="Technical Data<br/>(Type 1T)"
+              title={`Technical Data<br/>(Type ${technicalSpecs[technicalSpecs.length-1].values[1]})`}
               className="mb-8"
             />
             
