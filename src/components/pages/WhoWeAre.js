@@ -129,11 +129,11 @@ const WhoWeAre = () => {
 
               <div className="prose prose-lg max-w-none">
                 <h5 className="text-2xl font-semibold text-gray-900 mb-6" data-aos="fade-up" data-aos-delay="200">
-                  Lexora - India's top Adhesive Company, is the largest manufacturer of ceramic/vitrified tiles in India.
+                  Lexora - India's top Adhesive Company, is the largest manufacturer in India.
                 </h5>
 
                 <p className="text-gray-700 mb-6 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="300">
-                  All of Lexora's manufacturing units are equipped with cutting edge modern technology making their products the most desirable building material in this industry. Founded 35 years ago, Lexora has since then grown stronger with its hard work, innovations and patronage from its discerning customers. And with the Indian consumers rapidly growing appetite for quality building materials, the inspiration behind every Lexora product is to keep up with their customers' expectations alongside servicing every market demands as per requirement.
+                  All of Lexora's manufacturing units are equipped with cutting edge modern technology making their products the most desirable building material in this industry. Founded 17 years ago, Lexora has since then grown stronger with its hard work, innovations and patronage from its discerning customers. And with the Indian consumers rapidly growing appetite for quality building materials, the inspiration behind every Lexora product is to keep up with their customers' expectations alongside servicing every market demands as per requirement.
                 </p>
 
                 <p className="text-gray-700 mb-6 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="400">

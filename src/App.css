@@ -1,6 +1,325 @@
 /* Custom styles can be added here */
+/* Disable overscroll bounce at top/bottom; normal scrolling still works (fixed via body overflow in index.css) */
 html, body {
   overscroll-behavior: none;
+}
+
+/* ═══════════════════════════════════════════════
+   PDF FlipBook — Catalog Reader  (Lexora style)
+   ═══════════════════════════════════════════════
+   Brand palette:
+     dark bg  → #2B1E16  (kajaria-brown-900)
+     top bar  → #1A120B
+     accent   → #FF861E  (kajaria-base2)
+     accent2  → #B35600  (kajaria-base)
+   ═══════════════════════════════════════════════ */
+
+/* Flipbook outer wrapper — let library handle sizing */
+.pdf-flip-book-outer {
+  width: 100%;
+  margin: 0 auto;
+}
+.pdf-flip-book-outer .stf__item { overflow: hidden; }
+
+/* ── Reader shell: FIXED height so thumbnail scroll works ── */
+.catalog-reader {
+  background: #2B1E16;
+  color: #fff;
+  font-family: inherit;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* fill remaining viewport under the site header (~80px) + page header (~170px) + intro (~120px) */
+  height: calc(100vh - 80px);
+  min-height: 640px;
+  max-height: 1100px;
+}
+.catalog-reader--fullscreen {
+  height: 100vh !important;
+  max-height: 100vh !important;
+  min-height: 100vh !important;
+}
+.catalog-reader--center {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Top bar ── */
+.catalog-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1A120B;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding: 0 16px;
+  height: 46px;
+  gap: 12px;
+  flex-shrink: 0;
+  z-index: 50;
+}
+.catalog-topbar__left,
+.catalog-topbar__right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 130px;
+}
+.catalog-topbar__right { justify-content: flex-end; }
+.catalog-topbar__center {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  white-space: nowrap;
+}
+.catalog-topbar__title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.catalog-topbar__divider { color: rgba(255,255,255,0.18); }
+.catalog-topbar__pages strong { color: #FF861E; }
+.catalog-topbar__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.catalog-topbar__btn:hover {
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+}
+.catalog-topbar__btn.active {
+  background: rgba(255,134,30,0.18);
+  color: #FF861E;
+}
+
+/* ── Body row: thumbnails + main ── */
+.catalog-body {
+  display: flex;
+  flex: 1;           /* fill remaining height inside .catalog-reader */
+  overflow: hidden;  /* prevents body itself from scrolling */
+  position: relative;
+}
+
+/* ── Thumbnail sidebar — scrolls independently ── */
+.catalog-thumbs {
+  width: 166px;
+  min-width: 166px;
+  background: #1A120B;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  /* Fills the flex height and scrolls inside */
+  height: 100%;
+  overflow: hidden;
+}
+.catalog-thumbs__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.35);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  flex-shrink: 0;
+}
+.catalog-thumbs__close {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.3);
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 4px;
+  transition: color 0.15s;
+}
+.catalog-thumbs__close:hover { color: #FF861E; }
+
+.catalog-thumbs__list {
+  overflow-y: auto;   /* THIS makes only the list scroll, not the whole page */
+  flex: 1;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,134,30,0.25) transparent;
+}
+.catalog-thumbs__list::-webkit-scrollbar { width: 4px; }
+.catalog-thumbs__list::-webkit-scrollbar-thumb {
+  background: rgba(255,134,30,0.3);
+  border-radius: 4px;
+}
+
+/* Individual thumbnail button */
+.catalog-thumb {
+  background: none;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: border-color 0.15s, transform 0.12s;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.catalog-thumb:hover {
+  border-color: rgba(255,134,30,0.45);
+  transform: scale(1.025);
+}
+.catalog-thumb.active { border-color: #FF861E; }
+.catalog-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+}
+.catalog-thumb__num {
+  display: block;
+  font-size: 10px;
+  color: rgba(255,255,255,0.35);
+  padding: 3px 0 2px;
+  line-height: 1;
+}
+.catalog-thumb.active .catalog-thumb__num { color: #FF861E; }
+
+/* ── Main book area ── */
+.catalog-main {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 56px 68px;
+  overflow: hidden;
+  background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(179,86,0,0.10) 0%, transparent 70%);
+}
+
+/* This wrapper MUST have a width so the flipbook's stretch mode can measure it */
+.catalog-book-wrap {
+  width: 100%;
+  max-width: 960px;  /* 2 × maxWidth(480) */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;          /* explicit stacking level — keeps book below nav/toolbar */
+  isolation: isolate;  /* contain internal stacking contexts */
+}
+
+/* ── Navigation arrows ── */
+.catalog-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%); /* account for toolbar at bottom */
+  z-index: 40;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(43,30,22,0.7);
+  border: 1px solid rgba(255,134,30,0.35);
+  color: rgba(255,255,255,0.75);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  backdrop-filter: blur(6px);
+}
+.catalog-nav:hover:not(:disabled) {
+  background: #B35600;
+  border-color: #FF861E;
+  color: #fff;
+  transform: translateY(-60%) scale(1.1);
+}
+.catalog-nav:disabled { opacity: 0.2; cursor: not-allowed; }
+.catalog-nav--prev { left: 14px; }
+.catalog-nav--next { right: 14px; }
+
+/* ── Bottom floating toolbar ── */
+.catalog-toolbar {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: rgba(26, 18, 11, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,134,30,0.2);
+  border-radius: 100px;
+  padding: 5px 14px;
+  z-index: 50;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,134,30,0.05);
+  white-space: nowrap;
+}
+.catalog-toolbar__btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.catalog-toolbar__btn:hover:not(:disabled) {
+  background: rgba(255,134,30,0.18);
+  color: #FF861E;
+}
+.catalog-toolbar__btn:disabled { opacity: 0.25; cursor: not-allowed; }
+.catalog-toolbar__divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(255,134,30,0.15);
+  margin: 0 4px;
+}
+.catalog-toolbar__zoom {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  min-width: 34px;
+  text-align: center;
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+  .catalog-reader {
+    height: calc(100vh - 60px);
+    min-height: 500px;
+  }
+  .catalog-thumbs { display: none; }
+  .catalog-main { padding: 12px 44px 64px; }
+  .catalog-nav--prev { left: 6px; }
+  .catalog-nav--next { right: 6px; }
+  .catalog-book-wrap { max-width: 100%; }
+}
+@media (max-width: 480px) {
+  .catalog-topbar__btn span,
+  .catalog-topbar__title { display: none; }
+  .catalog-topbar__center { gap: 6px; font-size: 12px; }
 }
 /* Slick slider custom styles */
 .slick-prev,
