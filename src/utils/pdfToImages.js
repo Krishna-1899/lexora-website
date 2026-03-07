@@ -4,16 +4,28 @@
  */
 import { pdfjs } from 'react-pdf';
 
-// Polyfill for older mobile browsers (Chrome < 119, Safari < 17.4)
-// pdfjs-dist v5 uses Promise.withResolvers which is not available in older browsers
+// ── Polyfills for pdfjs-dist v5 on older mobile browsers (Chrome < 120, Safari < 17.4) ──
+
+// Promise.withResolvers  (Chrome 119+)
 if (typeof Promise.withResolvers === 'undefined') {
   Promise.withResolvers = function () {
     let resolve, reject;
-    const promise = new Promise((res, rej) => {
-      resolve = res;
-      reject = rej;
-    });
+    const promise = new Promise((res, rej) => { resolve = res; reject = rej; });
     return { promise, resolve, reject };
+  };
+}
+
+// URL.parse  (Chrome 120+)
+if (typeof URL.parse === 'undefined') {
+  URL.parse = function (url, base) {
+    try { return new URL(url, base); } catch { return null; }
+  };
+}
+
+// structuredClone  (Chrome 98+, but missing on some older Android WebViews)
+if (typeof structuredClone === 'undefined') {
+  window.structuredClone = function (obj) {
+    return JSON.parse(JSON.stringify(obj));
   };
 }
 
