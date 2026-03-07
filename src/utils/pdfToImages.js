@@ -4,34 +4,9 @@
  */
 import { pdfjs } from 'react-pdf';
 
-// ── Polyfills for pdfjs-dist v5 on older mobile browsers (Chrome < 120, Safari < 17.4) ──
-
-// Promise.withResolvers  (Chrome 119+)
-if (typeof Promise.withResolvers === 'undefined') {
-  Promise.withResolvers = function () {
-    let resolve, reject;
-    const promise = new Promise((res, rej) => { resolve = res; reject = rej; });
-    return { promise, resolve, reject };
-  };
-}
-
-// URL.parse  (Chrome 120+)
-if (typeof URL.parse === 'undefined') {
-  URL.parse = function (url, base) {
-    try { return new URL(url, base); } catch { return null; }
-  };
-}
-
-// structuredClone  (Chrome 98+, but missing on some older Android WebViews)
-if (typeof structuredClone === 'undefined') {
-  window.structuredClone = function (obj) {
-    return JSON.parse(JSON.stringify(obj));
-  };
-}
-
-// Configure worker for Create React App (no import.meta)
+// pdfjs-dist v3 — works on all mobile browsers, no modern API polyfills needed
 if (typeof window !== 'undefined' && pdfjs?.GlobalWorkerOptions) {
-  pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
+  pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 }
 
 const RENDER_SCALE = 2; // Quality of rendered page images
