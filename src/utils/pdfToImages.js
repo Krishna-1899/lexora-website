@@ -4,6 +4,19 @@
  */
 import { pdfjs } from 'react-pdf';
 
+// Polyfill for older mobile browsers (Chrome < 119, Safari < 17.4)
+// pdfjs-dist v5 uses Promise.withResolvers which is not available in older browsers
+if (typeof Promise.withResolvers === 'undefined') {
+  Promise.withResolvers = function () {
+    let resolve, reject;
+    const promise = new Promise((res, rej) => {
+      resolve = res;
+      reject = rej;
+    });
+    return { promise, resolve, reject };
+  };
+}
+
 // Configure worker for Create React App (no import.meta)
 if (typeof window !== 'undefined' && pdfjs?.GlobalWorkerOptions) {
   pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
