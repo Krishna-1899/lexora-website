@@ -51,18 +51,29 @@ const PdfFlipBook = ({ pdfUrl, images: imagesProp, title = 'LEXORA CHEMBOND' }) 
     setError(null);
     setLoadedCount(0);
 
-    // Load pages incrementally so thumbnails appear as they render
-    const loadIncrementally = async () => {
+    const load = async () => {
       try {
-        const { images, numPages } = await pdfToImages(pdfUrl, (count, total) => {
-          if (!cancelled) {
-            setLoadedCount(count);
-            setTotalCount(total);
-          }
-        });
+        // onPageReady fires for each page as it finishes (including background pages)
+        const onPageReady = (index, dataUrl) => {
+          if (cancelled) return;
+          setPages((prev) => {
+            const next = [...prev];
+            next[index] = dataUrl;
+            return next;
+          });
+          setLoadedCount(index + 1);
+        };
+
+        const { images, numPages } = await pdfToImages(
+          pdfUrl,
+          (count, total) => { if (!cancelled) setTotalCount(total); },
+          onPageReady,
+          4  // open flipbook after just 4 pages — rest load in background
+        );
+
         if (!cancelled) {
-          setPages(images);
-          setLoading(false);
+          setPages(images);   // set full array (with blanks) so flipbook has correct page count
+          setLoading(false);  // show flipbook immediately
         }
       } catch (err) {
         if (!cancelled) {
@@ -72,7 +83,7 @@ const PdfFlipBook = ({ pdfUrl, images: imagesProp, title = 'LEXORA CHEMBOND' }) 
       }
     };
 
-    loadIncrementally();
+    load();
     return () => { cancelled = true; };
   }, [pdfUrl, imagesProp]);
 
@@ -329,13 +340,13 @@ const PdfFlipBook = ({ pdfUrl, images: imagesProp, title = 'LEXORA CHEMBOND' }) 
                 startPage={0}
                 useMouseEvents={true}
                 ref={flipBookRef}
-                width={480}
-                height={679}
+                width={380}
+                height={537}
                 size="stretch"
                 minWidth={120}
-                maxWidth={480}
+                maxWidth={380}
                 minHeight={170}
-                maxHeight={679}
+                maxHeight={537}
                 usePortrait={false}
                 maxShadowOpacity={0.6}
                 showCover={true}

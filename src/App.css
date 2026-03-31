@@ -21,7 +21,7 @@ html, body {
 }
 .pdf-flip-book-outer .stf__item { overflow: hidden; }
 
-/* ── Reader shell: FIXED height so thumbnail scroll works ── */
+/* ── Reader shell: fills exactly the viewport below the fixed site header ── */
 .catalog-reader {
   background: #2B1E16;
   color: #fff;
@@ -29,10 +29,9 @@ html, body {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* fill remaining viewport under the site header (~80px) + page header (~170px) + intro (~120px) */
-  height: calc(100vh - 80px);
-  min-height: 640px;
-  max-height: 1100px;
+  height: calc(100vh - 80px);  /* site fixed header is 80px */
+  min-height: 560px;
+  max-height: 960px;
 }
 .catalog-reader--fullscreen {
   height: 100vh !important;
@@ -218,7 +217,7 @@ html, body {
 /* This wrapper MUST have a width so the flipbook's stretch mode can measure it */
 .catalog-book-wrap {
   width: 100%;
-  max-width: 960px;  /* 2 × maxWidth(480) */
+  max-width: 800px;  /* 2 × maxWidth(380) + some breathing room */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -308,12 +307,12 @@ html, body {
 @media (max-width: 767px) {
   .catalog-reader {
     height: calc(100vh - 60px);
-    min-height: 500px;
+    min-height: 480px;
   }
   .catalog-thumbs { display: none; }
-  .catalog-main { padding: 12px 44px 64px; }
-  .catalog-nav--prev { left: 6px; }
-  .catalog-nav--next { right: 6px; }
+  .catalog-main { padding: 8px 44px 60px; }
+  .catalog-nav--prev { left: 4px; }
+  .catalog-nav--next { right: 4px; }
   .catalog-book-wrap { max-width: 100%; }
 }
 @media (max-width: 480px) {
