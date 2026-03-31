@@ -27,13 +27,13 @@ const AboutSection = () => {
                     alt="innovative tile solutions" 
                     className="w-full h-auto rounded-lg shadow-lg"
                   />
-                  <div className="absolute bottom-[-15px] sm:bottom-[-20px] md:bottom-[-30px] right-[-25px] sm:right-[-35px] md:right-[-50px] w-1/2">
+                  {/* <div className="absolute bottom-[-15px] sm:bottom-[-20px] md:bottom-[-30px] right-[-25px] sm:right-[-35px] md:right-[-50px] w-1/2">
                     <img 
                       src={about2}
                       alt="innovative tile solutions" 
                       className="w-full h-auto rounded-lg shadow-lg"
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
